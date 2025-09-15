@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "lru-cache": "^10.3.0",
+    "p-retry": "^6.2.0"
+  }
+}

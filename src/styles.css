@@ -1,3 +1,4 @@
+
 :root{
   --container-max: 1150px;
   --pad: 16px;
@@ -12,7 +13,7 @@
 
 /* Banner full-bleed (ocupa todo el ancho de la pantalla) */
 .banner{
-  width: 100vw;
+  
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -384,3 +385,215 @@ body {
 @media (max-width: 720px){
   .site-footer__bottom{ flex-wrap:wrap; gap:10px; }
 }
+
+
+
+/* --- productod page--- */
+
+/* ===== Banner ===== */
+.banner { width: 100%; margin-bottom: 0; }
+.banner img { width: 100%; height: auto; display: block; }
+
+/* ===== Hero del buscador ===== */
+.searchbar-hero {
+  width: 100%;
+  background: #353332;        /* rojo de referencia */
+  padding: 16px 0;            /* alto de la franja */
+}
+.searchbar-hero__inner {
+  max-width: 980px;           /* ancho del carril */
+  margin: 0 auto;             /* centrado */
+  padding: 0 16px;
+}
+
+/* Estilizamos el SearchBar SOLO dentro del hero */
+.searchbar-hero form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;           /* ancho del pill */
+  height: 44px;
+  margin: 0 auto;             /* centrado */
+  background: #fff;
+  border-radius: 999px;       /* pill */
+  padding: 0 14px 0 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08) inset;
+}
+
+.searchbar-hero input {
+  flex: 1 1 auto;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #333;
+}
+.searchbar-hero input::placeholder {
+  color: #9aa3aa;
+}
+
+.searchbar-hero button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;            /* tamaño del ícono 🔍 */
+  line-height: 1;
+  color: #302c2b;             /* ícono rojo */
+  padding-left: 8px;
+}
+
+/* ===== Título + mensajes ===== */
+.products-search { padding: 14px 16px 0; }
+.products-search__inner { max-width: 980px; margin: 0 auto; text-align: center; }
+.products-search__title { margin: 14px 0 6px; font-size: 22px; font-weight: 600; }
+.products-msg { margin-top: 6px; color: #333; }
+.products-msg--error { color: #5a5a5a; }
+
+/* ===== Grid de productos ===== */
+.products-container { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
+
+/* derecha → izquierda + wrap + separación */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+ 
+}
+.products-grid__cell {
+  flex: 0 0 240px;            /* ancho por tarjeta */
+  direction: ltr;             /* contenido normal */
+}
+
+@media (max-width: 560px) {
+  .searchbar-hero { padding: 12px 0; }
+  .searchbar-hero form { max-width: 100%; height: 42px; }
+  .products-grid__cell { flex: 0 0 calc(50% - 10px); }
+}
+
+/* ===== Product card base (por si aún no lo tienes) ===== */
+.product-card {
+  display: flex; flex-direction: column; justify-content: space-between;
+  width: 240px; border: 1px solid #ddd; border-radius: 8px;
+  padding: 12px; background: #fff; text-decoration: none; color: inherit;
+  transition: box-shadow .2s;
+}
+.product-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.product-card__img { width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; }
+.product-card__img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.product-card__body { margin-top: 10px; }
+.product-card__priceRow { display: flex; gap: 8px; align-items: baseline; }
+.product-card__price { font-size: 18px; font-weight: 700; color: #2e7d32; }
+.product-card__pricePrev { font-size: 14px; color: #888; text-decoration: line-through; }
+.product-card__title { font-size: 14px; font-weight: 500; margin-top: 6px; line-height: 1.2em; height: 2.4em; overflow: hidden; }
+.product-card__unit { font-size: 12px; color: #555; margin-top: 4px; }
+.product-card__store { font-size: 12px; color: #333; margin-top: 4px; }
+
+
+/* ==== PRODUCT CARD ==== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 240px;               /* ancho uniforme */
+  border: 1px solid #130c0c;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  text-align: left;
+  transition: box-shadow 0.2s;
+}
+.product-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Imagen */
+.product-card__img {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card__img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.product-card__img--placeholder {
+  font-size: 12px;
+  color: #1d1919;
+}
+
+/* Cuerpo */
+.product-card__body {
+  margin-top: 10px;
+}
+
+.product-card__chip {
+  display: inline-block;
+  background: #ff9800;
+  color: #0f0b0b;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.product-card__priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.product-card__price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+.product-card__pricePrev {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.product-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 6px;
+  line-height: 1.2em;
+  height: 2.4em;       /* limita a 2 líneas */
+  overflow: hidden;
+  color: #0b0f19;
+}
+
+.product-card__unit {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.product-card__store {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #333;
+}
+
+
+/* === FIX overflow lateral: quitar flex del body === */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;        /* por si queda algún sub-píxel */
+}
+
+body {
+  display: block !important; /* anula el body flex que viste en DevTools */
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
