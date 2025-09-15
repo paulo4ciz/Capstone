@@ -20,8 +20,8 @@
   background: #0b0f19;
 }
 .banner img{
-    margin-top: 100px;
-    margin-bottom:100px ;
+    margin-top: 0px;
+    margin-bottom:0px ;
   display: auto;
   width: 100%;
   height: clamp(240px, 34vh, 420px); /* ajusta si quieres */

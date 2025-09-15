@@ -1,4 +1,3 @@
-// src/pages/Productos.jsx
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
@@ -8,18 +7,30 @@ export default function Productos() {
   const [params] = useSearchParams();
   const q = params.get("q") || "";
   const stores = params.get("stores") || "acuenta";
+
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
+  const [refreshKey, setRefreshKey] = useState(0); // para remezclar cuando NO hay q
 
   useEffect(() => {
     const run = async () => {
       try {
         setLoading(true);
         setErr("");
-        const usp = new URLSearchParams({ q, stores });
-        const url = q ? `/api/search?${usp.toString()}` : `/api/random?limit=24`;
-        const r = await fetch(url);
+
+        let url = "";
+        if (q) {
+          const usp = new URLSearchParams({ q, stores, _: Date.now() });
+          url = `/api/search?${usp.toString()}`;
+        } else {
+          // Canasta básica por defecto (12) -> aleatoria
+          url = `/api/random?limit=12&kind=basic&stores=${encodeURIComponent(
+            stores
+          )}&_=${Date.now()}`;
+        }
+
+        const r = await fetch(url, { cache: "no-store" });
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         const data = await r.json();
         setItems(Array.isArray(data) ? data : []);
@@ -30,39 +41,56 @@ export default function Productos() {
         setLoading(false);
       }
     };
+    // Si hay q: se actualiza por q/stores; si no hay q: también cambia con refreshKey
     run();
-  }, [q, stores]);
+  }, [q, stores, refreshKey]);
+
+  const remezclar = () => {
+    if (!q) setRefreshKey((k) => k + 1);
+  };
 
   return (
     <main className="page-products">
-      {/* 1) Banner */}
+      {/* Banner */}
       <section className="banner">
         <img src="/banner2.png" alt="Banner del proyecto" />
       </section>
 
-      {/* 2) Hero del buscador (franja roja full-width + pill centrado) */}
+      {/* Barra de búsqueda (hero) */}
       <section className="searchbar-hero">
         <div className="searchbar-hero__inner">
           <SearchBar compact />
         </div>
       </section>
 
-      {/* 3) Título + mensajes */}
+      {/* Título + mensajes */}
       <section className="products-search">
         <div className="products-search__inner">
           <h1 className="products-search__title">
-            {q ? `Resultados para "${q}"` : "Productos para inspirarte"} — fuente: {stores}
+            {q
+              ? `Resultados para "${q}" — fuente: ${stores}`
+              : "Mira estos productos de la canasta básica"}
           </h1>
 
-          {loading && <p className="products-msg">Cargando…</p>}
-          {!loading && err && <p className="products-msg products-msg--error">Error: {err}</p>}
+          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+            {loading && <p className="products-msg">Cargando…</p>}
+            {!loading && err && (
+              <p className="products-msg products-msg--error">Error: {err}</p>
+            )}
+           {/*  {!loading && !err && !q && (
+              <button type="button" onClick={remezclar} className="btn btn-light">
+                Actualizar
+              </button>
+            )}*/}
+          </div>
+
           {!loading && !err && items.length === 0 && (
             <p className="products-msg">No se encontraron productos.</p>
           )}
         </div>
       </section>
 
-      {/* 4) Grid de tarjetas (derecha → izquierda, wrap y separación) */}
+      {/* Grid de tarjetas */}
       {!loading && !err && items.length > 0 && (
         <section className="products-container">
           <div className="products-grid">

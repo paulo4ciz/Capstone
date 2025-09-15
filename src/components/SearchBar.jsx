@@ -31,7 +31,7 @@ export default function SearchBar({ compact = false, stores: storesProp = "" }) 
         type="text"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="¿Qué estás buscando?"
+        placeholder="¿Donde esta la mano?"
         aria-label="Buscar"
       />
       <button type="submit" aria-label="Buscar">🔍</button>
