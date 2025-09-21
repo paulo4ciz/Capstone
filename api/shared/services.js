@@ -1,6 +1,6 @@
 // api/shared/services.js
 import pRetry from "p-retry";
-import { ADAPTERS } from "./adapters.js";
+import { ADAPTERS } from "./adapters/index.js";
 import { getCache, setCache } from "./cache.js";
 
 // Descubre las tiendas disponibles según los adapters exportados
