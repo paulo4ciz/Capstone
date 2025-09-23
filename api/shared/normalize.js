@@ -1,3 +1,5 @@
+//api/shared/normalize.js
+
 export function normalizeProduct({ title, price, imageUrl, productUrl, store }) {
   const priceNumber = typeof price === "number"
     ? price
