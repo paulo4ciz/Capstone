@@ -2,5 +2,19 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": ["/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg"]
-  }
+  },
+  "routes": [
+    {
+      "route": "/productos",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/vision",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/home",
+      "rewrite": "/index.html"
+    }
+  ]
 }
