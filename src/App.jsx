@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Body from "./components/Body"; // tu Home actual
 import Productos from "./pages/Productos";
-import Vision from "./pages/vision";
+import Vision from "./pages/Vision";
 import "./styles.css";
 
 function App() {
