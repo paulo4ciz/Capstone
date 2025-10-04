@@ -32,8 +32,12 @@ export default function Header() {
         {/* Barra de búsqueda */}
         <div className="searchbar">
           <SearchBar compact />
+          <button className="nav">
+            <Link to="/Login" >Iniciar sesion</Link>
+          </button>
         </div>
       </div>
+
     </header>
   );
 }
