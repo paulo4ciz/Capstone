@@ -1,0 +1,55 @@
+name: Azure Static Web Apps CI/CD (QA)
+
+on:
+  push:
+    branches:
+      - qa            # 👈 usa exactamente el nombre de tu rama QA
+    paths:
+      - "api/**"
+      - "src/**"
+      - "index.html"
+      - "package.json"
+      - "vite.config.*"
+      - ".github/workflows/azure-static-web-apps-victorious-river-07a302f1e.yml"
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - qa
+
+jobs:
+  build_and_deploy_job:
+    # Ejecuta en push y en PR abiertos (no en PR cerrados)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          lfs: false
+
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_RIVER_07A302F1E }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Para comentarios en PR, etc.
+          action: "upload"
+
+          # === Configuración de tu app ===
+          app_location: "/"        # Ruta del frontend (Vite) en el repo
+          api_location: "api"      # 👈 Ruta de Azure Functions (muy importante)
+          output_location: "dist"  # Carpeta salida de build de Vite
+          # app_build_command: "npm ci && npm run build"   # (opcional, suele autodetectarse)
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_RIVER_07A302F1E }}
+          action: "close"
