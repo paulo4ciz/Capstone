@@ -757,21 +757,33 @@ body {
 }
 
 /* Principios */
-
+.vision-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
 
 .vision-list {
+  font-size: 1.1rem;
   max-width: 750px;
-  margin-left: 750px;
+  width: 90%;
   text-align: left;
-  font-size: 1.05rem;
   color: #ffffff;
   line-height: 1.8;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .vision-list li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   position: relative;
-  padding-left: 30px;
+  padding-left: 35px;
+  word-wrap: break-word;
 }
 
 .vision-list li::before {
@@ -780,6 +792,34 @@ body {
   left: 0;
   color: #045d94;
   font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .vision-list {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .vision-list li {
+    padding-left: 28px;
+  }
+
+  .vision-list li::before {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .vision-list {
+    width: 100%;
+    font-size: 0.95rem;
+  }
 }
 
 /* Métricas */
