@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Body from "./components/Body"; // tu Home actual
 import Productos from "./pages/Productos";
 import Vision from "./pages/Vision";
+import Login from "./pages/Login";
 import "./styles.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Body />} />
         <Route path="/productos" element={<Productos />} />
         <Route path="/Vision" element={<Vision />} />
+        <Route path="/Login" element={<Login />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

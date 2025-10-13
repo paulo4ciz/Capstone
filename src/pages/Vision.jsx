@@ -19,15 +19,19 @@ export default function Vision() {
 
       {/* Hero / encabezado corto con claim */}
       <section className="vision-hero">
-        <div className="vision-hero__inner">
-          <h1 className="vision-hero__title">¿DóndeEstáLaMano?</h1>
-          <p className="vision-hero__lead">
-            Ser la plataforma chilena de referencia para comparar precios de
+        <div className="vision-banner">
+          <div className="vision-text"><h1>Nuestra vision</h1>
+          <p>
+            En “¿Dónde está la mano?”, creemos en un futuro donde la tecnología
+            y la empatía se unen para ayudar a las familias a administrar sus
+            recursos de manera inteligente, justa y sostenible.
+            Siendo la plataforma referencial para comparar precios de
             productos del <strong>barrio</strong>, entregando{" "}
             <strong>transparencia</strong>, <strong>ahorro</strong> y{" "}
             <strong>confianza</strong> a hogares de menores ingresos,
             adultos mayores y estudiantes.
           </p>
+        </div>
         </div>
       </section>
 
