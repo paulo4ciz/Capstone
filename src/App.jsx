@@ -6,6 +6,9 @@ import Body from "./components/Body"; // tu Home actual
 import Productos from "./pages/Productos";
 import Vision from "./pages/Vision";
 import Login from "./pages/Login";
+import Proyecto from "./pages/Proyecto";
+import Historial from "./pages/Historial";
+
 import "./styles.css";
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
         <Route path="/productos" element={<Productos />} />
         <Route path="/Vision" element={<Vision />} />
         <Route path="/Login" element={<Login />}/>
+        <Route path="/Proyecto" element={<Proyecto />}/>
+        <Route path="/Historial" element={<Historial />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

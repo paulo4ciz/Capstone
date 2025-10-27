@@ -22,8 +22,9 @@ export default function Header() {
 
           {/* Menú de navegación */}
           <nav className="nav">
-            <Link to="/">Nuestro proyecto</Link>
+            
             <Link to="/productos">Productos</Link>
+            <Link to="/Proyecto">Proyecto</Link>
             <Link to="/historial">Historial</Link>
             <Link to="/Vision">Visión</Link>
           </nav>
@@ -31,11 +32,12 @@ export default function Header() {
 
         {/* Barra de búsqueda */}
         <div className="searchbar">
-          <SearchBar compact />
-          <button className="nav">
+          <SearchBar compact /> 
+
+        </div>
+         <button className="nav">
             <Link to="/Login" >Iniciar sesion</Link>
           </button>
-        </div>
       </div>
 
     </header>

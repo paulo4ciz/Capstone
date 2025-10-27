@@ -64,9 +64,9 @@ export default function Footer() {
 
         <nav className="social" aria-label="Redes">
           <a className="s s-fb" href="#" aria-label="Facebook" />
-          <a className="s s-in" href="#" aria-label="LinkedIn" />
+          <a className="s s-in" href="https://www.instagram.com/dondeestalamano" aria-label="LinkedIn" />
           <a className="s s-x"  href="#" aria-label="X" />
-          <a className="s s-yt" href="#" aria-label="YouTube" />
+          <a className="s s-yt" href="https://www.youtube.com/@DondeestálaMano" aria-label="YouTube" />
         </nav>
 
         <button type="button" className="to-top" onClick={scrollTop} aria-label="Volver arriba">

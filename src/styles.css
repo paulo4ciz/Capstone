@@ -67,6 +67,41 @@ body {
 }
 .nav{
   display: flex;
+  gap: 18px;
+  margin-left: auto;            /* empuja el menú a la derecha si hay espacio */
+}
+
+.nav a{
+  display: inline-flex;
+  align-items: center;
+  padding: .35rem .65rem;
+  border-radius: .5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+  will-change: transform;
+}
+
+.nav a:hover,
+.nav a:focus-visible{
+  color: #fff;
+  background: rgba(255,255,255,.06);
+  transform: translateY(-1px) scale(1.06);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.25);
+}
+
+.nav a:active{
+  transform: scale(.98);
+  box-shadow: 0 6px 14px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.25);
+}
+
+/* opcional: respetar preferencias de movimiento */
+@media (prefers-reduced-motion: reduce){
+  .nav a{ transition: none; }
+}
+/* css ntiguo  */
+.nav{
+  display: flex;
   gap: 14px;
   margin-left: 20px;
   font-size: 14px;
@@ -76,21 +111,23 @@ body {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
   flex: 1;
   max-width: 520px;
 }
 .searchbar input{
+  margin-left: 20px;
   flex: 1;
-  padding: 10px 12px;
-  border-radius: 8px;
+  padding: 10px 30px;
+  border-radius: 20px;
   border: 1px solid #94a3b8;
 }
 .searchbar button{
-  padding: 10px 12px;
+  margin-left: 5px;
+  padding: 6px 7px;
   border-radius: 8px;
-  border: 1px solid #94a3b8;
-  background: #3b82f6;
+  border: 1px solid #0169fa;
+  background: #ffffff;
   color: #fff;
   cursor: pointer;
 }
@@ -1223,3 +1260,89 @@ body {
     opacity: 1;
   }
 }
+
+/*--------------------------------------------Sección Proyecto--------------------------------------------*/
+
+.protecto-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url("../public/banner-proyecto.png") no-repeat center right;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* texto a la izquierda */
+  overflow: hidden;
+  color: #045d94;
+}
+
+/* Fondo semitransparente para contraste del texto */
+.protecto-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* oscurece un poco el fondo */
+  z-index: 0;
+}
+
+/* Contenedor del texto */
+.protecto-text {
+  position: relative;
+  z-index: 1;
+  margin-left: 200px;
+  max-width: 600px;
+  text-align: left;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Título */
+.protecto-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Párrafo */
+.protecto-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Adaptación móvil */
+@media (max-width: 768px) {
+  .protecto-banner {
+    justify-content: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-position: center;
+  }
+
+  .protecto-text {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .protecto-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .protecto-text p {
+    font-size: 1rem;
+  }
+}
+
+/*--------------------------------------------Sección  Historial--------------------------------------------*/
