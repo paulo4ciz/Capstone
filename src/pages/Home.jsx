@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
 
+
 export default function Productos() {
   const [params] = useSearchParams();
   const q = params.get("q") || "";

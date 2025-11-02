@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles.css";
-import loginImg from "../../public/hand.png"; // misma imagen que en Login
 
 export default function Register() {
   const navigate = useNavigate();
@@ -86,7 +85,6 @@ export default function Register() {
           {/* Panel derecho (visual) */}
           <div className="login-right">
             <div className="login-content">
-              {/* SVG inicial (mismo efecto del login) */}
               <div className="inicial">
                 <svg className="textoini" viewBox="0 0 215 100">
                   <text className="textini" x="50%" y="50%" textAnchor="middle">
@@ -95,7 +93,6 @@ export default function Register() {
                 </svg>
               </div>
 
-              {/* Segundo texto */}
               <div>
                 <svg className="textd" viewBox="0 0 200 100">
                   <text className="dtext" x="50%" y="65%" textAnchor="middle">
@@ -107,9 +104,9 @@ export default function Register() {
                 </svg>
               </div>
 
-              {/* Imagen */}
+              {/* Imagen desde /public con ruta absoluta */}
               <div className="login-image">
-                <img src={loginImg} alt="register" />
+                <img src="/hand.png" alt="register" />
               </div>
             </div>
           </div>
@@ -118,4 +115,3 @@ export default function Register() {
     </main>
   );
 }
-
