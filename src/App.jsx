@@ -8,6 +8,8 @@ import Vision from "./pages/Vision";
 import Login from "./pages/Login";
 import Proyecto from "./pages/Proyecto";
 import Historial from "./pages/Historial";
+import Register from "./pages/Register";
+import MiHistorial from "./pages/MiHistorial";
 
 import "./styles.css";
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/Login" element={<Login />}/>
         <Route path="/Proyecto" element={<Proyecto />}/>
         <Route path="/Historial" element={<Historial />}/>
+        <Route path="/Register" element={<Register />}/>
+        <Route path="/mi-historial" element={<MiHistorial />} />
       </Routes>
       <Footer />
     </BrowserRouter>

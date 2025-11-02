@@ -1346,3 +1346,116 @@ body {
 }
 
 /*--------------------------------------------Sección  Historial--------------------------------------------*/
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+  gap: 16px;
+  justify-content: center; /* centra el conjunto */
+}
+.product-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.btn { display:block; width:100%; padding:10px 12px; border-radius:8px; font-weight:700; }
+.btn-primary { background:#1e40af; color:#fff; }
+.btn-primary:hover { background:#1d4ed8; }
+.btn-dark { background:#111827; color:#fff; }
+.btn-dark:hover { background:#000; }
+.btn-danger { background:#b91c1c; color:#fff; }
+.btn-danger:hover { background:#991b1b; }
+.page-user-history .historial-header { text-align:center; margin:24px 0 12px; }
+.page-user-history .historial-header h1 { font-size:28px; font-weight:800; margin-bottom:6px; }
+.page-user-history .historial-header p { color:#555; margin:0; }
+
+.product-card__lastSeen {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #666;
+}
+/*--------------------------------------------forzado de tarjetas para grilla--------------------------------------------*/
+
+/* --- Grilla centrada con separación visible --- */
+.products-container { padding: 12px 8px; }
+
+.products-grid{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+  gap: 16px !important;                 /* 👈 espacio entre tarjetas */
+  justify-content: center !important;   /* centra el conjunto */
+}
+
+/* Cada celda con un “acolchado” extra (fallback si el gap fuese pisado) */
+.products-grid__cell { padding: 6px !important; }
+
+/* La tarjeta debe ocupar su celda completa (no un ancho fijo) */
+.products-grid .product-card { width: 100% !important; }
+
+/* En móviles, un poco menos de gap */
+@media (max-width: 640px){
+  .products-grid{
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+    gap: 12px !important;
+  }
+}
+
+/*--------------------------------------------botones login-------------------------------------------*/
+
+/* === Auth (logueado y no logueado) === */
+
+/* bloque de sesión a la derecha del header */
+.auth-user,
+.auth-btns{
+  margin-left: auto;              /* empuja al extremo derecho */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* cuando hay usuario: orden derecha → izquierda */
+.auth-user{
+  flex-direction: row-reverse;    /* Hola queda a la derecha */
+}
+
+/* evita que las reglas globales de .nav (del menú) interfieran */
+.auth-user .nav,
+.auth-btns .nav{
+  margin: 0 !important;           /* quita márgenes heredados */
+  display: inline-flex;           /* botones en fila */
+}
+
+/* el <a> interno conserva tu estilo de .nav a */
+.auth-user .nav a,
+.auth-btns .nav a{
+  display: inline-flex;
+  align-items: center;
+}
+
+/* saludo (texto) */
+.auth-user .hello{
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Si tu .nav del menú empuja con margin-left:auto, limítalo al menú */
+.brand > .nav{
+  margin-left: 20px;   /* como ya tienes abajo */
+}
+
+/*--------------------------------------------formulario de registro--------------------------------------------*/
+
+/* estilos ya existentes del login se reutilizan */
+/* error del formulario */
+.form-error {
+  color: #b91c1c;
+  background: rgba(185, 28, 28, 0.08);
+  border: 1px solid rgba(185,28,28,.25);
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 12px;
+}

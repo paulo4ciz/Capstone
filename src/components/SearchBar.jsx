@@ -34,7 +34,7 @@ export default function SearchBar({ compact = false, stores: storesProp = "" }) 
         placeholder="¿Donde esta la mano?"
         aria-label="Buscar"
       />
-      <button type="submit" aria-label="Buscar">🔍</button>
+      
     </form>
   );
 }
