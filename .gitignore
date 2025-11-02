@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
+# No subir secretos
 local.settings.json
 api/local.settings.json
 .env
