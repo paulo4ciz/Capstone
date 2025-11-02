@@ -1461,3 +1461,131 @@ body {
 }
 
 .login-container { background: url("/banner1.png") no-repeat center center; }
+
+
+/*--------------------------------------------seccion de suma de productos en mi historial--------------------------------------------*/
+/* ====== Resumen de historial (total) ====== */
+.page-user-history .history-summary{
+  display:flex;
+  justify-content:center;
+  margin: 10px 0 26px;
+}
+
+.page-user-history .history-summary__box{
+  /* ancho grande y responsive (centro) */
+  width: clamp(360px, 85vw, 1200px);
+  display:flex;
+  justify-content:center;
+  align-items: baseline;
+  gap: 16px;
+
+  /* estilo “pill” */
+  padding: 16px 32px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#0b1220 0%, #1e293b 100%);
+  color:#fff;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.page-user-history .history-summary__label{
+  font-size: clamp(12px, 1.6vw, 16px);
+  font-weight: 600;
+  opacity: .9;
+}
+
+.page-user-history .history-summary__amount{
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900;
+  letter-spacing: .3px;
+}
+
+.page-user-history .history-summary__count{
+  font-size: clamp(11px, 1.4vw, 14px);
+  opacity: .8;
+  margin-left: 6px;
+}
+
+/* Mejor comportamiento en móviles */
+@media (max-width: 640px){
+  .page-user-history .history-summary__box{
+    flex-wrap: wrap;
+    row-gap: 8px;
+    text-align: center;
+  }
+  .page-user-history .history-summary__amount{
+    width: 100%;
+  }
+}
+
+
+/*--------------------------------------------banners laterales--------------------------------------------*/
+/* =============== LAYOUT: productos + banners laterales =============== */
+.products-with-banners{
+  /* 260 (izq) + 1120 (centro) + 260 (der) + gaps */
+  display: grid;
+  grid-template-columns: 260px minmax(0,1120px) 260px;
+  gap: 24px;
+  justify-content: center;   /* centra el conjunto en la página */
+  align-items: start;
+  margin: 0 auto 48px;
+  padding-inline: 16px;
+}
+
+/* Contenedor central: que no se achique ni tenga padding extra */
+.products-with-banners .products-container{
+  max-width: unset;
+  width: 1120px;
+  padding: 0;
+}
+
+/* Banners */
+.side-banner{
+  position: sticky;
+  top: 92px;                /* altura aprox. de tu header fijo */
+  align-self: start;
+}
+.side-banner a{ display:block }
+.side-banner img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.28);
+}
+
+/* Grilla de tarjetas (robusta y con separación) */
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.products-grid__cell{ display: flex }  /* para que la card estire lo justo */
+
+/* Encabezado de la sección de productos (opcional, para respirar) */
+.products-search__inner{ max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* --------- Responsivo --------- */
+/* < 1400px: oculta banners y la grilla ocupa todo el ancho habitual */
+@media (max-width: 1400px){
+  .products-with-banners{
+    grid-template-columns: 1fr;
+    padding-inline: 12px;
+  }
+  .side-banner{ display: none }
+  .products-with-banners .products-container{
+    width: 100%;
+    max-width: 1200px;   /* tu valor original */
+    padding: 20px 16px;
+  }
+}
+
+/* Un poco más de aire en pantallas muy grandes */
+@media (min-width: 1800px){
+  .products-with-banners{
+    gap: 32px;
+  }
+  .side-banner img{ border-radius: 18px }
+}

@@ -91,18 +91,35 @@ export default function Productos() {
         </div>
       </section>
 
-      {/* Grid de tarjetas */}
-      {!loading && !err && items.length > 0 && (
-        <section className="products-container">
-          <div className="products-grid">
-            {items.map((p) => (
-              <div key={p.id} className="products-grid__cell">
-                <ProductCard product={p} />
-              </div>
-            ))}
+     {/* Grid de tarjetas + banners laterales */}
+{!loading && !err && items.length > 0 && (
+  <section className="products-with-banners">
+    {/* Banner izquierdo */}
+    <aside className="side-banner side-banner--left">
+      <a href="#" aria-label="Banner izquierdo">
+        <img src="/bannerIzq.gif" alt="Promoción izquierda" />
+      </a>
+    </aside>
+
+    {/* Contenido central (tu grid existente) */}
+    <section className="products-container">
+      <div className="products-grid">
+        {items.map((p) => (
+          <div key={p.id} className="products-grid__cell">
+            <ProductCard product={p} />
           </div>
-        </section>
-      )}
+        ))}
+      </div>
+    </section>
+
+    {/* Banner derecho */}
+    <aside className="side-banner side-banner--right">
+      <a href="#" aria-label="Banner derecho">
+        <img src="/bannerDer.gif" alt="Promoción derecha" />
+      </a>
+    </aside>
+  </section>
+)}
 
         {/* {/* Intro (se mantiene igual) 
       <section className="intro">
