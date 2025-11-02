@@ -79,7 +79,7 @@ export default function LoginForm() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <span className="show-pass" aria-hidden="true">👁</span>
+              <span className="show-pass" aria-hidden="true"></span>
             </div>
 
             <a href="#" className="forgot-link">¿Olvidaste tu contraseña?</a>
