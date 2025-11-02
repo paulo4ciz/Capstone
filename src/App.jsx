@@ -10,6 +10,7 @@ import Proyecto from "./pages/Proyecto";
 import Historial from "./pages/Historial";
 import Register from "./pages/Register";
 import MiHistorial from "./pages/MiHistorial";
+import MapaPage from "./pages/MapaPage";
 
 import "./styles.css";
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Historial" element={<Historial />}/>
         <Route path="/Register" element={<Register />}/>
         <Route path="/mi-historial" element={<MiHistorial />} />
+        <Route path="/mapa" element={<MapaPage />} />      
       </Routes>
       <Footer />
     </BrowserRouter>
