@@ -101,5 +101,9 @@ export default async function (context, req) {
     }
     context.log.error("register error:", err);
     context.res = bad(500, "internal_error");
+
+    
   }
+
+  
 }
