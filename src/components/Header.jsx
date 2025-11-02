@@ -98,7 +98,7 @@ useEffect(() => {
             </button>
 
             <button className="nav" onClick={logout}>
-              Terminar sesión
+              Cerrar sesión
             </button>
           </div>
         )}

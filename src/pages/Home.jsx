@@ -115,7 +115,7 @@ export default function Productos() {
     {/* Banner derecho */}
     <aside className="side-banner side-banner--right">
       <a href="#" aria-label="Banner derecho">
-        <img src="/bannerDer.gif" alt="Promoción derecha" />
+        <img src="/bannerDer2.gif" alt="Promoción derecha" />
       </a>
     </aside>
   </section>
