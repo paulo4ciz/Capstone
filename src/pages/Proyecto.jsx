@@ -11,7 +11,7 @@ export default function Proyecto() {
       {/* Hero / encabezado corto con claim */}
       <section className="protecto-hero">
         <div className="protecto-banner">
-          <div className="protecto-text"><h1>Nuestra vision</h1>
+          <div className="protecto-text"><h1>Nuestro Proyecto</h1>
           <p>
             “Dónde está la Mano” es una plataforma chilena 
             pensada para que familias, estudiantes y personas mayores encuentren 

@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# No subir secretos
+local.settings.json
+api/local.settings.json
+.env
+.env.*
+api/.env
+api/.env.*
