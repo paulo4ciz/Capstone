@@ -1572,23 +1572,122 @@ body {
 
 /* --------- Responsivo --------- */
 /* < 1400px: oculta banners y la grilla ocupa todo el ancho habitual */
+
+/* Asegura 3 columnas y que el centro no se estire fuera de su track */
+.products-with-banners{
+  display: grid;
+  grid-template-columns: 260px minmax(0,1fr) 260px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* 🔧 Clave: el contenedor central debe ocupar SOLO su columna y tener fondo */
+.products-with-banners .products-container{
+  width: 100%;
+  max-width: none;          /* evita que un max-width fijo “invada” el banner */
+  min-width: 0;             /* evita overflow por grid */
+  position: relative;
+  z-index: 1;               /* por delante del banner */
+  background: #0f0f10;      /* usa el mismo color de fondo de tu página */
+  border-radius: 12px;      /* opcional, se ve más limpio */
+  padding: 20px 16px;       /* tu padding original */
+}
+
+/* Banners “debajo” y pegados (sin superposición) */
+.side-banner{
+  position: sticky;
+  top: 96px;                /* ajusta según header */
+  z-index: 0;               /* debajo del centro (que ahora tiene fondo) */
+}
+
+.side-banner img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* < 1400px: sin banners, 1 columna */
 @media (max-width: 1400px){
   .products-with-banners{
     grid-template-columns: 1fr;
     padding-inline: 12px;
   }
-  .side-banner{ display: none }
+  .side-banner{ display: none; }
   .products-with-banners .products-container{
-    width: 100%;
-    max-width: 1200px;   /* tu valor original */
-    padding: 20px 16px;
+    background: transparent; /* opcional en 1 columna */
+    border-radius: 0;
   }
 }
 
-/* Un poco más de aire en pantallas muy grandes */
-@media (min-width: 1800px){
-  .products-with-banners{
-    gap: 32px;
-  }
-  .side-banner img{ border-radius: 18px }
+/*--------------------------------------------franja animanda debajo del header.--------------------------------------------*/
+/* Asegura alto/posicionamiento de la franja fija bajo el header */
+:root{
+  --header-h: 64px;   /* ajusta a tu header */
+  --announce-h: 33px; /* alto franja */
+}
+
+.announce-bar{
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  height: var(--announce-h);
+  background: #000;
+  color: #fff;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  /* sin rellenos que corten el scroll en los bordes */
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Contenedor sin máscaras ni paddings laterales */
+.announce-bar .ticker{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-mask-image: none !important;
+          mask-image: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Truco clave:
+   - 2 copias, cada una ocupa EXACTAMENTE el ancho de la franja
+   - sin gap ni padding → el texto llega a los bordes
+   - animación de -100% → 0% para L→R continuo */
+.ticker__track{
+  display: flex;
+  gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  will-change: transform;
+  animation: marquee-ltr var(--speed, 25s) linear infinite;
+}
+
+/* Cada copia = 100% del ancho visible */
+.ticker__content{
+  flex: 0 0 100%;
+  min-width: 100%;
+  /* si quieres algo de aire dentro del bloque, usa padding pequeño
+     pero no agregues padding en .ticker o .track */
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+/* Animación izquierda → derecha: de la 2ª copia (fuera a la izquierda)
+   a la 1ª copia (alineada al borde izquierdo) */
+@keyframes marquee-ltr{
+  from { transform: translateX(-100%); } /* 2ª copia alineada a la izquierda */
+  to   { transform: translateX(0%); }    /* 1ª copia alineada a la izquierda */
+}
+
+/* Offset para que el contenido no quede tapado por la franja fija */
+.app-with-announce{
+  padding-top: var(--announce-h);
 }

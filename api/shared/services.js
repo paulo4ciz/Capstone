@@ -3,37 +3,52 @@ import pRetry from "p-retry";
 import { ADAPTERS } from "./adapters/index.js";
 import { getCache, setCache } from "./cache.js";
 
-// Descubre las tiendas disponibles según los adapters exportados
-const AVAILABLE_STORES = Object.keys(ADAPTERS);          // p.ej. ["acuenta"]
-const DEFAULT_STORES = AVAILABLE_STORES.length
-  ? [...AVAILABLE_STORES]
-  : ["acuenta"]; // fallback sensato si no hay keys por algún motivo
+// Catálogo dinámico de tiendas (evita staleness si cambias ADAPTERS)
+const availableStores = () => Object.keys(ADAPTERS);
+const DEFAULT_STORES = () => {
+  const keys = availableStores();
+  return keys.length ? [...keys] : ["acuenta"];
+};
 
 async function withRetry(fn) {
   return pRetry(fn, { retries: 2, factor: 2, minTimeout: 300 });
 }
 
+function normalizeSlug(s) {
+  return String(s || "").trim().toLowerCase();
+}
+
 function parseStores(stores) {
-  if (!stores) return [...DEFAULT_STORES];
-  if (Array.isArray(stores)) return stores.filter((s) => AVAILABLE_STORES.includes(s));
+  const valid = new Set(availableStores());
+  if (!stores) return DEFAULT_STORES();
+
+  if (Array.isArray(stores)) {
+    const list = stores.map(normalizeSlug).filter((s) => valid.has(s));
+    return Array.from(new Set(list)); // dedup
+  }
+
   // CSV -> array filtrado por stores válidas
-  return String(stores)
+  const list = String(stores)
     .split(",")
-    .map((s) => s.trim())
-    .filter((s) => AVAILABLE_STORES.includes(s));
+    .map(normalizeSlug)
+    .filter((s) => valid.has(s));
+
+  return Array.from(new Set(list)); // dedup
 }
 
 export async function searchAllStores(q, stores = []) {
   const list = parseStores(stores);
-  const cacheKey = `search:${list.sort().join(",")}:${(q || "").toLowerCase()}`;
+  const storesKey = list.slice().sort().join(",") || "none";
+  const cacheKey = `search:${storesKey}:${(q || "").toLowerCase()}`;
+
   const cached = getCache(cacheKey);
   if (cached) return cached;
 
   const settled = await Promise.allSettled(
     list.map((s) => withRetry(() => ADAPTERS[s](q)))
   );
-  const data = settled.flatMap((r) => (r.status === "fulfilled" ? r.value : []));
 
+  const data = settled.flatMap((r) => (r.status === "fulfilled" ? r.value : []));
   setCache(cacheKey, data);
   return data;
 }
@@ -42,8 +57,18 @@ export async function searchAllStores(q, stores = []) {
 // CANASTA BÁSICA (12 productos)
 // -----------------------------
 const CANASTA_SEEDS = [
-  "arroz", "fideos", "aceite", "leche", "huevos", "pan",
-  "azúcar", "sal", "harina", "porotos", "lentejas", "atun"
+  "arroz",
+  "fideos",
+  "aceite",
+  "leche",
+  "huevos",
+  "pan",
+  "azúcar",
+  "sal",
+  "harina",
+  "porotos",
+  "lentejas",
+  "atun",
 ];
 
 function uniqueBy(arr, keyFn) {
@@ -51,7 +76,10 @@ function uniqueBy(arr, keyFn) {
   const out = [];
   for (const it of arr) {
     const k = keyFn(it);
-    if (!seen.has(k)) { seen.add(k); out.push(it); }
+    if (!seen.has(k)) {
+      seen.add(k);
+      out.push(it);
+    }
   }
   return out;
 }
@@ -94,7 +122,7 @@ export async function randomProducts(limit = 12, stores = [], kind = "basic") {
         imageUrl: "/hand.png",
         productUrl: "#",
         store: "Mock",
-        scrapedAt: new Date().toISOString()
+        scrapedAt: new Date().toISOString(),
       },
       {
         id: "mock2",
@@ -104,8 +132,8 @@ export async function randomProducts(limit = 12, stores = [], kind = "basic") {
         imageUrl: "/hand.png",
         productUrl: "#",
         store: "Mock",
-        scrapedAt: new Date().toISOString()
-      }
+        scrapedAt: new Date().toISOString(),
+      },
     ].slice(0, limit);
   }
 

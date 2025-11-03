@@ -59,7 +59,7 @@ export default function Productos() {
       {/* Barra de búsqueda (hero) */}
       <section className="searchbar-hero">
         <div className="searchbar-hero__inner">
-          <SearchBar compact />
+          <SearchBar compact stores={stores} />
         </div>
       </section>
 
@@ -96,7 +96,7 @@ export default function Productos() {
           <div className="products-grid">
             {items.map((p) => (
               <div key={p.id} className="products-grid__cell">
-                <ProductCard product={p} />
+                <ProductCard {...p} />
               </div>
             ))}
           </div>
