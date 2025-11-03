@@ -71,6 +71,7 @@ useEffect(() => {
             <Link to="/productos">Productos</Link>
             <Link to="/Proyecto">Proyecto</Link>
             <Link to="/Vision">Visión</Link>
+            <Link to="/mapa">Mapa</Link>
           </nav>
         </div>
 
