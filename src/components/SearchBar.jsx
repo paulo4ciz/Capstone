@@ -8,7 +8,7 @@ export default function SearchBar({ compact = false, stores: storesProp = "" }) 
   const [q, setQ] = useState(params.get("q") || "");
 
   const storesFromUrl = params.get("stores") || "";
-  const stores = storesProp || storesFromUrl || "acuenta"; // 👈 default
+  const stores = storesProp || storesFromUrl || "acuenta,centralmayorista"; // 👈 default
 
   useEffect(() => {
     setQ(params.get("q") || "");
