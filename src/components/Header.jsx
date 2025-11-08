@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 
 
 
@@ -74,16 +74,16 @@ useEffect(() => {
           <div className="collapse navbar-collapse" id="mainNavbar">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/productos">Productos</Link>
+                <NavLink to="/productos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Productos</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Proyecto">Proyecto</Link>
+                <NavLink to="/Proyecto" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Proyecto</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Vision">Visión</Link>
+                <NavLink to="/Vision" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Visión</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/mapa">Mapa</Link>
+                <NavLink to="/mapa" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Mapa</NavLink>
               </li>
             </ul>
 
@@ -96,7 +96,7 @@ useEffect(() => {
               {!user ? (
 
                 <div className="d-flex gap-2">
-                  <Link to="/Login" className="btn-login">Iniciar sesión</Link>
+                  <Link to="/Login" className="btn-login-header">Iniciar sesión</Link>
                   <Link to="/Register" className="btn-registro">Registrarse</Link>
                 </div>
               ) : (

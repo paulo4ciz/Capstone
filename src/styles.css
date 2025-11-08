@@ -22,7 +22,7 @@ a.nav-link:hover {
   font-weight: 600;
 }
 
-.btn-login {
+.btn-login-header {
   display: inline-block;
   padding: .375rem .75rem;
   background-color: #FFFFFF;
@@ -36,27 +36,27 @@ a.nav-link:hover {
   transition: all 0.25s ease;
 }
 
-.btn-login:hover {
+.btn-login-header:hover {
   background-color: #181818;
   color: #FFFFFF;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(43, 53, 66, 0.2);
 }
 
-.btn-login:active {
+.btn-login-header:active {
   background-color: #1e252f;
   color: #FFFFFF;
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(43, 53, 66, 0.25);
 }
 
-.btn-login:focus {
+.btn-login-header:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(43, 53, 66, 0.35);
 }
 
-.btn-login:disabled,
-.btn-login[disabled] {
+.btn-login-header:disabled,
+.btn-login-header[disabled] {
   background-color: #e0e0e0;
   color: #9a9a9a;
   border-color: #cccccc;
@@ -267,11 +267,348 @@ section.searchbar-hero {
   }
 }
 
+section.sections {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 
 footer {
-  margin-top: 3rem;
+
   background-color: #181818;
 }
+
+
+/*--------------------------------------------Login--------------------------------------------*/
+
+/* Contenedor principal */
+.login-container {
+  flex: 1;
+  width: 100%;
+  background: url("../public/bannerv.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+/* Caja general (split) */
+.login-box {
+  margin-bottom: 100px;
+  margin-top: 150px;
+  width: 800px;
+  height: 630px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Panel izquierdo */
+.login-left {
+  flex: 0.8;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-color: #000;
+  border: 3px;
+}
+
+.login-title {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: #4d96ff;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.login-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.show-pass {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: #4d96ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.btn-login {
+  margin-left: 15px;
+  width: 100%;
+  padding: 14px;
+  background: #2b008e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #2b008e;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  color: #aaa;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider span {
+  background: #ffffff00;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  z-index: 0;
+}
+
+/* Botones sociales */
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.google-btn,
+.facebook-btn {
+  flex: 1;
+  padding: 12px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+  color: #ffffff;
+}
+
+.google-btn {
+  background-color: #ffa29a;
+}
+
+.facebook-btn {
+  background-color: #8ebfff;
+}
+
+.google-btn:hover {
+  border-color: #6d6d6d;
+  color: #ffffff;
+  background-color: #ff1500;
+}
+
+.facebook-btn:hover {
+  border-color: #6d6d6d;
+  background-color: #1877f2;
+  color: #080808;
+}
+
+/* Texto de registro */
+.signup-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-text a {
+  color: #8a50ee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Panel derecho */
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(157, 154, 154, 0.8);
+  /* se puede cambiar por imagen o color lo deje asi mientras*/
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contenedor del contenido */
+.login-content {
+  text-align: center;
+  max-width: 450px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Imagen inferior */
+.login-image {
+  animation: show-img 2s forwards 6s;
+  visibility: hidden;
+}
+
+.login-image img {
+  max-width: 350px;
+  height: auto;
+  filter: drop-shadow(5px 10px 5px #000000);
+}
+
+/* Texto inicial (animado) */
+.inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.textoini {
+  text-align: center;
+  width: 100%;
+  height: 40%;
+  position: relative;
+}
+
+.textini {
+  font-size: 2rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  fill: #0687ff;
+  stroke-width: 0.1rem;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 7s linear forwards, color-change 5s linear forwards;
+}
+
+/* Animación SVG */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes color-change {
+  25% {
+    fill: #0687ff;
+    stroke: #0630ff;
+  }
+
+  50% {
+    stroke: #3399ff;
+    fill: #1a66ff;
+  }
+
+  75% {
+    stroke: #66ccff;
+    opacity: 1;
+  }
+
+  100% {
+    fill: #99ddff;
+    stroke: #66ccff;
+    opacity: 0;
+  }
+}
+
+/* Segundo SVG (texto Dónde está la mano) */
+.textd {
+  text-align: center;
+  width: 90%;
+  height: 60%;
+  font-size: 2.3rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  stroke-width: 0.1rem;
+}
+
+.dtext {
+  fill: #ffffff;
+  visibility: hidden;
+  animation: show-text 5s forwards 4s;
+}
+
+.mano {
+  fill: #086caa;
+
+  visibility: hidden;
+  animation: show-text 1s forwards 5s;
+}
+
+@keyframes show-text {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes show-img {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 
 @media (min-width: 992px) {
   .navbar-expand-lg {

@@ -125,38 +125,49 @@ export default function Vision() {
          
         </div>
       </section>
-      <section className="sections">
-        <div className="sections__bar">
-          <h2> SECCIONES</h2>
-        </div>
-
-        <div className="sections__grid">
-          <article className="card c1">
-            <div className="card__inner">
-              <div className="card__num">01</div>
-              <h3 className="card__title">Nuestro proyecto</h3>
-              <p className="card__desc">Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.</p>
-              <a className="card__btn" href="/Proyecto">Ver más</a>
+        <section className="sections">
+        <div className="container">
+          <div className="row">
+           <div className="col-12 col-xl-4 my-3">
+            <div class="card">
+             <div class="card-header">
+              ¿Dónde esta la mano?
+             </div>
+             <div class="card-body">
+              <h5 class="card-title">Nuestro proyecto</h5>
+              <p class="card-text">Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.</p>
+              <a href="/Proyecto" class="btn-card">Ver más</a>
+             </div>
             </div>
-          </article>
+           </div>
 
-          <article className="card c2">
-            <div className="card__inner">
-              <div className="card__num">02</div>
-              <h3 className="card__title">Nuestra visión</h3>
-              <p className="card__desc">Principios, transparencia de precios y el impacto que buscamos a largo plazo.</p>
-              <a className="card__btn" href="/vision">Ver más</a>
+            
+           <div className="col-12 col-xl-4 my-3">
+            <div class="card">
+             <div class="card-header">
+              ¿Dónde esta la mano?
+             </div>
+             <div class="card-body">
+              <h5 class="card-title">Nuestra visión</h5>
+              <p class="card-text">Principios, transparencia de precios y el impacto que buscamos a largo plazo.</p>
+              <a href="/vision" class="btn-card">Ver más</a>
+             </div>
             </div>
-          </article>
+           </div>
 
-          <article className="card c3">
-            <div className="card__inner">
-              <div className="card__num">03</div>
-              <h3 className="card__title">Historial</h3>
-              <p className="card__desc">Avances del proyecto, releases, y registro de cambios importantes.</p>
-              <a className="card__btn" href="/Historial">Ver más</a>
+           <div className="col-12 col-xl-4 my-3">
+            <div class="card">
+             <div class="card-header">
+              ¿Dónde esta la mano?
+             </div>
+             <div class="card-body">
+              <h5 class="card-title">Historial</h5>
+              <p class="card-text">Avances del proyecto, releases, y registro de cambios importantes.</p>
+              <a href="/Historial" class="btn-card">Ver más</a>
+             </div>
             </div>
-          </article>
+           </div>
+          </div>
         </div>
       </section>
     </main>
