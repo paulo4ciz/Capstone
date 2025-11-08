@@ -53,9 +53,11 @@ export default function Productos() {
   return (
     <main className="page-products">
       {/* Banner */}
-      <section className="banner">
+      <section className="banner-hero">
         <img src="/banner2.png" alt="Banner del proyecto" />
       </section>
+
+  
 
       {/* Barra de búsqueda (hero) */}
       <section className="searchbar-hero">
@@ -66,12 +68,15 @@ export default function Productos() {
 
       {/* Título + mensajes */}
       <section className="products-search">
-        <div className="products-search__inner">
-          <h1 className="products-search__title">
+        <div className="products-search__inner container">
+          <div className="row">
+            <div className="col-12 my-5">
+          <h1 className="products-search__title text-center">
             {q
               ? `Resultados para "${q}" — fuente: ${stores}`
               : "Mira estos productos de la canasta básica"}
           </h1>
+          </div>
 
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
             {loading && <p className="products-msg">Cargando…</p>}
@@ -89,6 +94,7 @@ export default function Productos() {
             <p className="products-msg">No se encontraron productos.</p>
           )}
         </div>
+       </div>
       </section>
 
      {/* Grid de tarjetas + banners laterales */}
@@ -124,37 +130,48 @@ export default function Productos() {
 
       {/* Secciones (igual) */}
       <section className="sections">
-        <div className="sections__bar">
-          <h2> SECCIONES</h2>
-        </div>
-
-        <div className="sections__grid">
-          <article className="card c1">
-            <div className="card__inner">
-              <div className="card__num">01</div>
-              <h3 className="card__title">Nuestro proyecto</h3>
-              <p className="card__desc">Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.</p>
-              <a className="card__btn" href="/Proyecto">Ver más</a>
+        <div className="container">
+          <div className="row">
+           <div className="col-12 col-xl-4 my-3">
+            <div class="card">
+             <div class="card-header">
+              ¿Dónde esta la mano?
+             </div>
+             <div class="card-body">
+              <h5 class="card-title">Nuestro proyecto</h5>
+              <p class="card-text">Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.</p>
+              <a href="/Proyecto" class="btn-card">Ver más</a>
+             </div>
             </div>
-          </article>
+           </div>
 
-          <article className="card c2">
-            <div className="card__inner">
-              <div className="card__num">02</div>
-              <h3 className="card__title">Nuestra visión</h3>
-              <p className="card__desc">Principios, transparencia de precios y el impacto que buscamos a largo plazo.</p>
-              <a className="card__btn" href="/vision">Ver más</a>
+            
+           <div className="col-12 col-xl-4 my-3">
+            <div class="card">
+             <div class="card-header">
+              ¿Dónde esta la mano?
+             </div>
+             <div class="card-body">
+              <h5 class="card-title">Nuestra visión</h5>
+              <p class="card-text">Principios, transparencia de precios y el impacto que buscamos a largo plazo.</p>
+              <a href="/vision" class="btn-card">Ver más</a>
+             </div>
             </div>
-          </article>
+           </div>
 
-          <article className="card c3">
-            <div className="card__inner">
-              <div className="card__num">03</div>
-              <h3 className="card__title">Historial</h3>
-              <p className="card__desc">Avances del proyecto, releases, y registro de cambios importantes.</p>
-              <a className="card__btn" href="/Historial">Ver más</a>
+           <div className="col-12 col-xl-4 my-3">
+            <div class="card">
+             <div class="card-header">
+              ¿Dónde esta la mano?
+             </div>
+             <div class="card-body">
+              <h5 class="card-title">Historial</h5>
+              <p class="card-text">Avances del proyecto, releases, y registro de cambios importantes.</p>
+              <a href="/Historial" class="btn-card">Ver más</a>
+             </div>
             </div>
-          </article>
+           </div>
+          </div>
         </div>
       </section>
     

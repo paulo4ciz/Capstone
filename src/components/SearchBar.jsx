@@ -26,15 +26,22 @@ export default function SearchBar({ compact = false, stores: storesProp = "" }) 
   };
 
   return (
-    <form onSubmit={onSubmit} className={compact ? "w-full flex" : "flex"}>
+   
+ <div class="searchbar-1">
+  <form onSubmit={onSubmit} className="w-full d-flex align-items-center" role="search">
+    <div className="input-group">
+      <span className="input-group-text">
+        <i className="bi bi-search"></i>
+      </span>
       <input
-        type="text"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        placeholder="¿Donde esta la mano?"
+        type="search"
+        className="form-control search-input"
+        placeholder="¿Dónde está la mano?"
         aria-label="Buscar"
       />
-      
-    </form>
+    </div>
+  </form>
+</div>
+
   );
 }
