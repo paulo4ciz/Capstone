@@ -53,9 +53,11 @@ export default function Productos() {
   return (
     <main className="page-products">
       {/* Banner */}
-      <section className="banner">
+      <section className="banner-hero">
         <img src="/banner2.png" alt="Banner del proyecto" />
       </section>
+
+
 
       {/* Barra de búsqueda (hero) */}
       <section className="searchbar-hero">
@@ -66,98 +68,140 @@ export default function Productos() {
 
       {/* Título + mensajes */}
       <section className="products-search">
-        <div className="products-search__inner">
-          <h1 className="products-search__title">
-            {q
-              ? `Resultados para "${q}" — fuente: ${stores}`
-              : "Mira estos productos de la canasta básica"}
-          </h1>
+        <div className="products-search__inner container">
+          <div className="row">
+            <div className="col-12 my-5">
+              <h1 className="products-search__title text-center">
+                {q
+                  ? `Resultados para "${q}" — fuente: ${stores}`
+                  : "Mira estos productos de la canasta básica"}
+              </h1>
+            </div>
 
-          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            {loading && <p className="products-msg">Cargando…</p>}
-            {!loading && err && (
-              <p className="products-msg products-msg--error">Error: {err}</p>
-            )}
-            {/*{!loading && !err && !q && (
+            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+              {loading && <p className="products-msg">Cargando…</p>}
+              {!loading && err && (
+                <p className="products-msg products-msg--error">Error: {err}</p>
+              )}
+              {/*{!loading && !err && !q && (
               <button type="button" onClick={remezclar} className="btn btn-light">
                 Actualizar
               </button>
             )}*/}
-          </div>
+            </div>
 
-          {!loading && !err && items.length === 0 && (
-            <p className="products-msg">No se encontraron productos.</p>
-          )}
+            {!loading && !err && items.length === 0 && (
+              <p className="products-msg">No se encontraron productos.</p>
+            )}
+          </div>
         </div>
       </section>
 
-     {/* Grid de tarjetas + banners laterales */}
-{!loading && !err && items.length > 0 && (
-  <section className="products-with-banners">
-    {/* Banner izquierdo */}
-    <aside className="side-banner side-banner--left">
-      <a href="#" aria-label="Banner izquierdo">
-        <img src="/bannerIzq.gif" alt="Promoción izquierda" />
-      </a>
-    </aside>
+      {/* Grid de tarjetas + banners laterales */}
+      {!loading && !err && items.length > 0 && (
+        <section class="products-with-banners py-4">
+          <div class="container">
+            <div class="row">
 
-    {/* Contenido central (tu grid existente) */}
-    <section className="products-container">
-      <div className="products-grid">
-        {items.map((p) => (
-          <div key={p.id} className="products-grid__cell">
-            <ProductCard product={p} />
+
+              <div class="col-12 col-md-2 d-none d-lg-block">
+                <aside class="side-banner side-banner--left text-center">
+                  <a href="#" aria-label="Banner izquierdo">
+                    <img src="/bannerIzq.gif" alt="Promoción izquierda" class="img-fluid" />
+                  </a>product-card 
+                </aside>
+              </div>
+
+
+              <div class="col-12 col-lg-8">
+                <section class="products-container">
+                  <div className="row g-3">
+                    {items.map((p) => (
+                      <div key={p.id} className="col-12 col-sm-6 col-md-4 col-lg-6 col-xxl-4">
+                        <div className="products-grid__cell">
+                          <ProductCard product={p} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                </section>
+              </div>
+
+
+              <div class="col-12 col-md-2 d-none d-lg-block">
+                <aside class="side-banner side-banner--right text-center">
+                  <a href="#" aria-label="Banner derecho">
+                    <img src="/bannerDer2.gif" alt="Promoción derecha" class="img-fluid" />
+                  </a>
+                </aside>
+              </div>
+
+            </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </section>
 
-    {/* Banner derecho */}
-    <aside className="side-banner side-banner--right">
-      <a href="#" aria-label="Banner derecho">
-        <img src="/bannerDer2.gif" alt="Promoción derecha" />
-      </a>
-    </aside>
-  </section>
-)}
+      )}
 
 
       {/* Secciones (igual) */}
-      <section className="sections">
-        <div className="sections__bar">
-          <h2> SECCIONES</h2>
-        </div>
-
-        <div className="sections__grid">
-          <article className="card c1">
-            <div className="card__inner">
-              <div className="card__num">01</div>
-              <h3 className="card__title">Nuestro proyecto</h3>
-              <p className="card__desc">Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.</p>
-              <a className="card__btn" href="/Proyecto">Ver más</a>
+      <section className="py-5 sections">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Nuestro proyecto</h5>
+                  <p className="card-text">
+                    Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.
+                  </p>
+                  <a href="/Proyecto" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
 
-          <article className="card c2">
-            <div className="card__inner">
-              <div className="card__num">02</div>
-              <h3 className="card__title">Nuestra visión</h3>
-              <p className="card__desc">Principios, transparencia de precios y el impacto que buscamos a largo plazo.</p>
-              <a className="card__btn" href="/vision">Ver más</a>
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Nuestra visión</h5>
+                  <p className="card-text">
+                    Principios, transparencia de precios y el impacto que buscamos a largo plazo.
+                  </p>
+                  <a href="/vision" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
 
-          <article className="card c3">
-            <div className="card__inner">
-              <div className="card__num">03</div>
-              <h3 className="card__title">Historial</h3>
-              <p className="card__desc">Avances del proyecto, releases, y registro de cambios importantes.</p>
-              <a className="card__btn" href="/Historial">Ver más</a>
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Historial</h5>
+                  <p className="card-text">
+                    Avances del proyecto, releases, y registro de cambios importantes.
+                  </p>
+                  <a href="/Historial" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
       </section>
-    
+
     </main>
   );
 }

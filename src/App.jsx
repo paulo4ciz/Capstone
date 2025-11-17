@@ -19,10 +19,10 @@ function App() {
     <BrowserRouter>
       <Header />
       {/* Franja informativa pegada al header */}
-      <AnnouncementBar
+      {/* <AnnouncementBar
         text="¿Te gustaría que tus productos o tu almacén se vean en nuestro sitio y asi llegar a más personas que buscan su Canasta Básica? Únete a nuestro proyecto, muy pronto contaremos con formulario de contacto."
         speed={28}
-      />
+      /> */}
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/productos" element={<Productos />} />

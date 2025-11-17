@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 
 
 
@@ -50,61 +50,71 @@ useEffect(() => {
   };
 
   return (
-    <header className="site-header">
-      <div className="site-header__inner">
-        <div className="brand">
-          <img
-            src="/hand.png"
-            alt="mano abierta"
-            width={28}
-            height={28}
-            style={{ borderRadius: 6 }}
-          />
 
-          {/* Marca principal */}
-          <Link to="/" className="brand-title">
-            ¿Dónde está la mano?
+
+    <><header className="site-header shadow-sm sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid container-xl">
+          <Link className="navbar-brand d-flex align-items-center" to="/">
+            <span>¿Dónde esta la mano?</span>
           </Link>
 
-          {/* Menú de navegación */}
-          <nav className="nav">
-            <Link to="/productos">Productos</Link>
-            <Link to="/Proyecto">Proyecto</Link>
-            <Link to="/Vision">Visión</Link>
-            <Link to="/mapa">Mapa</Link>
-          </nav>
-        </div>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
 
-        {/* Barra de búsqueda */}
-        <div className="searchbar">
-          <SearchBar compact />
-        </div>
+          <div className="collapse navbar-collapse" id="mainNavbar">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <NavLink to="/productos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Productos</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/Proyecto" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Proyecto</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/Vision" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Visión</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/mapa" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Mapa</NavLink>
+              </li>
+            </ul>
 
-        {/* Botones de auth / sesión */}
-        {!user ? (
-          <div className="auth-btns">
-            <button className="nav">
-              <Link to="/Login">Iniciar sesion</Link>
-            </button>
-            <button className="nav">
-              <Link to="/Register">Registrarse</Link>
-            </button>
+            {/* En pantallas grandes mostramos el searchbar y botones alineados a la derecha */}
+            <div className="d-flex align-items-center">
+              <div className="searchbar">
+                <SearchBar compact />
+              </div>
+
+              {!user ? (
+
+                <div className="d-flex gap-2">
+                  <Link to="/Login" className="btn-login-header">Iniciar sesión</Link>
+                  <Link to="/Register" className="btn-registro">Registrarse</Link>
+                </div>
+              ) : (
+                <div className="d-flex align-items-center gap-2">
+                  <span className="me-2 hello">Hola, {user.name || user.email}</span>
+                  <Link to="/mi-historial" className="btn btn-outline-secondary">Mi historial</Link>
+                  <button className="btn btn-outline-danger" onClick={logout}>Cerrar sesión</button>
+                </div>
+              )}
+            </div>
           </div>
-        ) : (
-          <div className="auth-user">
-            <span className="hello">Hola, {user.name || user.email}</span>
-
-            <button className="nav">
-              <Link to="/mi-historial">Mi historial</Link>
-            </button>
-
-            <button className="nav" onClick={logout}>
-              Cerrar sesión
-            </button>
-          </div>
-        )}
-
-      </div>
+        </div>
+      </nav>
+          <div className="marquee">
+     <p>¿Te gustaría que tus productos o tu almacén se vean en nuestro sitio y asi llegar a más personas que buscan su Canasta Básica? Únete a nuestro proyecto, muy pronto contaremos con formulario de contacto</p>
+    </div>
     </header>
+
+    </>
   );
 }
