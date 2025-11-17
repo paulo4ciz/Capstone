@@ -27,7 +27,7 @@ export default function SearchBar({ compact = false, stores: storesProp = "" }) 
 
   return (
    
- <div class="searchbar-1">
+ <div className="searchbar-1">
   <form onSubmit={onSubmit} className="w-full d-flex align-items-center" role="search">
     <div className="input-group">
       <span className="input-group-text">

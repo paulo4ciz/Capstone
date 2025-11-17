@@ -110,10 +110,11 @@ useEffect(() => {
           </div>
         </div>
       </nav>
-    </header>
-    <div className="marquee">
+          <div className="marquee">
      <p>¿Te gustaría que tus productos o tu almacén se vean en nuestro sitio y asi llegar a más personas que buscan su Canasta Básica? Únete a nuestro proyecto, muy pronto contaremos con formulario de contacto</p>
     </div>
+    </header>
+
     </>
   );
 }

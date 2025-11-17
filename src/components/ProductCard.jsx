@@ -115,91 +115,105 @@ export default function ProductCard(props) {
 
   return (
     <a
-      className={`product-card ${className}`}
-      href={productUrl || "#"}
-      target="_blank"
-      rel="noreferrer"
-      title={title}
-      aria-label={title}
-    >
-      <div className="product-card__img">
-        {imageUrl && !imgBroken ? (
-          <img
-            src={imageUrl}
-            alt={title}
-            loading="lazy"
-            onError={() => setImgBroken(true)}
-          />
-        ) : (
-          <div className="product-card__img--placeholder">Sin imagen</div>
-        )}
+  className={`text-decoration-none d-block border rounded-3  h-100 ${className}`}
+  href={productUrl || "#"}
+  target="_blank"
+  rel="noreferrer"
+  title={title}
+  aria-label={title}
+>
+  {/* Imagen */}
+  <div className="header-card">
+    {imageUrl && !imgBroken ? (
+      <img
+        src={imageUrl}
+        alt={title}
+        className="img-fluid rounded"
+        loading="lazy"
+        onError={() => setImgBroken(true)}
+        style={{ maxHeight: "180px", objectFit: "contain" }}
+      />
+    ) : (
+      <div className="bg-light border rounded d-flex align-items-center justify-content-center" style={{ height: "180px" }}>
+        Sin imagen
       </div>
+    )}
+  </div>
 
-      <div className="product-card__body">
-        {badge ? <span className="product-card__chip">{badge}</span> : null}
+  {/* Body */}
+  <div className="d-flex flex-column p-3">
 
-        <div className="product-card__priceRow">
-          <span className="product-card__price">{fmtCLP(displayPrice)}</span>
-          {variant !== "history" && previousPrice ? (
-            <span className="product-card__pricePrev">
-              {fmtCLP(previousPrice)}
-            </span>
-          ) : null}
-        </div>
+    {/* Badge */}
+    {badge && (
+      <span className="badge bg-warning text-dark mb-2">{badge}</span>
+    )}
 
-        <div className="product-card__title">{title}</div>
-        {pricePerSubUnit ? (
-          <div className="product-card__unit">{fmtCLP(pricePerSubUnit)}/un</div>
-        ) : null}
-        {store ? <div className="product-card__store">{store}</div> : null}
+    {/* Precios */}
+    <div className="d-flex align-items-baseline gap-2 mb-2">
+      <span className="fw-bold fs-5 text-dark">{fmtCLP(displayPrice)}</span>
 
-        {variant === "history" && (
-          <small className="product-card__lastSeen">
-            Visto por última vez:{" "}
-            {lastSeenAt ? new Date(lastSeenAt).toLocaleString("es-CL") : "-"}
-          </small>
-        )}
+      {variant !== "history" && previousPrice && (
+        <span className="text-decoration-line-through text-muted small">
+          {fmtCLP(previousPrice)}
+        </span>
+      )}
+    </div>
 
-        <div className="product-card__actions">
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={openProduct}
-          >
-            Ver
-          </button>
+    {/* Título */}
+    <div className="fw-semibold text-dark mb-1 title-product">
+      {title}
+    </div>
 
-          {showAddButton && (
-            <button
-              type="button"
-              onClick={addToHistory}
-              disabled={loading || added}
-              className="btn btn-dark"
-            >
-              {added ? "Agregado" : loading ? "Agregando…" : "Agregar"}
-            </button>
-          )}
-
-          {!!onDelete && (
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={handleDelete}
-            >
-              Eliminar
-            </button>
-          )}
-
-          {err ? (
-            <small
-              className="product-card__msg-error"
-              style={{ color: "crimson", display: "block" }}
-            >
-              {err}
-            </small>
-          ) : null}
-        </div>
+    {/* Precio por unidad */}
+    {pricePerSubUnit && (
+      <div className="text-muted small mb-2">
+        {fmtCLP(pricePerSubUnit)}/un
       </div>
-    </a>
+    )}
+
+    {/* Store */}
+    {store && (
+      <div className=" small mb-3 store">{store}</div>
+    )}
+
+    {/* Última vez visto */}
+    {variant === "history" && (
+      <small className="text-muted mb-2">
+        Visto por última vez:{" "}
+        {lastSeenAt ? new Date(lastSeenAt).toLocaleString("es-CL") : "-"}
+      </small>
+    )}
+
+    {/* Botones */}
+    <div className="mt-auto d-flex flex-wrap gap-2">
+
+      <button type="button" className="btn btn-view" onClick={openProduct}>
+        Ver
+      </button>
+
+      {showAddButton && (
+        <button
+          type="button"
+          onClick={addToHistory}
+          disabled={loading || added}
+          className="btn btn-outline-dark mt-auto btn-add"
+        >
+          {added ? "Agregado" : loading ? "Agregando…" : "Agregar"}
+        </button>
+      )}
+
+      {!!onDelete && (
+        <button type="button" className="btn btn-danger" onClick={handleDelete}>
+          Eliminar
+        </button>
+      )}
+    </div>
+
+    {err && (
+      <small className="text-danger mt-2 d-block">{err}</small>
+    )}
+  </div>
+</a>
+
   );
 }

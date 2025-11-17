@@ -267,10 +267,6 @@ section.searchbar-hero {
   }
 }
 
-section.sections {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
 
 
 footer {
@@ -618,5 +614,127 @@ footer {
   .searchbar {
     margin-right: 1rem;
     display: flex;
+  }
+}
+
+/* VISION */
+
+
+.vision-cta,
+.vision-principios {
+  background-color: #788d24;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.15);
+}
+
+ol.principios {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 720px;
+}
+
+ol.principios li {
+  position: relative;
+  counter-increment: item;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem 1.25rem 3.75rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  backdrop-filter: blur(4px);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  font-weight: 600;
+}
+
+ol.principios li::before {
+  display: none;
+}
+
+ol.principios li:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.vision-hero {
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.35),
+      /* antes era 0.5 */
+      rgba(0, 0, 0, 0.35)),
+    url('../public/bannerv.png') no-repeat center right;
+  background-size: cover;
+}
+
+.proyect-hero {
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.35),
+      /* antes era 0.5 */
+      rgba(0, 0, 0, 0.35)),
+    url('../public/banner-proyecto.png') no-repeat center right;
+  background-size: cover;
+
+}
+
+
+/* CARD PRODUCTOS */
+
+.products-grid__cell .title-product {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 50px;
+}
+
+.btn-add {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.btn-view {
+  background-color: #788d24;
+  display: inline-block;
+  color: #181818;
+  border: 1px solid #181818;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-view:hover {
+  background-color: #788d24;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  border: 1px solid #181818;
+}
+
+.btn-add:hover {
+  transform: translateY(-1px);
+}
+
+.store {
+  color: #181818;
+  text-decoration: underline;
+}
+
+.header-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid #dee2e6;
+
+  img {
+    width: 100%;
   }
 }

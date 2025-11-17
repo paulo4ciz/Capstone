@@ -64,86 +64,119 @@ export default function Productos() {
       </section>
 
       {/* Título + mensajes */}
-      <section className="products-search">
-        <div className="products-search__inner">
-          <h1 className="products-search__title">
-            {q
-              ? `Resultados para "${q}" — fuente: ${stores}`
-              : "Mira estos productos de la canasta básica"}
-          </h1>
+<section className="products-search py-4">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-12">
 
-          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            {loading && <p className="products-msg">Cargando…</p>}
-            {!loading && err && (
-              <p className="products-msg products-msg--error">Error: {err}</p>
-            )}
-           {/*  {!loading && !err && !q && (
-              <button type="button" onClick={remezclar} className="btn btn-light">
-                Actualizar
-              </button>
-            )}*/}
-          </div>
+        {/* Título */}
+        <h1 className="text-center my-3">
+          {q
+            ? `Resultados para "${q}" — fuente: ${stores}`
+            : "Mira estos productos de la canasta básica"}
+        </h1>
 
-          {!loading && !err && items.length === 0 && (
-            <p className="products-msg">No se encontraron productos.</p>
+        {/* Mensajes de estado */}
+        <div className="d-flex align-items-center gap-3 mb-3">
+          {loading && <p className="text-muted m-0">Cargando…</p>}
+
+          {!loading && err && (
+            <p className="text-danger m-0">Error: {err}</p>
           )}
+
+          {/* Si necesitas el botón volver a activarlo */}
+          {/* 
+          {!loading && !err && !q && (
+            <button
+              type="button"
+              onClick={remezclar}
+              className="btn btn-light"
+            >
+              Actualizar
+            </button>
+          )} 
+          */}
         </div>
-      </section>
+
+        {/* No hay resultados */}
+        {!loading && !err && items.length === 0 && (
+          <p className="text-muted">No se encontraron productos.</p>
+        )}
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Grid de tarjetas */}
       {!loading && !err && items.length > 0 && (
-        <section className="products-container">
-          <div className="products-grid">
-            {items.map((p) => (
-              <div key={p.id} className="products-grid__cell">
-                <ProductCard {...p} />
-              </div>
-            ))}
+        <section className="products-container my-4">
+          <div className="container">
+            <div className="row g-3">
+              {items.map((p) => (
+                <div key={p.id} className="col-6 col-md-4 col-lg-3">
+                  <ProductCard {...p} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
+
       )}
-       <section className="sections">
+      <section className="py-5 sections">
         <div className="container">
           <div className="row">
-           <div className="col-12 col-xl-4 my-3">
-            <div class="card">
-             <div class="card-header">
-              ¿Dónde esta la mano?
-             </div>
-             <div class="card-body">
-              <h5 class="card-title">Nuestro proyecto</h5>
-              <p class="card-text">Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.</p>
-              <a href="/Proyecto" class="btn-card">Ver más</a>
-             </div>
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Nuestro proyecto</h5>
+                  <p className="card-text">
+                    Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.
+                  </p>
+                  <a href="/Proyecto" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             </div>
-           </div>
 
-            
-           <div className="col-12 col-xl-4 my-3">
-            <div class="card">
-             <div class="card-header">
-              ¿Dónde esta la mano?
-             </div>
-             <div class="card-body">
-              <h5 class="card-title">Nuestra visión</h5>
-              <p class="card-text">Principios, transparencia de precios y el impacto que buscamos a largo plazo.</p>
-              <a href="/vision" class="btn-card">Ver más</a>
-             </div>
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Nuestra visión</h5>
+                  <p className="card-text">
+                    Principios, transparencia de precios y el impacto que buscamos a largo plazo.
+                  </p>
+                  <a href="/vision" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             </div>
-           </div>
 
-           <div className="col-12 col-xl-4 my-3">
-            <div class="card">
-             <div class="card-header">
-              ¿Dónde esta la mano?
-             </div>
-             <div class="card-body">
-              <h5 class="card-title">Historial</h5>
-              <p class="card-text">Avances del proyecto, releases, y registro de cambios importantes.</p>
-              <a href="/Historial" class="btn-card">Ver más</a>
-             </div>
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Historial</h5>
+                  <p className="card-text">
+                    Avances del proyecto, releases, y registro de cambios importantes.
+                  </p>
+                  <a href="/Historial" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             </div>
-           </div>
           </div>
         </div>
       </section>
