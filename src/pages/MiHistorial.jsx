@@ -98,7 +98,7 @@ export default function MiHistorial() {
             }}
           >
             <span className="history-summary__label" style={{ fontSize: 14, opacity: 0.85 }}>
-              Tienes un total de: 
+              Tienes un total de:
             </span>
             <span
               className="history-summary__amount"
@@ -115,25 +115,31 @@ export default function MiHistorial() {
 
       {/* Grilla */}
       {!loading && !err && items.length > 0 && (
-        <section className="products-container">
-          <div className="products-grid">
-            {items.map((p) => {
-              const addedPrice = getAddedPrice(p);
-              return (
-                <div key={p.id} className="products-grid__cell">
-                  <ProductCard
-                    product={p}
-                    variant="history"
-                    addedPrice={addedPrice}
-                    lastSeenAt={p.lastSeenAt}
-                    showAddButton={false}
-                    onDelete={removeItem}
-                  />
-                </div>
-              );
-            })}
+        <section className="products-container my-4">
+          <div className="container">
+            <div className="row g-3">
+
+              {items.map((p) => {
+                const addedPrice = getAddedPrice(p);
+
+                return (
+                  <div key={p.id} className="col-12 col-sm-6 col-md-4 col-lg-6 col-xxl-4">
+                    <ProductCard
+                      product={p}
+                      variant="history"
+                      addedPrice={addedPrice}
+                      lastSeenAt={p.lastSeenAt}
+                      showAddButton={false}
+                      onDelete={removeItem}
+                    />
+                  </div>
+                );
+              })}
+
+            </div>
           </div>
         </section>
+
       )}
     </main>
   );
