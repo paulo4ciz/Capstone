@@ -46,7 +46,7 @@ export default function TiendaPage() {
         const cache = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
 
         if (cache && Date.now() - cache.timestamp < CACHE_TTL) {
-          console.log("📦 Cargando productos desde CACHE:", tienda.nombre);
+          console.log("Cargando productos desde CACHE:", tienda.nombre);
           setProductos(cache.items);
           setLoadingProductos(false);
           return;

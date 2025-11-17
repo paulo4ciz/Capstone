@@ -57,7 +57,7 @@ export default function MapaTiendas() {
   const mapRef = useRef(null);
   const defaultCenter = [-33.4489, -70.6693]; // Santiago Centro
 
-  // ======= CARGAR TIENDAS =======
+  // Tiendas public json
   useEffect(() => {
     fetch("/tiendas.json")
       .then((res) => res.json())
@@ -65,7 +65,7 @@ export default function MapaTiendas() {
       .finally(() => setLoadingTiendas(false));
   }, []);
 
-  // ======= GEOLOCALIZACION =======
+  // Activar localizacion //
   const activarGeolocalizacion = () => {
     setUsarGeolocalizacion(true);
     setPermisoPregunta(false);
@@ -84,7 +84,7 @@ export default function MapaTiendas() {
     setUserPos(defaultCenter);
   };
 
-  // ======= CARGAR DIRECCIONES RECIENTES =======
+  // direccion reciente cache //
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("recentAddresses") || "[]");
     setRecentAddresses(stored);
@@ -96,8 +96,7 @@ export default function MapaTiendas() {
     setRecentAddresses(updated);
     localStorage.setItem("recentAddresses", JSON.stringify(updated));
   }
-
-  // ======= BUSCADOR MANUAL =======
+  // buscador manual //
   useEffect(() => {
     if (usarGeolocalizacion) return;
 
@@ -146,7 +145,6 @@ export default function MapaTiendas() {
     setManualAddress(nombre);
     setSuggestions([]);
     guardarDireccionReciente({ display_name: nombre, lat, lon });
-    // Zoom amplio ~10 cuadras
   }
 
   if (loadingTiendas) return <p>Cargando mapa…</p>;
