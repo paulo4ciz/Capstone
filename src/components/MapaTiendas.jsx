@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+//  FIX ICONOS LEAFLET 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -20,44 +21,78 @@ L.Icon.Default.mergeOptions({
     "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
+//  ICONO USUARIO 
 const userIcon = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
+  iconUrl:"/public/UserMap.png",
+  iconSize: [41, 41],
+  iconAnchor: [20, 41],
 });
 
-// Componente para mover el mapa cuando cambia userPos
+//  COMPONENTE PARA MOVER EL MAPA 
 function MapMover({ userPos, zoom }) {
   const map = useMap();
   useEffect(() => {
-    if (userPos && map) {
+    if (userPos) {
       map.flyTo(userPos, zoom, { duration: 1.2 });
     }
   }, [userPos, zoom, map]);
   return null;
 }
 
+//  CONTROL CENTRAR (BOTTOM-RIGHT) 
+function BotonCentrar({ userPos }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!map) return;
+
+    const customControl = L.control({ position: "bottomright" });
+
+    customControl.onAdd = () => {
+      const btn = L.DomUtil.create("button", "btn-centrar-mapa");
+      btn.innerHTML = "Centrar";
+
+      btn.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (userPos) map.flyTo(userPos, 16, { duration: 1.2 });
+      };
+
+      return btn;
+    };
+
+    customControl.addTo(map);
+
+    return () => {
+      map.removeControl(customControl);
+    };
+  }, [map, userPos]);
+
+  return null;
+}
+
 export default function MapaTiendas() {
   const navigate = useNavigate();
+  const mapRef = useRef(null);
+
+  //  ESTADOS 
   const [tiendas, setTiendas] = useState([]);
   const [loadingTiendas, setLoadingTiendas] = useState(true);
+
   const [userPos, setUserPos] = useState(null);
+  const [direccionConfirmada, setDireccionConfirmada] = useState("");
+  const [manualAddress, setManualAddress] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+
+  const [recentAddresses, setRecentAddresses] = useState([]);
+  const [showRecent, setShowRecent] = useState(false);
 
   const [permisoPregunta, setPermisoPregunta] = useState(true);
   const [usarGeolocalizacion, setUsarGeolocalizacion] = useState(false);
 
-  const [manualAddress, setManualAddress] = useState("");
-  const [direccionTexto, setDireccionTexto] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
-  const [recentAddresses, setRecentAddresses] = useState([]);
+  const defaultCenter = [-33.4489, -70.6693];
 
-  const mapRef = useRef(null);
-  const defaultCenter = [-33.4489, -70.6693]; // Santiago Centro
-
-  // Tiendas public json
+  //  CARGA TIENDAS 
   useEffect(() => {
     fetch("/tiendas.json")
       .then((res) => res.json())
@@ -65,43 +100,72 @@ export default function MapaTiendas() {
       .finally(() => setLoadingTiendas(false));
   }, []);
 
-  // Activar localizacion //
-  const activarGeolocalizacion = () => {
-    setUsarGeolocalizacion(true);
-    setPermisoPregunta(false);
-    if (!navigator.geolocation) {
-      alert("Tu navegador no soporta geolocalización.");
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      (pos) => setUserPos([pos.coords.latitude, pos.coords.longitude]),
-      () => alert("No se pudo acceder a la ubicación.")
-    );
-  };
-  const rechazarGeolocalizacion = () => {
-    setUsarGeolocalizacion(false);
-    setPermisoPregunta(false);
-    setUserPos(defaultCenter);
-  };
-
-  // direccion reciente cache //
+  //  CARGA DIRECCIONES RECIENTES 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("recentAddresses") || "[]");
     setRecentAddresses(stored);
+
+    const last = stored[0];
+    if (last) {
+      setDireccionConfirmada(last.display_name);
+      setManualAddress(last.display_name);
+      setUserPos([parseFloat(last.lat), parseFloat(last.lon)]);
+    } else {
+      setUserPos(defaultCenter);
+    }
   }, []);
 
+  //  GUARDAR DIRECCIÓN 
   function guardarDireccionReciente(direccion) {
-    const updated = [direccion, ...recentAddresses.filter(d => d.lat !== direccion.lat || d.lon !== direccion.lon)];
+    const updated = [
+      direccion,
+      ...recentAddresses.filter((d) => d.display_name !== direccion.display_name),
+    ];
     if (updated.length > 5) updated.splice(5);
     setRecentAddresses(updated);
     localStorage.setItem("recentAddresses", JSON.stringify(updated));
   }
-  // buscador manual //
+
+  //  GEOLOCALIZACIÓN 
+  const activarGeolocalizacion = () => {
+    setUsarGeolocalizacion(true);
+    setPermisoPregunta(false);
+
+    if (!navigator.geolocation) {
+      alert("Tu navegador no soporta geolocalización.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const coords = [pos.coords.latitude, pos.coords.longitude];
+        setUserPos(coords);
+        setDireccionConfirmada("Mi ubicación actual");
+        guardarDireccionReciente({
+          display_name: "Mi ubicación actual",
+          lat: coords[0],
+          lon: coords[1],
+        });
+      },
+      () => alert("No se pudo acceder a la ubicación.")
+    );
+  };
+
+  const rechazarGeolocalizacion = () => {
+    setUsarGeolocalizacion(false);
+    setPermisoPregunta(false);
+  };
+
   useEffect(() => {
     if (usarGeolocalizacion) return;
 
-    if (manualAddress.trim().length < 1) {
-      setSuggestions(recentAddresses);
+    if (direccionConfirmada && manualAddress === direccionConfirmada) {
+      setSuggestions([]);
+      return;
+    }
+
+    if (!manualAddress.trim()) {
+      setSuggestions([]);
       return;
     }
 
@@ -113,45 +177,47 @@ export default function MapaTiendas() {
         .then((data) => setSuggestions(data.slice(0, 5)))
         .catch(() => setSuggestions([]));
     }, 300);
+
     return () => clearTimeout(delay);
-  }, [manualAddress, usarGeolocalizacion, recentAddresses]);
+  }, [manualAddress, usarGeolocalizacion, direccionConfirmada]);
 
+  useEffect(() => {
+    const handler = (e) => {
+      if (
+        !e.target.closest(".barra-direccion-inner") &&
+        !e.target.closest(".lista-sugerencias")
+      ) {
+        setSuggestions([]);
+        setShowRecent(false);
+      }
+    };
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, []);
+
+  //  SELECCIONAR DIRECCIÓN 
   function seleccionarDireccion(s) {
-    if (!s) return;
-    let lat = parseFloat(s.lat);
-    let lon = parseFloat(s.lon);
-    let nombre = s.display_name || manualAddress;
+    const lat = parseFloat(s.lat);
+    const lon = parseFloat(s.lon);
 
-    if (!lat || !lon) {
-      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${nombre}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data[0]) {
-            lat = parseFloat(data[0].lat);
-            lon = parseFloat(data[0].lon);
-            flyToSelected(lat, lon, nombre);
-          } else {
-            alert("No se pudo encontrar la ubicación");
-          }
-        });
-    } else {
-      flyToSelected(lat, lon, nombre);
-    }
-  }
-
-  function flyToSelected(lat, lon, nombre) {
     setUserPos([lat, lon]);
-    setDireccionTexto(nombre);
-    setManualAddress(nombre);
+    setDireccionConfirmada(s.display_name);
+    setManualAddress(s.display_name);
+
     setSuggestions([]);
-    guardarDireccionReciente({ display_name: nombre, lat, lon });
+    setShowRecent(false);
+
+    guardarDireccionReciente({
+      display_name: s.display_name,
+      lat,
+      lon,
+    });
   }
 
   if (loadingTiendas) return <p>Cargando mapa…</p>;
 
   return (
     <div className="mapa-container">
-      {/* MODAL UBICACION */}
       {permisoPregunta && (
         <div className="ubicacion-modal">
           <div className="ubicacion-modal-content">
@@ -169,17 +235,28 @@ export default function MapaTiendas() {
         </div>
       )}
 
-      {/* BARRA DIRECCION MANUAL */}
+      {/* BARRA DIRECCIÓN */}
       {!usarGeolocalizacion && !permisoPregunta && (
         <div className="barra-direccion">
           <div className="barra-direccion-inner">
             <input
               type="text"
               placeholder="Ingresa tu dirección…"
-              value={manualAddress}
-              onChange={(e) => setManualAddress(e.target.value)}
               className="input-direccion-barra"
+              value={manualAddress}
+              onChange={(e) => {
+                setManualAddress(e.target.value);
+                setDireccionConfirmada("");
+              }}
             />
+
+            <button
+              className="btn-recientes"
+              onClick={() => setShowRecent((prev) => !prev)}
+            >
+              ▾
+            </button>
+
             <button
               className="btn-confirmar-direccion"
               onClick={() => {
@@ -189,6 +266,7 @@ export default function MapaTiendas() {
               Confirmar
             </button>
           </div>
+
           {suggestions.length > 0 && (
             <ul className="lista-sugerencias">
               {suggestions.map((s, idx) => (
@@ -198,13 +276,44 @@ export default function MapaTiendas() {
               ))}
             </ul>
           )}
-        </div>
-      )}
 
-      {/* DIRECCION ACTUAL */}
-      {direccionTexto && (
-        <div className="direccion-actual">
-          {direccionTexto}
+          {showRecent && recentAddresses.length > 0 && (
+            <ul className="lista-sugerencias">
+              {recentAddresses.map((r, i) => (
+                <li
+                  key={i}
+                  onClick={() =>
+                    seleccionarDireccion({
+                      display_name: r.display_name,
+                      lat: r.lat,
+                      lon: r.lon,
+                    })
+                  }
+                >
+                  {r.display_name}
+
+                  <span
+                    style={{
+                      float: "right",
+                      color: "red",
+                      cursor: "pointer",
+                      fontWeight: "bold",
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const updated = recentAddresses.filter(
+                        (x) => x.display_name !== r.display_name
+                      );
+                      setRecentAddresses(updated);
+                      localStorage.setItem("recentAddresses", JSON.stringify(updated));
+                    }}
+                  >
+                    X
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
 
@@ -216,13 +325,16 @@ export default function MapaTiendas() {
         className="leaflet-map"
       >
         <TileLayer
-          attribution='© OpenStreetMap contributors'
+          attribution="© OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <MapMover userPos={userPos} zoom={16.5} />
+        <MapMover userPos={userPos} zoom={16} />
 
-        {userPos && <Marker position={userPos} icon={userIcon}></Marker>}
+        {/* BOTÓN CENTRAR (CONTROL LEAFLET) */}
+        <BotonCentrar userPos={userPos} />
+
+        {userPos && <Marker position={userPos} icon={userIcon} />}
 
         {tiendas.map((t) => (
           <Marker key={t.id} position={[t.lat, t.lng]}>
@@ -233,7 +345,7 @@ export default function MapaTiendas() {
               <br />
               <button
                 className="btn-ver-precios"
-                onClick={() => navigate(`/tienda/${t.id}?stores=acuenta`)}
+                onClick={() => navigate(`/tienda/${t.id}`)}
               >
                 Ver productos y precios
               </button>
