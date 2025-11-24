@@ -4,97 +4,121 @@
     "nombre": "Lider - Av. Pajaritos",
     "direccion": "Av. Pajaritos 2686, Maipú",
     "lat": -33.50422,
-    "lng": -70.76865
+    "lng": -70.76865,
+    "tipo": "archivo",
+    "archivo": "lider_av_pajaritos.json"
   },
   {
     "id": 2,
     "nombre": "Santa Isabel - Pajaritos",
     "direccion": "Av. Pajaritos 1902, Maipú",
     "lat": -33.49755,
-    "lng": -70.76166
+    "lng": -70.76166,
+    "tipo": "archivo",
+    "archivo": "santa_isabel_pajaritos.json"
   },
   {
     "id": 3,
     "nombre": "Unimarc - 5 de Abril",
     "direccion": "Av. 5 de Abril 412, Maipú",
     "lat": -33.51081,
-    "lng": -70.76211
+    "lng": -70.76211,
+    "tipo": "archivo",
+    "archivo": "unimarc_5_de_abril.json"
   },
   {
     "id": 4,
     "nombre": "Tottus - Plaza de Maipú",
     "direccion": "Av. Pajaritos 1790, Maipú",
     "lat": -33.4965,
-    "lng": -70.7605
+    "lng": -70.7605,
+    "tipo": "archivo",
+    "archivo": "tottus_plaza_de_maipu.json"
   },
   {
     "id": 5,
     "nombre": "Acuenta - Av. Portales",
     "direccion": "Av. Portales 2370, Maipú",
     "lat": -33.5186,
-    "lng": -70.7979
+    "lng": -70.7979,
+    "tipo": "acuenta"
   },
   {
     "id": 6,
     "nombre": "Panadería San Manuel",
     "direccion": "Av. Portales 799, Maipú",
     "lat": -33.51268,
-    "lng": -70.77253
+    "lng": -70.77253,
+    "tipo": "archivo",
+    "archivo": "panaderia_san_manuel.json"
   },
   {
     "id": 7,
     "nombre": "Supermercado El Sol",
     "direccion": "Av. 5 de Abril 131, Maipú",
     "lat": -33.5097,
-    "lng": -70.7589
+    "lng": -70.7589,
+    "tipo": "archivo",
+    "archivo": "supermercado_el_sol.json"
   },
   {
     "id": 8,
     "nombre": "Alvi Maipú",
     "direccion": "Av. Pajaritos 4500, Maipú",
     "lat": -33.5222,
-    "lng": -70.7876
+    "lng": -70.7876,
+    "tipo": "archivo",
+    "archivo": "alvi_maipu.json"
   },
   {
     "id": 9,
-    "nombre": "Minimarket El Esfuerzo",
-    "direccion": "Monumento 1871, Maipú",
-    "lat": -33.51913,
-    "lng": -70.76483
+    "nombre": "Central Mayorista - Maipú",
+    "direccion": "Av. 5 de Abril 4000, Maipú",
+    "lat": -33.5181,
+    "lng": -70.7804,
+    "tipo": "centralmayorista"
   },
   {
     "id": 10,
-    "nombre": "Panadería La Espiga de Oro",
-    "direccion": "Av. 5 de Abril 301, Maipú",
-    "lat": -33.5103,
-    "lng": -70.7607
+    "nombre": "Minimarket El Esfuerzo",
+    "direccion": "Monumento 1871, Maipú",
+    "lat": -33.51913,
+    "lng": -70.76483,
+    "tipo": "archivo",
+    "archivo": "minimarket_el_esfuerzo.json"
   },
   {
     "id": 11,
-    "nombre": "Lider Express - Monumento",
-    "direccion": "Monumento 2060, Maipú",
-    "lat": -33.5202,
-    "lng": -70.7671
+    "nombre": "Panadería La Espiga de Oro",
+    "direccion": "Av. 5 de Abril 301, Maipú",
+    "lat": -33.5103,
+    "lng": -70.7607,
+    "tipo": "archivo",
+    "archivo": "Panadería_la_espiga_de_oro.json" 
   },
   {
     "id": 12,
     "nombre": "Acuenta - Tres Poniente",
     "direccion": "Av. Tres Poniente 100, Maipú",
     "lat": -33.5117,
-    "lng": -70.7958
+    "lng": -70.7958,
+    "tipo": "acuenta"
   },
   {
     "id": 13,
     "nombre": "Minimarket Donde Lucho",
     "direccion": "Chacabuco 336, Maipú",
     "lat": -33.5104,
-    "lng": -70.7538
+    "lng": -70.7538,
+    "tipo": "archivo",
+    "archivo": "minimarket_donde_lucho.json" 
   },
   {
     "id": 14,
     "nombre": "Santa Isabel - Av. Central",
     "direccion": "Av. Central 730, Maipú",
     "lat": -33.4913,
-    "lng": -70.7699
+    "lng": -70.7699,
+    "tipo": "santaisabel"
   }
 ]
