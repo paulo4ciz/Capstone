@@ -13,20 +13,20 @@ export default function TiendaPage() {
   // Categorías filtros
   const CATEGORIAS_GRUPADAS = {
     Lacteos: ["leche", "yoghurt", "mantequilla", "queso", "yogurt", "nata", "crema pastelera"],
-    Legumbres: ["arroz", "fideos", "arvejas", "porotos","poroto", "lentejas", "garbanzos"],
-    Conservas: ["atun","atún", "mermelada", "aceitunas","aceituna", "pickles", "chucrut","pepinillos"],
+    Legumbres: ["arroz", "fideos", "arvejas", "porotos", "poroto", "lentejas", "garbanzos"],
+    Conservas: ["atun", "atún", "mermelada", "aceitunas", "aceituna", "pickles", "chucrut", "pepinillos"],
     Pastas: ["spaguetti", "pasta", "anellini", "tallarín", "prepizza"],
     Bebidas: ["cafe", "café", "bebida", "café instantáneo", "café molido"],
     Infusiones: ["té", "té verde", "té negro", "té ceylán", "té manzanilla", "té ocho hierbas", "té mystic", "té emblem", "té polvo"],
-    Panaderia: ["pan","molde integral", "huevos","huevo", "sopaipillas", "queque", "donut", "alfajor", "magdalena", "berlín", "medialuna", "muffin"],
+    Panaderia: ["pan", "molde integral", "huevos", "huevo", "sopaipillas", "queque", "donut", "alfajor", "magdalena", "berlín", "medialuna", "muffin"],
     Snacks: ["snack", "cerealbar", "papas fritas", "chips", "barra de proteína", "chocolate", "dulce"],
-    Aceites_y_Azucar: ["aceite", "azucar","Azúcar", "sal", "chancaca", "stevia"],
-    Carnes: ["pollo", "carne", "vacuno","carnicero", "cerdo", "lomo", "costillar", "chuleta", "posta", "medallón", "pulpa", "salchicha"],
-    Embutidos: ["jamon", "salame", "paté", "mortadela", "longaniza", "jamón","costilla","chuletitas","tocino"],
-    Aderezos: ["salsas","salsa", "mayonesa", "ketchup", "aderezo", "mostaza"],
-    Comida_Preparada: ["empanada","Empanadas", "torta", "kuchen", "pastel", "pie", "brazo de reina"],
+    Aceites_y_Azucar: ["aceite", "azucar", "Azúcar", "sal", "chancaca", "stevia"],
+    Carnes: ["pollo", "carne", "vacuno", "carnicero", "cerdo", "lomo", "costillar", "chuleta", "posta", "medallón", "pulpa", "salchicha"],
+    Embutidos: ["jamon", "salame", "paté", "mortadela", "longaniza", "jamón", "costilla", "chuletitas", "tocino"],
+    Aderezos: ["salsas", "salsa", "mayonesa", "ketchup", "aderezo", "mostaza"],
+    Comida_Preparada: ["empanada", "Empanadas", "torta", "kuchen", "pastel", "pie", "brazo de reina"],
     Pasteleria: ["pasteleria", "croissant", "helado"],
-    Cereales: ["cereal"],  
+    Cereales: ["cereal", "granola", "cebadilla"],
     Abarrotes: ["harina", "manteca", "margarina", "chocolate en polvo", "azúcar rubia", "azúcar blanca"]
   };
 
@@ -95,7 +95,7 @@ export default function TiendaPage() {
           setLoadingProductos(false);
           return;
         }
-      } catch {}
+      } catch { }
 
       let productosFinales = [];
 
@@ -109,7 +109,7 @@ export default function TiendaPage() {
               .then(data => {
                 if (Array.isArray(data)) acumulado.push(...data);
               })
-              .catch(() => {})
+              .catch(() => { })
           );
           await Promise.all(fetches);
           productosFinales = Object.values(
@@ -132,7 +132,7 @@ export default function TiendaPage() {
           CACHE_KEY,
           JSON.stringify({ timestamp: Date.now(), items: productosFinales })
         );
-      } catch {}
+      } catch { }
 
       setProductos(productosFinales);
       setLoadingProductos(false);
