@@ -23,7 +23,7 @@ L.Icon.Default.mergeOptions({
 
 // ICONO USUARIO 
 const userIcon = new L.Icon({
-  iconUrl: "/UserMap.png",
+  iconUrl: "../../public/UserMap.png",
   iconSize: [41, 41],
   iconAnchor: [20, 41],
 });

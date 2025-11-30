@@ -1,9 +1,21 @@
 // src/pages/MapaPage.jsx
 import React from 'react';
-import MapaTiendas from '../components/MapaTiendas'; // Importa el componente del mapa
-import '../styles.css'; // O tu archivo CSS principal
+import MapaTiendas from '../components/MapaTiendas';
+import '../styles.css';
+import ScrollToTopButton from '../components/ScrollToTopButton';
+import Loader from '../components/Loader';
+import { useEffect, useState } from 'react';
+
 
 export default function MapaPage() {
+  const [mapaCargado, setMapaCargado] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMapaCargado(false);
+    }, 500);
+  }, []);
+
   return (
     <main className="page-mapa" style={{ padding: '20px' }}>
       <section className="maps-hero">
@@ -20,8 +32,9 @@ export default function MapaPage() {
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>
       </h1>
       <section>
-        <MapaTiendas /> {/* Renderiza el componente del mapa aquí */}
+        {mapaCargado ? <Loader /> : <MapaTiendas />}
       </section>
+      <ScrollToTopButton targetId="tienda-info" />
 
       <section className="py-5 sections">
         <div className="container">

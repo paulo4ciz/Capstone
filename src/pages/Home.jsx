@@ -108,7 +108,7 @@ export default function Productos() {
                 <aside class="side-banner side-banner--left text-center">
                   <a href="#" aria-label="Banner izquierdo">
                     <img src="/bannerIzq.gif" alt="Promoción izquierda" class="img-fluid" />
-                  </a>product-card 
+                  </a>
                 </aside>
               </div>
 

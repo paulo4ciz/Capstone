@@ -1,16 +1,20 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Loader from "../components/Loader";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function TiendaPage() {
   const { id } = useParams();
-
   const [tienda, setTienda] = useState(null);
   const [productos, setProductos] = useState([]);
   const [error, setError] = useState("");
   const [loadingProductos, setLoadingProductos] = useState(true);
+  const [visibleProductos, setVisibleProductos] = useState([]);
+  const [batchIndex, setBatchIndex] = useState(0);
 
-  // Categorías filtros
+  const BATCH_SIZE = 20;
+
   const CATEGORIAS_GRUPADAS = {
     Lacteos: ["leche", "yoghurt", "mantequilla", "queso", "yogurt", "nata", "crema pastelera"],
     Legumbres: ["arroz", "fideos", "arvejas", "porotos", "poroto", "lentejas", "garbanzos"],
@@ -30,11 +34,9 @@ export default function TiendaPage() {
     Abarrotes: ["harina", "manteca", "margarina", "chocolate en polvo", "azúcar rubia", "azúcar blanca"]
   };
 
-  // filtros UI
   const [filtroCategoria, setFiltroCategoria] = useState("Todos");
   const [ordenPrecio, setOrdenPrecio] = useState("ninguno");
 
-  // Cargar tienda
   useEffect(() => {
     fetch("/tiendas.json")
       .then((res) => res.json())
@@ -46,7 +48,6 @@ export default function TiendaPage() {
       .catch((err) => setError(err.message));
   }, [id]);
 
-  // Formateo seguro de labels
   const formatLabel = (s) => {
     if (!s) return "Otros";
     const str = s.toString().replace(/_/g, " ").trim();
@@ -55,30 +56,24 @@ export default function TiendaPage() {
 
   function detectarCategoria(p) {
     if (!p) return "Otros";
-
     if (p.category && p.category.trim() !== "") {
       const key = Object.keys(CATEGORIAS_GRUPADAS).find((general) =>
         CATEGORIAS_GRUPADAS[general].includes(p.category.toLowerCase())
       );
       return key ? formatLabel(key) : formatLabel(p.category);
     }
-
     const titulo = String(p.title || "").toLowerCase();
     for (const [general, items] of Object.entries(CATEGORIAS_GRUPADAS)) {
       for (const item of items) {
-        if (
-          titulo === item.toLowerCase() ||
-          titulo.includes(item.toLowerCase() + " ")
-        ) {
+        if (titulo === item.toLowerCase() || titulo.includes(item.toLowerCase() + " ")) {
           return formatLabel(general);
         }
       }
     }
-
     return "Otros";
   }
 
-  // Cargar productos
+  // Carga inicial de productos
   useEffect(() => {
     if (!tienda) return;
 
@@ -105,8 +100,8 @@ export default function TiendaPage() {
           let acumulado = [];
           const fetches = CONSULTAS_ACUENTA.map((query) =>
             fetch(`/api/search?q=${query}&stores=${tienda.tipo}`)
-              .then(res => res.json())
-              .then(data => {
+              .then((res) => res.json())
+              .then((data) => {
                 if (Array.isArray(data)) acumulado.push(...data);
               })
               .catch(() => { })
@@ -141,7 +136,7 @@ export default function TiendaPage() {
     loadProductos();
   }, [tienda]);
 
-  // Categorías para filtro 
+  // Filtro de categorías
   const categorias = useMemo(() => {
     if (!productos || productos.length === 0) return ["Todos"];
     const unicas = new Set(productos.map((p) => detectarCategoria(p)));
@@ -161,14 +156,59 @@ export default function TiendaPage() {
       lista = lista.filter((p) => p.__detectedCategory === filtroCategoria);
     }
 
-    if (ordenPrecio === "asc") {
-      lista.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
-    } else if (ordenPrecio === "desc") {
-      lista.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
-    }
+    if (ordenPrecio === "asc") lista.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
+    else if (ordenPrecio === "desc") lista.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
 
     return lista;
   }, [productos, filtroCategoria, ordenPrecio]);
+
+  // Infinite scroll
+  useEffect(() => {
+    if (productosFiltrados.length === 0) return;
+
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
+        visibleProductos.length < productosFiltrados.length &&
+        !loadingProductos
+      ) {
+        loadNextBatch();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [visibleProductos, productosFiltrados, loadingProductos]);
+
+  const loadNextBatch = () => {
+    setLoadingProductos(true);
+    const nextBatch = productosFiltrados.slice(batchIndex * BATCH_SIZE, (batchIndex + 1) * BATCH_SIZE);
+
+    // Espera que todas las imágenes del batch se carguen
+    const imagesPromises = nextBatch.map(
+      (p) =>
+        new Promise((resolve) => {
+          const img = new Image();
+          img.src = p.imageUrl;
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+        })
+    );
+
+    Promise.all(imagesPromises).then(() => {
+      setVisibleProductos((prev) => [...prev, ...nextBatch]);
+      setBatchIndex((prev) => prev + 1);
+      setLoadingProductos(false);
+    });
+  };
+
+  // Carga inicial batch
+  useEffect(() => {
+    if (productosFiltrados.length === 0) return;
+    setVisibleProductos([]);
+    setBatchIndex(0);
+    loadNextBatch();
+  }, [productosFiltrados]);
 
   if (error) return <p className="error-msg">{error}</p>;
   if (!tienda) return <p className="loading-msg">Cargando tienda…</p>;
@@ -181,49 +221,28 @@ export default function TiendaPage() {
         <h1 className="tienda-title">{tienda.nombre}</h1>
         <p className="tienda-address">{tienda.direccion}</p>
 
-        {/* FILTROS */}
         <div className="filtros-container">
           <label>
             <span>Categoría:</span>
-            <select
-              className="filtro-select"
-              value={filtroCategoria}
-              onChange={(e) => setFiltroCategoria(e.target.value)}
-            >
-              {categorias.map((c) => (
-                <option key={c} value={c}>{c}</option>
-              ))}
+            <select className="filtro-select" value={filtroCategoria} onChange={(e) => setFiltroCategoria(e.target.value)}>
+              {categorias.map((c) => (<option key={c} value={c}>{c}</option>))}
             </select>
           </label>
-
           <label>
             <span>Orden:</span>
-            <select
-              className="filtro-select"
-              value={ordenPrecio}
-              onChange={(e) => setOrdenPrecio(e.target.value)}
-            >
+            <select className="filtro-select" value={ordenPrecio} onChange={(e) => setOrdenPrecio(e.target.value)}>
               <option value="ninguno">Sin ordenar</option>
               <option value="asc">Precio: menor a mayor</option>
               <option value="desc">Precio: mayor a menor</option>
             </select>
           </label>
-
-          <button
-            className="btn-reset-filtros"
-            onClick={() => {
-              setFiltroCategoria("Todos");
-              setOrdenPrecio("ninguno");
-            }}
-          >
-            Limpiar
-          </button>
+          <button className="btn-reset-filtros" onClick={() => { setFiltroCategoria("Todos"); setOrdenPrecio("ninguno"); }}>Limpiar</button>
         </div>
       </div>
 
-      {/* GRID de productos */}
+      {/* Grid de productos */}
       <div className="productos-grid">
-        {productosFiltrados.map((p, i) => (
+        {visibleProductos.map((p, i) => (
           <ProductCard
             key={p.id ?? i}
             product={{
@@ -241,6 +260,10 @@ export default function TiendaPage() {
           />
         ))}
       </div>
+
+      {/* Loader */}
+      {loadingProductos && <Loader />}
+      <ScrollToTopButton targetId="tienda-info" />
     </main>
   );
 }

@@ -1,5 +1,4 @@
-// src/pages/Register.jsx
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles.css";
 
@@ -8,6 +7,21 @@ export default function Register() {
   const [form, setForm] = useState({ name: "", email: "", password: "", confirm: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const rightRef = useRef(null);
+
+  useEffect(() => {
+    // Solo aplicar fade-out en pantallas pequeñas
+    if (window.innerWidth <= 768 && rightRef.current) {
+      const totalAnimationTime = 12000; // duración total animaciones SVG
+
+      const timer = setTimeout(() => {
+        rightRef.current.classList.add("fade-out");
+      }, totalAnimationTime);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -41,6 +55,7 @@ export default function Register() {
       localStorage.setItem("auth:user", JSON.stringify(payload.user));
       window.dispatchEvent(new Event("auth:user-changed"));
       navigate("/");
+
     } catch {
       setError("No se pudo registrar. Intenta nuevamente.");
     } finally {
@@ -52,7 +67,7 @@ export default function Register() {
     <main className="page-Login">
       <div className="login-container">
         <div className="login-box">
-          {/* Panel izquierdo (form) */}
+          {/* PANEL IZQUIERDO */}
           <div className="login-left">
             <h2 className="login-title">Crear cuenta</h2>
             <p className="login-subtitle">Únete a la ruta del ahorro ✨</p>
@@ -82,8 +97,8 @@ export default function Register() {
             </form>
           </div>
 
-          {/* Panel derecho (visual) */}
-          <div className="login-right">
+          {/* PANEL DERECHO */}
+          <div ref={rightRef} className="login-right">
             <div className="login-content">
               <div className="inicial">
                 <svg className="textoini" viewBox="0 0 215 100">
@@ -96,15 +111,14 @@ export default function Register() {
               <div>
                 <svg className="textd" viewBox="0 0 200 100">
                   <text className="dtext" x="50%" y="65%" textAnchor="middle">
-                    Crea tu cuenta
+                    ¿Dónde está
                   </text>
                   <text className="mano" x="50%" y="100%" textAnchor="middle">
-                    ¿Dónde está la mano?
+                    la mano?
                   </text>
                 </svg>
               </div>
 
-              {/* Imagen desde /public con ruta absoluta */}
               <div className="login-image">
                 <img src="/hand.png" alt="register" />
               </div>

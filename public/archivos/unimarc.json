@@ -1,0 +1,345 @@
+[
+    {
+        "title": "Margarina Soprole 500 g",
+        "price": 2880,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/margarina-soprole-pote-500-gr"
+    },
+    {
+        "title": "Margarina Calo 450 g",
+        "price": 1890,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/margarina-calo-pote-500-gr"
+    },
+    {
+        "title": "Margarina Deline 500 g",
+        "price": 1650,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/margarina-deline-sadia-500-grs"
+    },
+    {
+        "title": "Margarina Sureña Mix 450 g",
+        "price": 3390,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/margarina-mix-surena-pote-500-gr"
+    },
+    {
+        "title": "Harina Integral Selecta 1 kg",
+        "price": 2270,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/harina-integral-selecta-1-kg"
+    },
+    {
+        "title": "Harina Sin Polvos Merkat 1 kg",
+        "price": 870,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/harina-merkat-sin-polvos-1-kg"
+    },
+    {
+        "title": "Manteca Astra 200 g",
+        "price": 2130,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/manteca-astra-200-g"
+    },
+    {
+        "title": "Harina de Maíz P.A.N. Blanca 1 kg",
+        "price": 2090,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/harina-de-maiz-precocid-pan-1kg-blanca"
+    },
+    {
+        "title": "Harina Tostada Oso 1 kg",
+        "price": 2630,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/harina-tostada-oso-1-kg"
+    },
+    {
+        "title": "Polvos de Hornear Imperial 100 g",
+        "price": 1080,
+        "category": "Abarrotes",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/polvos-hornear-imperial-sobre-100-gr"
+    },
+    {
+        "title": "Aceite Vegetal Merkat 900 ml",
+        "price": 1590,
+        "category": "Aceites y azucar",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/category/despensa/aceite-y-alinos/aceite-vegetal"
+    },
+    {
+        "title": "Aceite Belmont Vegetal 1 L",
+        "price": 3250,
+        "category": "Aceites y azucar",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/category/despensa/aceite-y-alinos/aceite-vegetal"
+    },
+    {
+        "title": "Azúcar Blanca Iansa 1 kg",
+        "price": 1450,
+        "category": "Aceites y azucar",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/azucar-granulada-iansa-1-kg"
+    },
+    {
+        "title": "Sal Lobos Fina 1 kg",
+        "price": 540,
+        "category": "Aceites y azucar",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/sal-de-mesa-lobos-1-kg"
+    },
+    {
+        "title": "Bizcocho Chocman Costa 33 g",
+        "price": 360,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/chocman-biscocho-rell-c-man-costa-8x33gr"
+    },
+    {
+        "title": "Galletas Oreo Vainilla 108 g",
+        "price": 850,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/galletas-oreo-clasica-vainilla-126-g"
+    },
+    {
+        "title": "Dulce de Membrillo Watt's 500 g",
+        "price": 2220,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/dulce-de-membrillo-watts-500-gr-2"
+    },
+    {
+        "title": "Papas Fritas Lay's Corte Americano 200 g",
+        "price": 2090,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/category/despensa/coctel-y-snacks"
+    },
+    {
+        "title": "Ramitas Evercrisp Queso 330 g",
+        "price": 2290,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/ramitas-evercrisp-330-g-queso"
+    },
+    {
+        "title": "Maní Salado Marco Polo 150 g",
+        "price": 1290,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/mani-salado-marco-polo-150-gr-2"
+    },
+    {
+        "title": "Galletas Triton Vainilla 116 g",
+        "price": 860,
+        "category": "Snacks",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/brand/triton"
+    },
+    {
+        "title": "Pan de Hamburguesa Castaño Brioche 660 g",
+        "price": 4080,
+        "category": "Panaderia",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/pan-hamburguesa-brioche-castano-660-gr"
+    },
+    {
+        "title": "Pan Marraqueta kg",
+        "price": 2190,
+        "category": "Panaderia",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/marraqueta-kg"
+    },
+    {
+        "title": "Pan Molde Ideal Blanco XL 750 g",
+        "price": 2950,
+        "category": "Panaderia",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/pan-molde-blanco-grande-ideal-750-g"
+    },
+    {
+        "title": "Salame Italiano San Jorge 100 g",
+        "price": 1840,
+        "category": "Embutidos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/salame-italiano-lamindo-san-jorge-100gr"
+    },
+    {
+        "title": "Jamón Colonial PF 100 g",
+        "price": 1180,
+        "category": "Embutidos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/jamon-colonial-pf-kg"
+    },
+    {
+        "title": "Mortadela Jamonada San Jorge 250 g",
+        "price": 1950,
+        "category": "Embutidos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/mortadela-jamonada-san-jorge-250gr"
+    },
+    {
+        "title": "Salame Receta del Abuelo 100 g",
+        "price": 2090,
+        "category": "Embutidos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/salamin-artesanal-receta-d-abuelo-200grs"
+    },
+    {
+        "title": "Salsa de Tomate Italiana Merkat 200 g",
+        "price": 400,
+        "category": "Aderezos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/salsa-tomate-italiana-merkat-dp-200-gr"
+    },
+    {
+        "title": "Ketchup Nuestra Cocina 1 kg",
+        "price": 2790,
+        "category": "Aderezos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/ketchup-nuestra-cocina-1-kg"
+    },
+    {
+        "title": "Mayonesa Kraft Real Mayo 789 g",
+        "price": 5750,
+        "category": "Aderezos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/mayonesa-kraft-pote-394-g"
+    },
+    {
+        "title": "Mostaza JB 240 g",
+        "price": 1570,
+        "category": "Aderezos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/mostaza-jb-dp-900-gr"
+    },
+    {
+        "title": "Salsa Americana Don Juan 400 g",
+        "price": 1050,
+        "category": "Aderezos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/salsa-americana-don-juan-400-gr"
+    },
+    {
+        "title": "Café Instantáneo Nuestra Cocina 170 g",
+        "price": 5990,
+        "category": "Bebidas",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/cafe-inst-granu-nuestra-cocina-fco-170g"
+    },
+    {
+        "title": "Jugo en Polvo Vivo 7 g",
+        "price": 280,
+        "category": "Bebidas",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/ofertas/precio-oferta?page=4"
+    },
+    {
+        "title": "Té Lipton Yellow Label 100 un",
+        "price": 7190,
+        "category": "Infusiones",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/te-lipton-yellow-label-100-bolsitas"
+    },
+    {
+        "title": "Leche Semidescremada Loncoleche 1 L",
+        "price": 1000,
+        "category": "Lacteos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/category/lacteos-huevos-y-refrigerados"
+    },
+    {
+        "title": "Arroz Grado 2 Merkat 1 kg",
+        "price": 1000,
+        "category": "Legumbres",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/arroz-g2-largo-delgado-merkat-1-kg"
+    },
+    {
+        "title": "Porotos Tórtola Nuestra Cocina 1 kg",
+        "price": 3000,
+        "category": "Legumbres",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/category/despensa/arroz-y-legumbres"
+    },
+    {
+        "title": "Atún en Agua Merkat 140 g",
+        "price": 950,
+        "category": "Conservas",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/atun-desmenuzado-en-agua-merkat-140-gr"
+    },
+    {
+        "title": "Jurel Natural Nuestra Cocina 425 g",
+        "price": 1920,
+        "category": "Conservas",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/jurel-natural-nuestra-cocina-425g"
+    },
+    {
+        "title": "Salsa de Chocolate Gourmet 280 g",
+        "price": 2000,
+        "category": "Reposteria",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/salsa-chocolate-gourmet-280-grs"
+    },
+    {
+        "title": "Helado Savory Chocolate Suizo 1 L",
+        "price": 2850,
+        "category": "Helados",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/helado-savory-especial-chocolate-suizo"
+    },
+    {
+        "title": "Galletas Vino McKay 155 g",
+        "price": 930,
+        "category": "Pasteleria",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/galleta-vino-mckay-155-gr"
+    },
+    {
+        "title": "Galletas Champaña Costa 140 g",
+        "price": 2090,
+        "category": "Pasteleria",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/galleta-champana-costa-140-gr"
+    },
+    {
+        "title": "Mermelada Frambuesa Nuestra Cocina 225 g",
+        "price": 1090,
+        "category": "Reposteria",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/category/desayuno-y-dulces/mermelada-y-manjar/mermeladas-y-dulces"
+    },
+    {
+        "title": "Mermelada Damasco Nuestra Cocina 225 g",
+        "price": 1090,
+        "category": "Reposteria",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/mermelada-nuestra-cocina-225-gr-damasco"
+    },
+    {
+        "title": "Leche Condensada Nuestra Cocina 397 g",
+        "price": 1850,
+        "category": "Reposteria",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/leche-condensada-nuestra-cocina-397-gr"
+    },
+    {
+        "title": "Crema de Leche Colun 200 ml",
+        "price": 1250,
+        "category": "Lacteos",
+        "imageUrl": "",
+        "productUrl": "https://www.unimarc.cl/product/crema-para-batir-colun-larga-vida-tetra-200-cc-2"
+    }
+]
