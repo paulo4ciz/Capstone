@@ -225,8 +225,6 @@ export default function MapaTiendas() {
     localStorage.setItem("userPos", JSON.stringify({ lat, lon }));
   }
 
-  if (loadingTiendas) return <p>Cargando mapa…</p>;
-
   return (
     <div className="mapa-container">
       {/* Mostrar aviso de geolocalización solo si hay una puesta */}
