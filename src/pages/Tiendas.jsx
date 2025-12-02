@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
@@ -6,37 +6,41 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function TiendaPage() {
   const { id } = useParams();
+
   const [tienda, setTienda] = useState(null);
   const [productos, setProductos] = useState([]);
   const [error, setError] = useState("");
   const [loadingProductos, setLoadingProductos] = useState(true);
-  const [visibleProductos, setVisibleProductos] = useState([]);
-  const [batchIndex, setBatchIndex] = useState(0);
 
-  const BATCH_SIZE = 20;
+  // Infinite scroll
+  const [visibleCount, setVisibleCount] = useState(20);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const loadRef = useRef(null);
 
+  // Categorías filtros
   const CATEGORIAS_GRUPADAS = {
     Lacteos: ["leche", "yoghurt", "mantequilla", "queso", "yogurt", "nata", "crema pastelera"],
     Legumbres: ["arroz", "fideos", "arvejas", "porotos", "poroto", "lentejas", "garbanzos"],
     Conservas: ["atun", "atún", "mermelada", "aceitunas", "aceituna", "pickles", "chucrut", "pepinillos"],
-    Pastas: ["spaguetti", "pasta", "anellini", "tallarín", "prepizza"],
+    Pastas: ["spaguetti", "5 spaghetti", "pasta", "anellini", "tallarín", "prepizza"],
     Bebidas: ["cafe", "café", "bebida", "café instantáneo", "café molido"],
     Infusiones: ["té", "té verde", "té negro", "té ceylán", "té manzanilla", "té ocho hierbas", "té mystic", "té emblem", "té polvo"],
     Panaderia: ["pan", "molde integral", "huevos", "huevo", "sopaipillas", "queque", "donut", "alfajor", "magdalena", "berlín", "medialuna", "muffin"],
-    Snacks: ["snack", "cerealbar", "papas fritas", "chips", "barra de proteína", "chocolate", "dulce"],
+    Snacks: ["snack", "brownie", "galleta", "gall", "ramitas", "tortillas sal", "cerealbar", "papas fritas", "chips", "barra de proteína", "chocolate", "dulce"],
     Aceites_y_Azucar: ["aceite", "azucar", "Azúcar", "sal", "chancaca", "stevia"],
     Carnes: ["pollo", "carne", "vacuno", "carnicero", "cerdo", "lomo", "costillar", "chuleta", "posta", "medallón", "pulpa", "salchicha"],
     Embutidos: ["jamon", "salame", "paté", "mortadela", "longaniza", "jamón", "costilla", "chuletitas", "tocino"],
     Aderezos: ["salsas", "salsa", "mayonesa", "ketchup", "aderezo", "mostaza"],
     Comida_Preparada: ["empanada", "Empanadas", "torta", "kuchen", "pastel", "pie", "brazo de reina"],
     Pasteleria: ["pasteleria", "croissant", "helado"],
-    Cereales: ["cereal", "granola", "cebadilla"],
-    Abarrotes: ["harina", "manteca", "margarina", "chocolate en polvo", "azúcar rubia", "azúcar blanca"]
+    Cereales: ["cereal"],
+    Abarrotes: ["harina", "ensalada lista", "manteca", "margarina", "chocolate en polvo", "azúcar rubia", "azúcar blanca"]
   };
 
   const [filtroCategoria, setFiltroCategoria] = useState("Todos");
   const [ordenPrecio, setOrdenPrecio] = useState("ninguno");
 
+  // Cargar tienda
   useEffect(() => {
     fetch("/tiendas.json")
       .then((res) => res.json())
@@ -56,24 +60,27 @@ export default function TiendaPage() {
 
   function detectarCategoria(p) {
     if (!p) return "Otros";
+
     if (p.category && p.category.trim() !== "") {
       const key = Object.keys(CATEGORIAS_GRUPADAS).find((general) =>
         CATEGORIAS_GRUPADAS[general].includes(p.category.toLowerCase())
       );
       return key ? formatLabel(key) : formatLabel(p.category);
     }
+
     const titulo = String(p.title || "").toLowerCase();
     for (const [general, items] of Object.entries(CATEGORIAS_GRUPADAS)) {
       for (const item of items) {
-        if (titulo === item.toLowerCase() || titulo.includes(item.toLowerCase() + " ")) {
+        if (titulo.includes(item.toLowerCase())) {
           return formatLabel(general);
         }
       }
     }
+
     return "Otros";
   }
 
-  // Carga inicial de productos
+  // Cargar productos
   useEffect(() => {
     if (!tienda) return;
 
@@ -96,17 +103,19 @@ export default function TiendaPage() {
 
       try {
         if (tienda.tipo === "acuenta" || tienda.tipo === "centralmayorista") {
-          const CONSULTAS_ACUENTA = Object.values(CATEGORIAS_GRUPADAS).flat();
+          const CONSULTAS = Object.values(CATEGORIAS_GRUPADAS).flat();
           let acumulado = [];
-          const fetches = CONSULTAS_ACUENTA.map((query) =>
+
+          const fetches = CONSULTAS.map((query) =>
             fetch(`/api/search?q=${query}&stores=${tienda.tipo}`)
               .then((res) => res.json())
               .then((data) => {
                 if (Array.isArray(data)) acumulado.push(...data);
               })
-              .catch(() => { })
           );
+
           await Promise.all(fetches);
+
           productosFinales = Object.values(
             acumulado.reduce((acc, p) => {
               acc[p.title] = p;
@@ -136,7 +145,7 @@ export default function TiendaPage() {
     loadProductos();
   }, [tienda]);
 
-  // Filtro de categorías
+  // Filtros
   const categorias = useMemo(() => {
     if (!productos || productos.length === 0) return ["Todos"];
     const unicas = new Set(productos.map((p) => detectarCategoria(p)));
@@ -145,125 +154,154 @@ export default function TiendaPage() {
     return ["Todos", ...lista];
   }, [productos, tienda]);
 
-  // Productos filtrados
   const productosFiltrados = useMemo(() => {
     let lista = [...productos].map((p) => ({
       ...p,
       __detectedCategory: detectarCategoria(p),
     }));
 
-    if (filtroCategoria && filtroCategoria !== "Todos") {
+    if (filtroCategoria !== "Todos")
       lista = lista.filter((p) => p.__detectedCategory === filtroCategoria);
-    }
 
-    if (ordenPrecio === "asc") lista.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
-    else if (ordenPrecio === "desc") lista.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
+    if (ordenPrecio === "asc")
+      lista.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
+    else if (ordenPrecio === "desc")
+      lista.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
 
     return lista;
   }, [productos, filtroCategoria, ordenPrecio]);
 
-  // Infinite scroll
+  const productosVisibles = productosFiltrados.slice(0, visibleCount);
+
+  // Infinite Scroll
   useEffect(() => {
-    if (productosFiltrados.length === 0) return;
+    if (!loadRef.current) return;
+    if (visibleCount >= productosFiltrados.length) return;
 
-    const handleScroll = () => {
-      if (
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
-        visibleProductos.length < productosFiltrados.length &&
-        !loadingProductos
-      ) {
-        loadNextBatch();
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [visibleProductos, productosFiltrados, loadingProductos]);
-
-  const loadNextBatch = () => {
-    setLoadingProductos(true);
-    const nextBatch = productosFiltrados.slice(batchIndex * BATCH_SIZE, (batchIndex + 1) * BATCH_SIZE);
-
-    // Espera que todas las imágenes del batch se carguen
-    const imagesPromises = nextBatch.map(
-      (p) =>
-        new Promise((resolve) => {
-          const img = new Image();
-          img.src = p.imageUrl;
-          img.onload = () => resolve();
-          img.onerror = () => resolve();
-        })
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !loadingMore) {
+          setLoadingMore(true);
+          setTimeout(() => {
+            setVisibleCount((prev) => prev + 20);
+            setLoadingMore(false);
+          }, 600);
+        }
+      },
+      { rootMargin: "200px" }
     );
 
-    Promise.all(imagesPromises).then(() => {
-      setVisibleProductos((prev) => [...prev, ...nextBatch]);
-      setBatchIndex((prev) => prev + 1);
-      setLoadingProductos(false);
-    });
-  };
+    observer.observe(loadRef.current);
 
-  // Carga inicial batch
-  useEffect(() => {
-    if (productosFiltrados.length === 0) return;
-    setVisibleProductos([]);
-    setBatchIndex(0);
-    loadNextBatch();
-  }, [productosFiltrados]);
+    return () => observer.disconnect();
+  }, [visibleCount, productosFiltrados.length, loadingMore]);
 
   if (error) return <p className="error-msg">{error}</p>;
-  if (!tienda) return <p className="loading-msg">Cargando tienda…</p>;
 
   return (
     <main className="tienda-page">
+
+      {/* TIENDA-CAJA SIEMPRE VISIBLE */}
       <div className="tienda-caja">
         <Link to="/mapa" className="tienda-back">⬅ Volver al mapa</Link>
 
-        <h1 className="tienda-title">{tienda.nombre}</h1>
-        <p className="tienda-address">{tienda.direccion}</p>
+        <h1 className="tienda-title">
+          {tienda ? tienda.nombre : "Cargando tienda..."}
+        </h1>
 
-        <div className="filtros-container">
-          <label>
-            <span>Categoría:</span>
-            <select className="filtro-select" value={filtroCategoria} onChange={(e) => setFiltroCategoria(e.target.value)}>
-              {categorias.map((c) => (<option key={c} value={c}>{c}</option>))}
-            </select>
-          </label>
-          <label>
-            <span>Orden:</span>
-            <select className="filtro-select" value={ordenPrecio} onChange={(e) => setOrdenPrecio(e.target.value)}>
-              <option value="ninguno">Sin ordenar</option>
-              <option value="asc">Precio: menor a mayor</option>
-              <option value="desc">Precio: mayor a menor</option>
-            </select>
-          </label>
-          <button className="btn-reset-filtros" onClick={() => { setFiltroCategoria("Todos"); setOrdenPrecio("ninguno"); }}>Limpiar</button>
+        <p className="tienda-address">
+          {tienda ? tienda.direccion : ""}
+        </p>
+
+        {/* FILTROS solo si tienda ya cargó */}
+        {tienda && (
+          <div className="filtros-container">
+            <label>
+              <span>Categoría:</span>
+              <select
+                className="filtro-select"
+                value={filtroCategoria}
+                onChange={(e) => {
+                  setFiltroCategoria(e.target.value);
+                  setVisibleCount(20);
+                }}
+              >
+                {categorias.map((c) => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              <span>Orden:</span>
+              <select
+                className="filtro-select"
+                value={ordenPrecio}
+                onChange={(e) => {
+                  setOrdenPrecio(e.target.value);
+                  setVisibleCount(20);
+                }}
+              >
+                <option value="ninguno">Sin ordenar</option>
+                <option value="asc">Precio: menor a mayor</option>
+                <option value="desc">Precio: mayor a menor</option>
+              </select>
+            </label>
+
+            <button
+              className="btn-reset-filtros"
+              onClick={() => {
+                setFiltroCategoria("Todos");
+                setOrdenPrecio("ninguno");
+                setVisibleCount(20);
+              }}
+            >
+              Limpiar
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* LOADER PRINCIPAL PARA PRODUCTOS */}
+      {loadingProductos ? (
+        <div className="loader-fullscreen">
+          <Loader />
         </div>
-      </div>
+      ) : (
+        <>
+          {/* GRID */}
+          <div className="productos-grid">
+            {productosVisibles.map((p, i) => (
+              <ProductCard
+                key={p.id ?? i}
+                product={{
+                  id: p.id ?? i,
+                  title: p.title,
+                  price: p.price,
+                  imageUrl: p.imageUrl,
+                  productUrl: p.productUrl,
+                  store: p.__detectedCategory,
+                  previousPrice: p.previousPrice,
+                  pricePerSubUnit: p.pricePerSubUnit,
+                  badge: p.badge,
+                }}
+                showAddButton={true}
+              />
+            ))}
+          </div>
 
-      {/* Grid de productos */}
-      <div className="productos-grid">
-        {visibleProductos.map((p, i) => (
-          <ProductCard
-            key={p.id ?? i}
-            product={{
-              id: p.id ?? i,
-              title: p.title,
-              price: p.price,
-              imageUrl: p.imageUrl,
-              productUrl: p.productUrl,
-              store: p.__detectedCategory,
-              previousPrice: p.previousPrice,
-              pricePerSubUnit: p.pricePerSubUnit,
-              badge: p.badge,
-            }}
-            showAddButton={true}
-          />
-        ))}
-      </div>
+          {/* LOADER INFINITE SCROLL */}
+          {!loadingProductos &&
+            visibleCount > 20 &&
+            visibleCount < productosFiltrados.length && (
+              <div ref={loadRef} className="loader-container">
+                <Loader />
+              </div>
+            )}
+        </>
+      )}
 
-      {/* Loader */}
-      {loadingProductos && <Loader />}
-      <ScrollToTopButton targetId="tienda-info" />
+      <ScrollToTopButton />
     </main>
   );
 }
