@@ -124,6 +124,7 @@ export default function MiHistorial() {
 
                 return (
                   <div key={p.id} className="col-12 col-sm-6 col-md-4 col-lg-6 col-xxl-4">
+                    <div className="products-grid__cell">
                     <ProductCard
                       product={p}
                       variant="history"
@@ -132,6 +133,7 @@ export default function MiHistorial() {
                       showAddButton={false}
                       onDelete={removeItem}
                     />
+                    </div>
                   </div>
                 );
               })}
