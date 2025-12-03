@@ -123,8 +123,8 @@ export default function MiHistorial() {
                 const addedPrice = getAddedPrice(p);
 
                 return (
-                  <div key={p.id} className="col-12 col-sm-6 col-md-4 col-lg-6 col-xxl-4">
-                    <div className="products-grid__cell">
+                  <div key={p.id} className="col-6 col-md-4 col-lg-3">
+                    
                     <ProductCard
                       product={p}
                       variant="history"
@@ -134,7 +134,7 @@ export default function MiHistorial() {
                       onDelete={removeItem}
                     />
                     </div>
-                  </div>
+                  
                 );
               })}
 
