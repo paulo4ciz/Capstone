@@ -291,13 +291,11 @@ export default function TiendaPage() {
           </div>
 
           {/* LOADER INFINITE SCROLL */}
-          {!loadingProductos &&
-            visibleCount > 20 &&
-            visibleCount < productosFiltrados.length && (
-              <div ref={loadRef} className="loader-container">
-                <Loader />
-              </div>
-            )}
+          {!loadingProductos && visibleCount < productosFiltrados.length && (
+            <div ref={loadRef} className="loader-container">
+              {loadingMore && <Loader />}
+            </div>
+          )}
         </>
       )}
 
