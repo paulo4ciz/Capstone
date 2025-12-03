@@ -21,9 +21,8 @@ L.Icon.Default.mergeOptions({
     "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
-// ICONO USUARIO 
 const userIcon = new L.Icon({
-  iconUrl: "../../public/UserMap.png",
+  iconUrl: "/UserMap.png",     
   iconSize: [41, 41],
   iconAnchor: [20, 41],
 });
