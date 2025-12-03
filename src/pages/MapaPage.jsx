@@ -1,9 +1,21 @@
 // src/pages/MapaPage.jsx
 import React from 'react';
-import MapaTiendas from '../components/MapaTiendas'; // Importa el componente del mapa
-import '../styles.css'; // O tu archivo CSS principal
+import MapaTiendas from '../components/MapaTiendas';
+import '../styles.css';
+import ScrollToTopButton from '../components/ScrollToTopButton';
+import Loader from '../components/Loader';
+import { useEffect, useState } from 'react';
+
 
 export default function MapaPage() {
+  const [mapaCargado, setMapaCargado] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMapaCargado(false);
+    }, 500);
+  }, []);
+
   return (
     <main className="page-mapa" style={{ padding: '20px' }}>
       <section className="maps-hero">
@@ -11,7 +23,7 @@ export default function MapaPage() {
           <div className="row">
             <div className="col-12">
               <h2 className="text-center my-3">
-                 Mapa de Tiendas Cercanas
+                Mapa de Tiendas Cercanas
               </h2>
             </div>
           </div>
@@ -20,67 +32,68 @@ export default function MapaPage() {
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>
       </h1>
       <section>
-        <MapaTiendas /> {/* Renderiza el componente del mapa aquí */}
+        {mapaCargado ? <Loader /> : <MapaTiendas />}
       </section>
+      <ScrollToTopButton targetId="tienda-info" />
 
-  <section className="py-5 sections">
-  <div className="container">
-    <div className="row">
-      <div className="col-12 col-md-4 mb-4">
-        <div className="card h-100 shadow-sm">
-          <div className="card-header fw-semibold">
-            ¿Dónde está la mano?
-          </div>
-          <div className="card-body d-flex flex-column">
-            <h5 className="card-title fw-bold">Nuestro proyecto</h5>
-            <p className="card-text">
-              Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.
-            </p>
-            <a href="/Proyecto" className="btn btn-outline-dark mt-auto">
-              Ver más
-            </a>
+      <section className="py-5 sections">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Nuestro proyecto</h5>
+                  <p className="card-text">
+                    Conoce el objetivo, el alcance y cómo “Dónde está la mano” ayuda a la comunidad.
+                  </p>
+                  <a href="/Proyecto" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Nuestra visión</h5>
+                  <p className="card-text">
+                    Principios, transparencia de precios y el impacto que buscamos a largo plazo.
+                  </p>
+                  <a href="/vision" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-header fw-semibold">
+                  ¿Dónde está la mano?
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold">Historial</h5>
+                  <p className="card-text">
+                    Avances del proyecto, releases, y registro de cambios importantes.
+                  </p>
+                  <a href="/Historial" className="btn btn-outline-dark mt-auto">
+                    Ver más
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="col-12 col-md-4 mb-4">
-        <div className="card h-100 shadow-sm">
-          <div className="card-header fw-semibold">
-            ¿Dónde está la mano?
-          </div>
-          <div className="card-body d-flex flex-column">
-            <h5 className="card-title fw-bold">Nuestra visión</h5>
-            <p className="card-text">
-              Principios, transparencia de precios y el impacto que buscamos a largo plazo.
-            </p>
-            <a href="/vision" className="btn btn-outline-dark mt-auto">
-              Ver más
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="col-12 col-md-4 mb-4">
-        <div className="card h-100 shadow-sm">
-          <div className="card-header fw-semibold">
-            ¿Dónde está la mano?
-          </div>
-          <div className="card-body d-flex flex-column">
-            <h5 className="card-title fw-bold">Historial</h5>
-            <p className="card-text">
-              Avances del proyecto, releases, y registro de cambios importantes.
-            </p>
-            <a href="/Historial" className="btn btn-outline-dark mt-auto">
-              Ver más
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </main>
-    
+
   );
-  
+
 }

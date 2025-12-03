@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "nombre": "Lider - Av. Pajaritos",
+    "nombre": "Distribuidora Darwin",
     "direccion": "Av. Pajaritos 2686, Maipú",
     "lat": -33.50422,
     "lng": -70.76865,
     "tipo": "archivo",
-    "archivo": "lider_av_pajaritos.json"
+    "archivo": "distribuidora_darwin.json"
   },
   {
     "id": 2,
-    "nombre": "Santa Isabel - Pajaritos",
-    "direccion": "Av. Pajaritos 1902, Maipú",
-    "lat": -33.49755,
-    "lng": -70.76166,
+    "nombre": "Santa Isabel - Américo Vespucio Nte",
+    "direccion": "Américo Vespucio Nte. 51, Maipú",
+    "lat": -33.485833767161814,
+    "lng": -70.7495852266182,
     "tipo": "archivo",
-    "archivo": "santa_isabel_pajaritos.json"
+    "archivo": "santa_isabel.json"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "lat": -33.51081,
     "lng": -70.76211,
     "tipo": "archivo",
-    "archivo": "unimarc_5_de_abril.json"
+    "archivo": "unimarc.json"
   },
   {
     "id": 4,
@@ -37,18 +37,18 @@
   },
   {
     "id": 5,
-    "nombre": "Acuenta - Av. Portales",
-    "direccion": "Av. Portales 2370, Maipú",
-    "lat": -33.5186,
-    "lng": -70.7979,
+    "nombre": "Acuenta - Ciudad Satélite",
+    "direccion": "Ciudad Satélite - Cmo. a Melipilla 18500, Maipú",
+    "lat": -33.55390487991292,
+    "lng": -70.7945483911621,
     "tipo": "acuenta"
   },
   {
     "id": 6,
     "nombre": "Panadería San Manuel",
-    "direccion": "Av. Portales 799, Maipú",
-    "lat": -33.51268,
-    "lng": -70.77253,
+    "direccion": "Avda, Nueva San Martín 681, Maipú",
+    "lat": -33.525031217423454,
+    "lng": -70.76510386814343,
     "tipo": "archivo",
     "archivo": "panaderia_san_manuel.json"
   },
@@ -63,19 +63,19 @@
   },
   {
     "id": 8,
-    "nombre": "Alvi Maipú",
+    "nombre": "Donde la noni",
     "direccion": "Av. Pajaritos 4500, Maipú",
     "lat": -33.5222,
     "lng": -70.7876,
     "tipo": "archivo",
-    "archivo": "alvi_maipu.json"
+    "archivo": "donde_la_noni.json"
   },
   {
     "id": 9,
     "nombre": "Central Mayorista - Maipú",
-    "direccion": "Av. 5 de Abril 4000, Maipú",
-    "lat": -33.5181,
-    "lng": -70.7804,
+    "direccion": "Camino a Melipilla 18300, Maipú",
+    "lat": -33.55219633626375,
+    "lng": -70.7918946027114,
     "tipo": "centralmayorista"
   },
   {
@@ -94,14 +94,14 @@
     "lat": -33.5103,
     "lng": -70.7607,
     "tipo": "archivo",
-    "archivo": "Panadería_la_espiga_de_oro.json" 
+    "archivo": "Panadería_la_espiga_de_oro.json"
   },
   {
     "id": 12,
-    "nombre": "Acuenta - Tres Poniente",
-    "direccion": "Av. Tres Poniente 100, Maipú",
-    "lat": -33.5117,
-    "lng": -70.7958,
+    "nombre": "Acuenta - Camino a Rinconada",
+    "direccion": "Camino a Rinconada 2515, Maipú",
+    "lat": -33.504648091020215,
+    "lng": -70.78987434520495,
     "tipo": "acuenta"
   },
   {
@@ -111,14 +111,66 @@
     "lat": -33.5104,
     "lng": -70.7538,
     "tipo": "archivo",
-    "archivo": "minimarket_donde_lucho.json" 
+    "archivo": "minimarket_donde_lucho.json"
   },
   {
     "id": 14,
     "nombre": "Santa Isabel - Av. Central",
-    "direccion": "Av. Central 730, Maipú",
-    "lat": -33.4913,
-    "lng": -70.7699,
-    "tipo": "santaisabel"
+    "direccion": "Av. Los Pajaritos 4909, 9291601 Maipú",
+    "lat": -33.47670449040636,
+    "lng": -70.74119416715912,
+    "tipo": "archivo",
+    "archivo": "santa_isabel.json"
+  },
+  {
+    "id": 15,
+    "nombre": "Acuenta - Avenida Sur",
+    "direccion": "Av. Sur 411, Maipú",
+    "lat": -33.52060976262548,
+    "lng": -70.76259724932262,
+    "tipo": "acuenta"
+  },
+  {
+    "id": 16,
+    "nombre": "Central Mayorista - Maipú",
+    "direccion": "Dos Nte. 1373, Maipú",
+    "lat": -33.50139126528266,
+    "lng": -70.74040087312461,
+    "tipo": "centralmayorista"
+  },
+  {
+    "id": 17,
+    "nombre": "Central Mayorista - Cerillos",
+    "direccion": "Av. Américo Vespucio 1601, 9201027 Cerrillos",
+    "lat": -33.50660730980485,
+    "lng": -70.72692301791348,
+    "tipo": "centralmayorista"
+  },
+  {
+    "id": 18,
+    "nombre": "Santa Isabel - Av. Pajaritos",
+    "direccion": "Av. Los Pajaritos 1948, 9273353 Maipú",
+    "lat": -33.50775228409635,
+    "lng": -70.75760731907448,
+    "tipo": "archivo",
+    "archivo": "santa_isabel.json"
+  },
+  {
+    "id": 19,
+    "nombre": "Santa Isabel - Av. El Rosal",
+    "direccion": "Av. El Rosal 3999, 9300708 Pudahuel, Maipú",
+    "lat": -33.4904999421844,
+    "lng": -70.77737391813882,
+    "tipo": "archivo",
+    "archivo": "santa_isabel.json"
+  },
+  {
+    "id": 20,
+    "nombre": "Santa Isabel - Av. 3 Pte.",
+    "direccion": "Av. 3 Pte. 2600, 9275900 Maipú, ",
+    "lat": -33.503057862943336,
+    "lng": -70.7797214614587,
+    "tipo": "archivo",
+    "archivo": "santa_isabel.json"
   }
 ]

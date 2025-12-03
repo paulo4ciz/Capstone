@@ -16,9 +16,9 @@ export default function Login() {
 
   return (
     <main className="page-Login">
-        <section>
-            <LoginForm />
-        </section>
+      <section>
+        <LoginForm />
+      </section>
     </main>
   );
 }

@@ -1,0 +1,610 @@
+[
+    {
+        "id": 1,
+        "title": "Margarina Soprole 500g",
+        "price": 2690,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/278125-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-soprole-cremosa-con-leche-pote-500-g/p"
+    },
+    {
+        "id": 2,
+        "title": "Margarina Calo 450 g",
+        "price": 1990,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/479042-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-500-g-1244608/p"
+    },
+    {
+        "id": 3,
+        "title": "Margarina Deline 500g",
+        "price": 1960,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/186912-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-deline-pote-500-g-388056/p"
+    },
+    {
+        "id": 4,
+        "title": "Margarina Sureña Mix 450 g",
+        "price": 3650,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/482852-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-surena-450-g-con-mantequilla-del-sur/p"
+    },
+    {
+        "id": 5,
+        "title": "Margarina Cuisine & Co Mix 450 g",
+        "price": 2690,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/298525-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/marg-mix-450g-c-y-co/p"
+    },
+    {
+        "id": 6,
+        "title": "Harina Integral Selecta 1 kg",
+        "price": 2070,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/180540-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-integral-selecta-1-kg-2/p"
+    },
+    {
+        "id": 7,
+        "title": "Harina Sin Polvos de Hornear Mont Blanc 5Kg",
+        "price": 6630,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/180686-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-sin-polvos-de-hornear-mont-blanc-bolsa-5-kg-2/p"
+    },
+    {
+        "id": 8,
+        "title": "Manteca Astra 200 g",
+        "price": 2090,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/340115-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/manteca-astra-pan-200-g/p"
+    },
+    {
+        "id": 9,
+        "title": "Manteca Crucina 200 g",
+        "price": 1860,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/173000-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/manteca-crucina-pan-200-g-2/p"
+    },
+    {
+        "id": 10,
+        "title": "Harina Cuisine & Co Sin Polvos 1Kg",
+        "price": 1000,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/271022-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-sin-polvo-de-hornear-1-kg-1899550/p"
+    },
+    {
+        "id": 11,
+        "title": "Harina de Maíz Blanca P.A.N 1Kg",
+        "price": 1850,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/262305-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-de-maiz-p-a-n-1-kg/p"
+    },
+    {
+        "id": 12,
+        "title": "Harina de Maíz Amarilla P.A.N 1Kg",
+        "price": 1850,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/262306-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-pan-amarilla-1-kg/p"
+    },
+    {
+        "id": 13,
+        "title": "Harina Tostada Oso 500 g",
+        "price": 1270,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/494635-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-tostada-oso-500-g/p"
+    },
+    {
+        "id": 14,
+        "title": "Polvos de Hornear Imperial 100g",
+        "price": 1070,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/158219-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/polvos-de-hornear-imperial-100-g/p"
+    },
+    {
+        "id": 15,
+        "title": "Harina Flor Collico 1Kg",
+        "price": 990,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/185954-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-flor-collico-env-papel-1kg/p"
+    },
+    {
+        "id": 16,
+        "title": "Harina Quaker de Avena Integral 450 g",
+        "price": 2790,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/512194-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/harina-avena-integral-450-g-1894721/p"
+    },
+    {
+        "id": 17,
+        "title": "Margarina Sureña 900 g",
+        "price": 3990,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/482859-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-surena-1-kg-con-mantequilla-del-sur/p"
+    },
+    {
+        "id": 18,
+        "title": "Margarina Qualy 500grs",
+        "price": 2660,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/156786-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-con-sal-qualy-500g/p"
+    },
+    {
+        "id": 19,
+        "title": "Margarina Qualy Pote 1kg",
+        "price": 5440,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/198822-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-con-sal-1-kg-1811524/p"
+    },
+    {
+        "id": 20,
+        "title": "Margarina Pamperita 900 g",
+        "price": 3190,
+        "category": "Abarrotes",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/462711-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/margarina-pamperita-1-kilo/p"
+    },
+    {
+        "id": 21,
+        "title": "Aceite Vegetal Cuisine & Co 900ml",
+        "price": 1790,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/296011-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-vegetal-libre-de-colesterol-900-ml-cuisine-and-co-1800913/p"
+    },
+    {
+        "id": 22,
+        "title": "Aceite Vegetal Maxima 5L",
+        "price": 8590,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/296448-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-maxima-5l-1859332/p"
+    },
+    {
+        "id": 23,
+        "title": "Aceite Maravilla Miraflores 900 ml",
+        "price": 3150,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/278644-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-maravilla-miraflores-900-ml-1952461/p"
+    },
+    {
+        "id": 24,
+        "title": "Aceite Maravilla Chef 1 L",
+        "price": 2990,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/507712-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-maravilla-chef-1-l/p"
+    },
+    {
+        "id": 25,
+        "title": "Aceite Belmont Vegetal 1L",
+        "price": 3190,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/197658-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-vegetal-belmont-1-l-0-colesterol/p"
+    },
+    {
+        "id": 26,
+        "title": "Aceite Natura Maravilla 900ml",
+        "price": 2690,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/188787-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-maravilla-natura-900-ml/p"
+    },
+    {
+        "id": 27,
+        "title": "Aceite de Oliva Extra Virgen Chef 500cc",
+        "price": 4890,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/339523-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/aceite-de-oliva-chef-botella-500-ml-extra-virgen-2/p"
+    },
+    {
+        "id": 28,
+        "title": "Azúcar Blanca Cuisine & Co 1Kg",
+        "price": 1260,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/271516-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/azucar-blanca-granulada-1-kg-cuisine-and-co-1821380/p"
+    },
+    {
+        "id": 29,
+        "title": "Azúcar Blanca Iansa 1Kg",
+        "price": 1470,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/535191-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/azucar-blanca-granulada-iansa-1-kg/p"
+    },
+    {
+        "id": 30,
+        "title": "Azúcar Blanca Iansa 5Kg",
+        "price": 7350,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/520336-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/azucar-blanca-iansa-bolsa-5-kg-granulada/p"
+    },
+    {
+        "id": 31,
+        "title": "Azúcar Flor Cuisine & Co 500g",
+        "price": 1050,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/271519-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/azucar-flor-500-g-cuisine-and-co-1821384/p"
+    },
+    {
+        "id": 32,
+        "title": "Azúcar Rubia Cuisine & Co 1 kg",
+        "price": 2360,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/271514-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/azucar-rubia-1-kg-cuisine-and-co-1755906/p"
+    },
+    {
+        "id": 33,
+        "title": "Endulzante Líquido Daily Stevia 270ml",
+        "price": 2990,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/496352-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/endulzante-liquido-daily-stevia-270-ml/p"
+    },
+    {
+        "id": 34,
+        "title": "Sal Lobos Fina 1Kg",
+        "price": 540,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/170191-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/sal-fina-lobos-1-kg/p"
+    },
+    {
+        "id": 35,
+        "title": "Sal Cuisine & Co Fina 1Kg",
+        "price": 480,
+        "category": "Aceites y azucar",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/197889-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/sal-fina-cuisine-and-co-1-kg/p"
+    },
+    {
+        "id": 36,
+        "title": "Bizcocho Chocman Costa 33 g",
+        "price": 2020,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/276188-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/pack-chocman-costa-10-unid-330-g/p"
+    },
+    {
+        "id": 37,
+        "title": "Galletas Oreo Rollo Sabor Original 108 g",
+        "price": 880,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/553163-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/galleta-oreo-regular-108-gr-1932773/p"
+    },
+    {
+        "id": 38,
+        "title": "Dulce de Membrillo Cuisine & Co 500 g",
+        "price": 2710,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/543914-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/dulce-de-membrillo-watt-s-500-g/p"
+    },
+    {
+        "id": 39,
+        "title": "Dulce de Membrillo Eckart 330 g",
+        "price": 1750,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/363827-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/dulce-de-membrillo-eckart-pote-330-g-con-sucralosa-751537/p"
+    },
+    {
+        "id": 40,
+        "title": "Papas Fritas Lay's Corte Americano 200 g",
+        "price": 2160,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/527519-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/papas-fritas-lay-s-tipo-americana-230-g/p"
+    },
+    {
+        "id": 41,
+        "title": "Ramitas Evercrisp Queso 230 g",
+        "price": 2080,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/526629-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/ramitas-queso-230-g-1956895/p"
+    },
+    {
+        "id": 42,
+        "title": "Maní Salado Marco Polo 150 g",
+        "price": 1000,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/425370-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/mani-salado-marco-polo-150gr-2000508/p"
+    },
+    {
+        "id": 43,
+        "title": "Galletas Triton Vainilla 116 g",
+        "price": 880,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/470788-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/galletas-mckay-126-g-triton-sabor-chocolate-con-relleno-vainilla/p"
+    },
+    {
+        "id": 44,
+        "title": "Cereales Pillows Sabor Chocolate 350 g Cola Cao",
+        "price": 3890,
+        "category": "Snacks",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/255787-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/cereal-pillows-caja-480-g-cola-cao-2/p"
+    },
+    {
+        "id": 45,
+        "title": "Pan de Hamburguesa Castaño 8 un",
+        "price": 3490,
+        "category": "Panaderia",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/444308-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/pan-hamburguesa-castano-230-g-4-un-1997494/p"
+    },
+    {
+        "id": 46,
+        "title": "Pan Marraqueta kg",
+        "price": 2190,
+        "category": "Panaderia",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/289887-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/marraqueta-santa-isabel-v4-kg/p"
+    },
+    {
+        "id": 47,
+        "title": "Alfajor Pulmahue con Manjar",
+        "price": 2190,
+        "category": "Panaderia",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/174464-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/alfajor-pulmahue-con-manjar-2190/p"
+    },
+    {
+        "id": 48,
+        "title": "Pan Molde Ideal Blanco XL 750 g",
+        "price": 2490,
+        "category": "Panaderia",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/451301-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/m-ideal-bco-xl-750/p"
+    },
+    {
+        "id": 49,
+        "title": "Salame Italiano San Jorge 100 g",
+        "price": 1950,
+        "category": "Embutidos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/357473-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salame-italiano-sj-100-g/p"
+    },
+    {
+        "id": 50,
+        "title": "Jamón Colonial PF 200 g",
+        "price": 2190,
+        "category": "Embutidos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/330007-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/jamon-colonial-pf-granel-2/p"
+    },
+    {
+        "id": 51,
+        "title": "Mortadela Jamonada San Jorge 250 g",
+        "price": 1890,
+        "category": "Embutidos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/357501-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/mortadela-jamonada-250-g-1921241/p"
+    },
+    {
+        "id": 52,
+        "title": "Longaniza Llanquihue 500 g 4 un",
+        "price": 5590,
+        "category": "Embutidos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/163764-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/longaniza-ahumada-parrillera-chillan-500-g/p"
+    },
+    {
+        "id": 53,
+        "title": "Salame Receta del Abuelo 100 g",
+        "price": 2090,
+        "category": "Embutidos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/292955-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salame-receta-del-abuelo-100-g-1382537/p"
+    },
+    {
+        "id": 54,
+        "title": "Salame Italiano PF 100 g",
+        "price": 1670,
+        "category": "Embutidos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/174965-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salame-italiano-pf-gr/p"
+    },
+    {
+        "id": 55,
+        "title": "Salsa de Tomate Italiana 200 g Cuisine & Co",
+        "price": 820,
+        "category": "Aderezos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/269773-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salsa-de-tomate-italiana-200-g-cuisine-and-co-1801327/p"
+    },
+    {
+        "id": 56,
+        "title": "Ketchup 500 g Cuisine & Co",
+        "price": 1590,
+        "category": "Aderezos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/276677-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/ketchup-1-kg-cuisine-and-co-1866619/p"
+    },
+    {
+        "id": 57,
+        "title": "Mayonesa Kraft Real Mayo 789 g",
+        "price": 4650,
+        "category": "Aderezos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/419902-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/mayonesa-kraft-pote-794-g/p"
+    },
+    {
+        "id": 58,
+        "title": "Mostaza JB 240 g",
+        "price": 1290,
+        "category": "Aderezos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/400474-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/www-jumbo-cljb-mostaza-tradicional-botella-240g/p"
+    },
+    {
+        "id": 59,
+        "title": "Salsa Americana Don Juan 180 g",
+        "price": 1350,
+        "category": "Aderezos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/163446-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salsa-americana-traverso-bolsa-300-grs-2/p"
+    },
+    {
+        "id": 60,
+        "title": "Café Instantáneo 150 g Cuisine & Co",
+        "price": 3490,
+        "category": "Bebidas",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/270988-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/cafe-instantaneo-150-g-cuisine-and-co-1870006/p"
+    },
+    {
+        "id": 61,
+        "title": "Jugo en Polvo Frutilla Cuisine & Co 7 g",
+        "price": 220,
+        "category": "Bebidas",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/479792-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/jugo-inst-frutilla-7-gr-cuisine-and-co-2003440/p"
+    },
+    {
+        "id": 62,
+        "title": "Té Ceylán Supremo Premium 100 un",
+        "price": 5590,
+        "category": "Infusiones",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/377405-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/te-ceylan-supremo-premium-200-g-100-unid/p"
+    },
+    {
+        "id": 63,
+        "title": "Leche Semidescremada Surlat 1 L",
+        "price": 1200,
+        "category": "Lacteos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/304194-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/leche-semidescremada-1-l-cuisine-and-co-1858322/p"
+    },
+    {
+        "id": 64,
+        "title": "Arroz Grado 2 Cuisine & Co 1 kg",
+        "price": 1250,
+        "category": "Legumbres",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/268449-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/arroz-largo-fino-1-kg-cuisine-and-co-1845787/p"
+    },
+    {
+        "id": 65,
+        "title": "Porotos Tórtola Cuisine & Co 1 kg",
+        "price": 2990,
+        "category": "Legumbres",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/270912-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/poroto-espanol-1-kg-cuisine-and-co-1840319/p"
+    },
+    {
+        "id": 66,
+        "title": "Atún Lomitos en Agua Cuisine & Co 140 g",
+        "price": 1420,
+        "category": "Conservas",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/491495-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/atun-cuisine-and-co-lomitos-en-agua-91-g-drenado-140-g-neto-2017687/p"
+    },
+    {
+        "id": 67,
+        "title": "Jurel Natural Cuisine & Co 300 g",
+        "price": 1590,
+        "category": "Conservas",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/543890-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/jurel-al-natural-lata-300-g-drenado-266192/p"
+    },
+    {
+        "id": 68,
+        "title": "Salsa de Chocolate Gourmet 280 g",
+        "price": 2130,
+        "category": "Reposteria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/465753-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salsa-para-postres-gourmet-280-g-chocolate/p"
+    },
+    {
+        "id": 69,
+        "title": "Helado Chocolate Suizo Savory 1 L",
+        "price": 2790,
+        "category": "Helados",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/169495-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/helado-savory-1-l-chocolate-suizo/p"
+    },
+    {
+        "id": 70,
+        "title": "Salsa de Manjar Gourmet 280 g",
+        "price": 2130,
+        "category": "Reposteria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/465765-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/salsa-para-postres-gourmet-280-g-manjar/p"
+    },
+    {
+        "id": 71,
+        "title": "Galletas Vino Mckay 155 g",
+        "price": 940,
+        "category": "Pasteleria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/171459-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/galletas-vino-mckay-155-g/p"
+    },
+    {
+        "id": 72,
+        "title": "Galletas Champaña Costa 140 g",
+        "price": 2590,
+        "category": "Pasteleria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/180789-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/galletas-champana-costa-140-g-dulces-azucaradas/p"
+    },
+    {
+        "id": 73,
+        "title": "Mermelada Frambuesa Cuisine & Co 250 g",
+        "price": 1080,
+        "category": "Reposteria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/269406-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/mermelada-frambuesa-250-g-cuisine-and-co-1844837/p"
+    },
+    {
+        "id": 74,
+        "title": "Mermelada Damasco Cuisine & Co 250 g",
+        "price": 860,
+        "category": "Reposteria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/269404-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/mermelada-damasco-250-g-cuisine-and-co-1844835/p"
+    },
+    {
+        "id": 75,
+        "title": "Leche Condensada Cuisine & Co 397 g",
+        "price": 1330,
+        "category": "Reposteria",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/169541-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/leche-condensada-397-g-cuisine-and-co-1858600/p"
+    },
+    {
+        "id": 76,
+        "title": "Crema de Leche Colun 200 ml",
+        "price": 1400,
+        "category": "Lacteos",
+        "imageUrl": "https://santaisabel.vtexassets.com/arquivos/ids/156595-900-900?width=900&height=900&aspect=true",
+        "productUrl": "https://www.santaisabel.cl/crema-de-leche-colun-caja-200-ml/p"
+    }
+]

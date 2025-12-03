@@ -1,0 +1,1322 @@
+[
+    {
+        "id": 1,
+        "title": "Harina Selecta 1kg",
+        "category": "Abarrotes",
+        "price": 1490,
+        "imageUrl": "public/ProductosImage/harina-selecta.png",
+        "productUrl": "/producto?item=harina-selecta-1kg"
+    },
+    {
+        "id": 2,
+        "title": "Harina MontBlanc 1kg",
+        "category": "Abarrotes",
+        "price": 1550,
+        "imageUrl": "public/ProductosImage/harina-montblanc.png",
+        "productUrl": "/producto?item=harina-montblanc-1kg"
+    },
+    {
+        "id": 3,
+        "title": "Harina King 1kg",
+        "category": "Abarrotes",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/harina-king.png",
+        "productUrl": "/producto?item=harina-king-1kg"
+    },
+    {
+        "id": 4,
+        "title": "Harina Integral Selecta 1kg",
+        "category": "Abarrotes",
+        "price": 1890,
+        "imageUrl": "public/ProductosImage/harina-integral-selecta.png",
+        "productUrl": "/producto?item=harina-integral-selecta-1kg"
+    },
+    {
+        "id": 5,
+        "title": "Mantequilla Los Nogales 250g",
+        "category": "Abarrotes",
+        "price": 1890,
+        "imageUrl": "public/ProductosImage/mantequilla-los-nogales.png",
+        "productUrl": "/producto?item=mantequilla-los-nogales-250g"
+    },
+    {
+        "id": 6,
+        "title": "Mantequilla La Vaquita 250g",
+        "category": "Abarrotes",
+        "price": 2690,
+        "imageUrl": "public/ProductosImage/mantequilla-la-vaquita.png",
+        "productUrl": "/producto?item=mantequilla-la-vaquita-250g"
+    },
+    {
+        "id": 7,
+        "title": "Margarina Manty 250g",
+        "category": "Abarrotes",
+        "price": 1450,
+        "imageUrl": "public/ProductosImage/margarina-manty.png",
+        "productUrl": "/producto?item=margarina-manty-250g"
+    },
+    {
+        "id": 8,
+        "title": "Margarina Dorina 250g",
+        "category": "Abarrotes",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/margarina-dorina.png",
+        "productUrl": "/producto?item=margarina-dorina-250g"
+    },
+    {
+        "id": 9,
+        "title": "Azúcar Blanca Iansa 1kg",
+        "category": "Azucar y Aceites",
+        "price": 1250,
+        "imageUrl": "public/ProductosImage/azucar-blanca-iansa.png",
+        "productUrl": "/producto?item=azucar-blanca-iansa-1kg"
+    },
+    {
+        "id": 10,
+        "title": "Azúcar Rubia Iansa 1kg",
+        "category": "Azucar y Aceites",
+        "price": 1350,
+        "imageUrl": "public/ProductosImage/azucar-rubia-iansa.png",
+        "productUrl": "/producto?item=azucar-rubia-iansa-1kg"
+    },
+    {
+        "id": 11,
+        "title": "Azúcar Blanca DamaBlanca 1kg",
+        "category": "Azucar y Aceites",
+        "price": 1190,
+        "imageUrl": "public/ProductosImage/azucar-blanca-dama.png",
+        "productUrl": "/producto?item=azucar-blanca-dama-1kg"
+    },
+    {
+        "id": 12,
+        "title": "Azúcar Rubia DamaBlanca 500g",
+        "category": "Azucar y Aceites",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/azucar-rubia-dama.png",
+        "productUrl": "/producto?item=azucar-rubia-dama-500g"
+    },
+    {
+        "id": 13,
+        "title": "Chocolate en Polvo Milo 400g",
+        "category": "Abarrotes",
+        "price": 2690,
+        "imageUrl": "public/ProductosImage/chocolate-milo.png",
+        "productUrl": "/producto?item=chocolate-en-polvo-milo-400g"
+    },
+    {
+        "id": 14,
+        "title": "Chocolate en Polvo Carozzi 400g",
+        "category": "Abarrotes",
+        "price": 2490,
+        "imageUrl": "public/ProductosImage/chocolate-carozzi.png",
+        "productUrl": "/producto?item=chocolate-en-polvo-carozzi-400g"
+    },
+    {
+        "id": 15,
+        "title": "Chocolate en Polvo Toddy 400g",
+        "category": "Abarrotes",
+        "price": 2590,
+        "imageUrl": "public/ProductosImage/chocolate-toddy.png",
+        "productUrl": "/producto?item=chocolate-en-polvo-toddy-400g"
+    },
+    {
+        "id": 16,
+        "title": "Sal Lobos 1kg",
+        "category": "Abarrotes",
+        "price": 950,
+        "imageUrl": "public/ProductosImage/sal-lobos.png",
+        "productUrl": "/producto?item=sal-lobos-1kg"
+    },
+    {
+        "id": 17,
+        "title": "Sal Marina La Patrona 1kg",
+        "category": "Abarrotes",
+        "price": 1150,
+        "imageUrl": "public/ProductosImage/sal-marina.png",
+        "productUrl": "/producto?item=sal-marina-la-patrona-1kg"
+    },
+    {
+        "id": 18,
+        "title": "Stevia Iansa 250g",
+        "category": "Azucar y Aceites",
+        "price": 1890,
+        "imageUrl": "public/ProductosImage/stevia-iansa.png",
+        "productUrl": "/producto?item=stevia-iansa-250g"
+    },
+    {
+        "id": 19,
+        "title": "Stevia Daily 250g",
+        "category": "Azucar y Aceites",
+        "price": 1750,
+        "imageUrl": "public/ProductosImage/stevia-daily.png",
+        "productUrl": "/producto?item=stevia-daily-250g"
+    },
+    {
+        "id": 20,
+        "title": "Chancaca Deliciosa 225g",
+        "price": 1200,
+        "imageUrl": "public/ProductosImage/chancaca-deliciosa.png",
+        "productUrl": "/producto?item=chancaca-deliciosa-225g"
+    },
+    {
+        "id": 21,
+        "title": "Chancaca Doña Isidora 225g",
+        "price": 1100,
+        "imageUrl": "public/ProductosImage/chancaca-isidora.png",
+        "productUrl": "/producto?item=chancaca-dona-isidora-225g"
+    },
+    {
+        "id": 22,
+        "title": "Margarina Loncoleche 250g",
+        "price": 1490,
+        "imageUrl": "public/ProductosImage/margarina-lonco.png",
+        "productUrl": "/producto?item=margarina-loncoleche-250g"
+    },
+    {
+        "id": 23,
+        "title": "Harina Selecta Sin Polvos 1kg",
+        "price": 1590,
+        "imageUrl": "public/ProductosImage/harina-selecta-sin-polvos.png",
+        "productUrl": "/producto?item=harina-selecta-sin-polvos-1kg"
+    },
+    {
+        "id": 24,
+        "title": "Azúcar Flor Iansa 1kg",
+        "category": "Azucar y Aceites",
+        "price": 1890,
+        "imageUrl": "public/ProductosImage/azucar-flor-iansa.png",
+        "productUrl": "/producto?item=azucar-flor-iansa-1kg"
+    },
+    {
+        "id": 25,
+        "title": "Chocolate en Polvo Nestlé Cacao 300g",
+        "price": 2790,
+        "imageUrl": "public/ProductosImage/chocolate-nestle.png",
+        "productUrl": "/producto?item=chocolate-en-polvo-nestle-cacao-300g"
+    },
+    {
+        "id": 26,
+        "title": "Galletas Soda Costa 200g",
+        "category": "Snaks",
+        "price": 1490,
+        "imageUrl": "public/ProductosImage/galletas-soda-costa.png",
+        "productUrl": "/producto?item=galletas-soda-costa-200g"
+    },
+    {
+        "id": 27,
+        "title": "Galletas de Agua Tritón 200g",
+        "category": "Snaks",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/galletas-agua-triton.png",
+        "productUrl": "/producto?item=galletas-de-agua-triton-200g"
+    },
+    {
+        "id": 28,
+        "title": "Galletas María Costa 160g",
+        "category": "Snaks",
+        "price": 990,
+        "imageUrl": "public/ProductosImage/galletas-maria-costa.png",
+        "productUrl": "/producto?item=galletas-maria-costa-160g"
+    },
+    {
+        "id": 29,
+        "title": "Galletas Lincoln 140g",
+        "category": "Snaks",
+        "price": 890,
+        "imageUrl": "public/ProductosImage/galletas-lincoln.png",
+        "productUrl": "/producto?item=galletas-lincoln-140g"
+    },
+    {
+        "id": 30,
+        "title": "Gelatina Frambuesa Carozzi 85g",
+        "category": "Reposteria",
+        "price": 750,
+        "imageUrl": "public/ProductosImage/gelatina-frambuesa.png",
+        "productUrl": "/producto?item=gelatina-frambuesa-carozzi-85g"
+    },
+    {
+        "id": 31,
+        "title": "Gelatina Piña Carozzi 85g",
+        "category": "Reposteria",
+        "price": 750,
+        "imageUrl": "public/ProductosImage/gelatina-pina.png",
+        "productUrl": "/producto?item=gelatina-pina-carozzi-85g"
+    },
+    {
+        "id": 32,
+        "title": "Gelatina Naranja Carozzi 85g",
+        "category": "Reposteria",
+        "price": 750,
+        "imageUrl": "public/ProductosImage/gelatina-naranja.png",
+        "productUrl": "/producto?item=gelatina-naranja-carozzi-85g"
+    },
+    {
+        "id": 33,
+        "title": "Maicena Alimentos del Sur 250g",
+        "price": 1150,
+        "imageUrl": "public/ProductosImage/maicena-sur.png",
+        "productUrl": "/producto?item=maicena-alimentos-del-sur-250g"
+    },
+    {
+        "id": 34,
+        "title": "Maicena Selecta 250g",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/maicena-selecta.png",
+        "productUrl": "/producto?item=maicena-selecta-250g"
+    },
+    {
+        "id": 35,
+        "title": "Cacao en Polvo Winter's 250g",
+        "price": 2150,
+        "imageUrl": "public/ProductosImage/cacao-winters.png",
+        "productUrl": "/producto?item=cacao-en-polvo-winters-250g"
+    },
+    {
+        "id": 36,
+        "title": "Cocoa en Polvo Universal 250g",
+        "price": 2050,
+        "imageUrl": "public/ProductosImage/cocoa-universal.png",
+        "productUrl": "/producto?item=cocoa-en-polvo-universal-250g"
+    },
+    {
+        "id": 37,
+        "title": "Azúcar Light Iansa 500g",
+        "category": "Aceites y Azucar",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/azucar-light-iansa.png",
+        "productUrl": "/producto?item=azucar-light-iansa-500g"
+    },
+    {
+        "id": 38,
+        "title": "Azúcar Morena Selecta 1kg",
+        "price": 1650,
+        "imageUrl": "public/ProductosImage/azucar-morena-selecta.png",
+        "productUrl": "/producto?item=azucar-morena-selecta-1kg"
+    },
+    {
+        "id": 39,
+        "title": "Harina Integral MontBlanc 1kg",
+        "price": 1890,
+        "imageUrl": "public/ProductosImage/harina-integral-montblanc.png",
+        "productUrl": "/producto?item=harina-integral-montblanc-1kg"
+    },
+    {
+        "id": 40,
+        "title": "Harina de Maíz P.A.N. 1kg",
+        "price": 2390,
+        "imageUrl": "public/ProductosImage/harina-pan.png",
+        "productUrl": "/producto?item=harina-de-maiz-pan-1kg"
+    },
+    {
+        "id": 41,
+        "title": "Margarina Bonella 250g",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/margarina-bonella.png",
+        "productUrl": "/producto?item=margarina-bonella-250g"
+    },
+    {
+        "id": 42,
+        "title": "Margarina Sello de Oro 250g",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/margarina-sello-oro.png",
+        "productUrl": "/producto?item=margarina-sello-de-oro-250g"
+    },
+    {
+        "id": 43,
+        "title": "Endulzante Sucralosa Daily 250g",
+        "category": "Aceites y Azucar",
+        "price": 1850,
+        "imageUrl": "public/ProductosImage/sucralosa-daily.png",
+        "productUrl": "/producto?item=endulzante-sucralosa-daily-250g"
+    },
+    {
+        "id": 44,
+        "title": "Endulzante Sucralosa Iansa 250g",
+        "category": "Aceites y Azucar",
+        "price": 1950,
+        "imageUrl": "public/ProductosImage/sucralosa-iansa.png",
+        "productUrl": "/producto?item=endulzante-sucralosa-iansa-250g"
+    },
+    {
+        "id": 45,
+        "title": "Galletas Vainilla Costa 160g",
+        "category": "Snaks",
+        "price": 1090,
+        "imageUrl": "public/ProductosImage/galletas-vainilla-costa.png",
+        "productUrl": "/producto?item=galletas-vainilla-costa-160g"
+    },
+    {
+        "id": 46,
+        "title": "Galletas Negritas Costa 126g",
+        "category": "Snaks",
+        "price": 890,
+        "imageUrl": "public/ProductosImage/galletas-negritas.png",
+        "productUrl": "/producto?item=galletas-negritas-costa-126g"
+    },
+    {
+        "id": 47,
+        "title": "Galletas Lemon Costa 126g",
+        "category": "Snaks",
+        "price": 890,
+        "imageUrl": "public/ProductosImage/galletas-lemon.png",
+        "productUrl": "/producto?item=galletas-lemon-costa-126g"
+    },
+    {
+        "id": 48,
+        "title": "Cacao Amargo Selecta 180g",
+        "price": 1750,
+        "imageUrl": "public/ProductosImage/cacao-amargo-selecta.png",
+        "productUrl": "/producto?item=cacao-amargo-selecta-180g"
+    },
+    {
+        "id": 49,
+        "title": "Harina Sin Gluten Schär 500g",
+        "price": 5990,
+        "imageUrl": "public/ProductosImage/harina-sin-gluten-schar.png",
+        "productUrl": "/producto?item=harina-sin-gluten-schar-500g"
+    },
+    {
+        "id": 50,
+        "title": "Galletas de Agua Costa 200g",
+        "category": "Snaks",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/galletas-agua-costa.png",
+        "productUrl": "/producto?item=galletas-agua-costa-200g"
+    },
+    {
+        "id": 51,
+        "title": "Atún en Agua 170 g San José",
+        "category": "Conservas",
+        "price": 1290,
+        "imageUrl": "https://example.com/atun-agua-sanjose.jpg",
+        "productUrl": "/producto/atun-agua-sanjose"
+    },
+    {
+        "id": 52,
+        "title": "Atún en Agua 170 g Angelmo",
+        "category": "Conservas",
+        "price": 1190,
+        "imageUrl": "https://example.com/atun-agua-angelmo.jpg",
+        "productUrl": "/producto/atun-agua-angelmo"
+    },
+    {
+        "id": 53,
+        "title": "Atún en Aceite 170 g San José",
+        "category": "Conservas",
+        "price": 1390,
+        "imageUrl": "https://example.com/atun-aceite-sanjose.jpg",
+        "productUrl": "/producto/atun-aceite-sanjose"
+    },
+    {
+        "id": 54,
+        "title": "Atún en Aceite 170 g Van Camp's",
+        "category": "Conservas",
+        "price": 1490,
+        "imageUrl": "https://example.com/atun-aceite-vancamps.jpg",
+        "productUrl": "/producto/atun-aceite-vancamps"
+    },
+    {
+        "id": 55,
+        "title": "Mermelada Frutilla 400 g Watts",
+        "category": "Conservas",
+        "price": 1890,
+        "imageUrl": "https://example.com/mermelada-frutilla-watts.jpg",
+        "productUrl": "/producto/mermelada-frutilla-watts"
+    },
+    {
+        "id": 56,
+        "title": "Mermelada Frutilla 400 g La Campesina",
+        "category": "Conservas",
+        "price": 1590,
+        "imageUrl": "https://example.com/mermelada-frutilla-campesina.jpg",
+        "productUrl": "/producto/mermelada-frutilla-campesina"
+    },
+    {
+        "id": 57,
+        "title": "Aceitunas Verdes Sin Carozo 300 g San Jorge",
+        "category": "Conservas",
+        "price": 2290,
+        "imageUrl": "https://example.com/aceitunas-sin-carozo-sanjorge.jpg",
+        "productUrl": "/producto/aceitunas-sin-carozo-sanjorge"
+    },
+    {
+        "id": 58,
+        "title": "Aceitunas Verdes Sin Carozo 300 g Coppola",
+        "category": "Conservas",
+        "price": 2190,
+        "imageUrl": "https://example.com/aceitunas-sin-carozo-coppola.jpg",
+        "productUrl": "/producto/aceitunas-sin-carozo-coppola"
+    },
+    {
+        "id": 59,
+        "title": "Pepinillos en Vinagre 300 g Coppola",
+        "category": "Conservas",
+        "price": 2490,
+        "imageUrl": "https://example.com/pepinillos-coppola.jpg",
+        "productUrl": "/producto/pepinillos-coppola"
+    },
+    {
+        "id": 60,
+        "title": "Pepinillos en Vinagre 300 g San Jorge",
+        "category": "Conservas",
+        "price": 2390,
+        "imageUrl": "https://example.com/pepinillos-sanjorge.jpg",
+        "productUrl": "/producto/pepinillos-sanjorge"
+    },
+    {
+        "id": 61,
+        "title": "Chucrut en Bolsa 1 kg Coppola",
+        "category": "Conservas",
+        "price": 1590,
+        "imageUrl": "https://example.com/chucrut-coppola.jpg",
+        "productUrl": "/producto/chucrut-coppola"
+    },
+    {
+        "id": 62,
+        "title": "Chucrut en Bolsa 1 kg San Remo",
+        "category": "Conservas",
+        "price": 1490,
+        "imageUrl": "https://example.com/chucrut-sanremo.jpg",
+        "productUrl": "/producto/chucrut-sanremo"
+    },
+    {
+        "id": 63,
+        "title": "Jurel en Tarro 425 g San José",
+        "category": "Conservas",
+        "price": 1890,
+        "imageUrl": "https://example.com/jurel-sanjose.jpg",
+        "productUrl": "/producto/jurel-sanjose"
+    },
+    {
+        "id": 64,
+        "title": "Jurel en Tarro 425 g Coronel",
+        "category": "Conservas",
+        "price": 1790,
+        "imageUrl": "https://example.com/jurel-coronel.jpg",
+        "productUrl": "/producto/jurel-coronel"
+    },
+    {
+        "id": 65,
+        "title": "Duraznos en Conserva 820 g Wasil",
+        "category": "Conservas",
+        "price": 2590,
+        "imageUrl": "https://example.com/duraznos-wasil.jpg",
+        "productUrl": "/producto/duraznos-wasil"
+    },
+    {
+        "id": 66,
+        "title": "Duraznos en Conserva 820 g Dos Caballos",
+        "category": "Conservas",
+        "price": 2390,
+        "imageUrl": "https://example.com/duraznos-doscaballos.jpg",
+        "productUrl": "/producto/duraznos-doscaballos"
+    },
+    {
+        "id": 67,
+        "title": "Piña en Conserva 560 g Wasil",
+        "category": "Conservas",
+        "price": 2390,
+        "imageUrl": "https://example.com/pina-wasil.jpg",
+        "productUrl": "/producto/pina-wasil"
+    },
+    {
+        "id": 68,
+        "title": "Piña en Conserva 560 g Dos Caballos",
+        "category": "Conservas",
+        "price": 2190,
+        "imageUrl": "https://example.com/pina-doscaballos.jpg",
+        "productUrl": "/producto/pina-doscaballos"
+    },
+    {
+        "id": 69,
+        "title": "Aceitunas Negras Enteras 300 g Coppola",
+        "category": "Conservas",
+        "price": 2390,
+        "imageUrl": "https://example.com/aceitunas-negras-coppola.jpg",
+        "productUrl": "/producto/aceitunas-negras-coppola"
+    },
+    {
+        "id": 70,
+        "title": "Aceitunas Negras Enteras 300 g San Jorge",
+        "category": "Conservas",
+        "price": 2290,
+        "imageUrl": "https://example.com/aceitunas-negras-sanjorge.jpg",
+        "productUrl": "/producto/aceitunas-negras-sanjorge"
+    },
+    {
+        "id": 71,
+        "title": "Spaghetti 400 g Carozzi",
+        "category": "Pastas",
+        "price": 1150,
+        "imageUrl": "https://example.com/spaghetti-carozzi.jpg",
+        "productUrl": "/producto/spaghetti-carozzi"
+    },
+    {
+        "id": 72,
+        "title": "Spaghetti 400 g Lucchetti",
+        "category": "Pastas",
+        "price": 1090,
+        "imageUrl": "https://example.com/spaghetti-lucchetti.jpg",
+        "productUrl": "/producto/spaghetti-lucchetti"
+    },
+    {
+        "id": 73,
+        "title": "Spaghetti 400 g Don Vittorio",
+        "category": "Pastas",
+        "price": 1250,
+        "imageUrl": "https://example.com/spaghetti-donvittorio.jpg",
+        "productUrl": "/producto/spaghetti-donvittorio"
+    },
+    {
+        "id": 74,
+        "title": "Tallarines 400 g Carozzi",
+        "category": "Pastas",
+        "price": 1150,
+        "imageUrl": "https://example.com/tallarines-carozzi.jpg",
+        "productUrl": "/producto/tallarines-carozzi"
+    },
+    {
+        "id": 75,
+        "title": "Tallarines 400 g Lucchetti",
+        "category": "Pastas",
+        "price": 1090,
+        "imageUrl": "https://example.com/tallarines-lucchetti.jpg",
+        "productUrl": "/producto/tallarines-lucchetti"
+    },
+    {
+        "id": 76,
+        "title": "Tallarines 400 g Don Vittorio",
+        "category": "Pastas",
+        "price": 1250,
+        "imageUrl": "https://example.com/tallarines-donvittorio.jpg",
+        "productUrl": "/producto/tallarines-donvittorio"
+    },
+    {
+        "id": 77,
+        "title": "Pasta Anellini 250 g Carozzi",
+        "category": "Pastas",
+        "price": 990,
+        "imageUrl": "https://example.com/anellini-carozzi.jpg",
+        "productUrl": "/producto/anellini-carozzi"
+    },
+    {
+        "id": 78,
+        "title": "Pasta Anellini 250 g Lucchetti",
+        "category": "Pastas",
+        "price": 950,
+        "imageUrl": "https://example.com/anellini-lucchetti.jpg",
+        "productUrl": "/producto/anellini-lucchetti"
+    },
+    {
+        "id": 79,
+        "title": "Pasta Anellini 250 g Don Vittorio",
+        "category": "Pastas",
+        "price": 1190,
+        "imageUrl": "https://example.com/anellini-donvittorio.jpg",
+        "productUrl": "/producto/anellini-donvittorio"
+    },
+    {
+        "id": 80,
+        "title": "Penne Rigate 400 g Carozzi",
+        "category": "Pastas",
+        "price": 1350,
+        "imageUrl": "https://example.com/penne-carozzi.jpg",
+        "productUrl": "/producto/penne-carozzi"
+    },
+    {
+        "id": 81,
+        "title": "Penne Rigate 400 g Lucchetti",
+        "category": "Pastas",
+        "price": 1290,
+        "imageUrl": "https://example.com/penne-lucchetti.jpg",
+        "productUrl": "/producto/penne-lucchetti"
+    },
+    {
+        "id": 82,
+        "title": "Penne Rigate 400 g Don Vittorio",
+        "category": "Pastas",
+        "price": 1450,
+        "imageUrl": "https://example.com/penne-donvittorio.jpg",
+        "productUrl": "/producto/penne-donvittorio"
+    },
+    {
+        "id": 83,
+        "title": "Pasta para Lasagna 400 g Carozzi",
+        "category": "Pastas",
+        "price": 1790,
+        "imageUrl": "https://example.com/lasagna-carozzi.jpg",
+        "productUrl": "/producto/lasagna-carozzi"
+    },
+    {
+        "id": 84,
+        "title": "Pasta para Lasagna 400 g Lucchetti",
+        "category": "Pastas",
+        "price": 1690,
+        "imageUrl": "https://example.com/lasagna-lucchetti.jpg",
+        "productUrl": "/producto/lasagna-lucchetti"
+    },
+    {
+        "id": 85,
+        "title": "Pasta para Lasagna 400 g Don Vittorio",
+        "category": "Pastas",
+        "price": 1890,
+        "imageUrl": "https://example.com/lasagna-donvittorio.jpg",
+        "productUrl": "/producto/lasagna-donvittorio"
+    },
+    {
+        "id": 86,
+        "title": "Prepizza 2 Unidades Ideal",
+        "category": "Pastas",
+        "price": 2390,
+        "imageUrl": "https://example.com/prepizza-ideal.jpg",
+        "productUrl": "/producto/prepizza-ideal"
+    },
+    {
+        "id": 87,
+        "title": "Prepizza 2 Unidades Orlando",
+        "category": "Pastas",
+        "price": 2290,
+        "imageUrl": "https://example.com/prepizza-orlando.jpg",
+        "productUrl": "/producto/prepizza-orlando"
+    },
+    {
+        "id": 88,
+        "title": "Pasta Coditos 400 g Carozzi",
+        "category": "Pastas",
+        "price": 1290,
+        "imageUrl": "https://example.com/coditos-carozzi.jpg",
+        "productUrl": "/producto/coditos-carozzi"
+    },
+    {
+        "id": 89,
+        "title": "Pasta Coditos 400 g Lucchetti",
+        "category": "Pastas",
+        "price": 1190,
+        "imageUrl": "https://example.com/coditos-lucchetti.jpg",
+        "productUrl": "/producto/coditos-lucchetti"
+    },
+    {
+        "id": 90,
+        "title": "Pasta Coditos 400 g Don Vittorio",
+        "category": "Pastas",
+        "price": 1390,
+        "imageUrl": "https://example.com/coditos-donvittorio.jpg",
+        "productUrl": "/producto/coditos-donvittorio"
+    },
+    {
+        "id": 91,
+        "title": "Bebida Coca-Cola 1.5L",
+        "category": "Bebidas",
+        "price": 1990,
+        "imageUrl": "https://example.com/cocacola-15.jpg",
+        "productUrl": "/producto/cocacola-15"
+    },
+    {
+        "id": 92,
+        "title": "Bebida Coca-Cola Zero 1.5L",
+        "category": "Bebidas",
+        "price": 1990,
+        "imageUrl": "https://example.com/cocacolazero-15.jpg",
+        "productUrl": "/producto/cocacolazero-15"
+    },
+    {
+        "id": 93,
+        "title": "Bebida Pepsi 1.5L",
+        "category": "Bebidas",
+        "price": 1790,
+        "imageUrl": "https://example.com/pepsi-15.jpg",
+        "productUrl": "/producto/pepsi-15"
+    },
+    {
+        "id": 94,
+        "title": "Bebida Pepsi Black 1.5L",
+        "category": "Bebidas",
+        "price": 1790,
+        "imageUrl": "https://example.com/pepsiblack-15.jpg",
+        "productUrl": "/producto/pepsiblack-15"
+    },
+    {
+        "id": 95,
+        "title": "Bebida Fanta Naranja 1.5L",
+        "category": "Bebidas",
+        "price": 1890,
+        "imageUrl": "https://example.com/fanta-15.jpg",
+        "productUrl": "/producto/fanta-15"
+    },
+    {
+        "id": 96,
+        "title": "Bebida Sprite 1.5L",
+        "category": "Bebidas",
+        "price": 1890,
+        "imageUrl": "https://example.com/sprite-15.jpg",
+        "productUrl": "/producto/sprite-15"
+    },
+    {
+        "id": 97,
+        "title": "Bebida Canada Dry Ginger Ale 1.5L",
+        "category": "Bebidas",
+        "price": 1990,
+        "imageUrl": "https://example.com/canadadry-ginger.jpg",
+        "productUrl": "/producto/canadadry-ginger-15"
+    },
+    {
+        "id": 98,
+        "title": "Bebida Canada Dry Limón Soda 1.5L",
+        "category": "Bebidas",
+        "price": 1990,
+        "imageUrl": "https://example.com/canadadry-limon.jpg",
+        "productUrl": "/producto/canadadry-limon-15"
+    },
+    {
+        "id": 99,
+        "title": "Bebida Kem Piña 1.5L",
+        "category": "Bebidas",
+        "price": 1650,
+        "imageUrl": "https://example.com/kem-pina.jpg",
+        "productUrl": "/producto/kem-pina-15"
+    },
+    {
+        "id": 100,
+        "title": "Bebida Bilz 1.5L",
+        "category": "Bebidas",
+        "price": 1650,
+        "imageUrl": "https://example.com/bilz-15.jpg",
+        "productUrl": "/producto/bilz-15"
+    },
+    {
+        "id": 101,
+        "title": "Bebida Pap 1.5L",
+        "category": "Bebidas",
+        "price": 1650,
+        "imageUrl": "https://example.com/pap-15.jpg",
+        "productUrl": "/producto/pap-15"
+    },
+    {
+        "id": 102,
+        "title": "Bebida Crush Naranja 1.5L",
+        "category": "Bebidas",
+        "price": 1790,
+        "imageUrl": "https://example.com/crush-naranja.jpg",
+        "productUrl": "/producto/crush-naranja-15"
+    },
+    {
+        "id": 103,
+        "title": "Bebida Watt's Orange 1.5L",
+        "category": "Bebidas",
+        "price": 1590,
+        "imageUrl": "https://example.com/watts-orange.jpg",
+        "productUrl": "/producto/watts-orange-15"
+    },
+    {
+        "id": 104,
+        "title": "Agua Mineral Sin Gas 1.6L Benedictino",
+        "category": "Bebidas",
+        "price": 1350,
+        "imageUrl": "https://example.com/benedictino.jpg",
+        "productUrl": "/producto/agua-benedictino-16"
+    },
+    {
+        "id": 105,
+        "title": "Agua Mineral Con Gas 1.6L Perrier",
+        "category": "Bebidas",
+        "price": 2990,
+        "imageUrl": "https://example.com/perrier.jpg",
+        "productUrl": "/producto/perrier-16"
+    },
+    {
+        "id": 106,
+        "title": "Bebida Energética Red Bull 250 ml Red Bull",
+        "category": "Bebidas",
+        "price": 1800,
+        "imageUrl": "https://example.com/redbull.jpg",
+        "productUrl": "/producto/redbull-250"
+    },
+    {
+        "id": 107,
+        "title": "Bebida Energética Monster 473 ml Monster",
+        "category": "Bebidas",
+        "price": 2200,
+        "imageUrl": "https://example.com/monster.jpg",
+        "productUrl": "/producto/monster-473"
+    },
+    {
+        "id": 108,
+        "title": "Café Instantáneo 170 g Nescafé",
+        "category": "Bebidas",
+        "price": 3990,
+        "imageUrl": "https://example.com/nescafe.jpg",
+        "productUrl": "/producto/nescafe-170"
+    },
+    {
+        "id": 109,
+        "title": "Café Instantáneo 170 g Dolca",
+        "category": "Bebidas",
+        "price": 3690,
+        "imageUrl": "https://example.com/dolca.jpg",
+        "productUrl": "/producto/dolca-170"
+    },
+    {
+        "id": 110,
+        "title": "Café Molido 250 g Starbucks",
+        "category": "Bebidas",
+        "price": 5790,
+        "imageUrl": "https://example.com/starbucks-molido.jpg",
+        "productUrl": "/producto/starbucks-molido-250"
+    },
+    {
+        "id": 111,
+        "title": "Mayonesa Hellmann's Tradicional 400 g",
+        "category": "Aderezos",
+        "price": 2490,
+        "imageUrl": "https://example.com/mayonesa-hellmanns-400g.jpg",
+        "productUrl": "https://example.com/product/mayonesa-hellmanns-400g"
+    },
+    {
+        "id": 112,
+        "title": "Mayonesa Gourmet Light 380 g",
+        "category": "Aderezos",
+        "price": 1990,
+        "imageUrl": "https://example.com/mayonesa-gourmet-light.jpg",
+        "productUrl": "https://example.com/product/mayonesa-gourmet-light"
+    },
+    {
+        "id": 113,
+        "title": "Ketchup Heinz 397 g",
+        "category": "Aderezos",
+        "price": 2390,
+        "imageUrl": "https://example.com/ketchup-heinz.jpg",
+        "productUrl": "https://example.com/product/ketchup-heinz"
+    },
+    {
+        "id": 114,
+        "title": "Ketchup Lider 400 g",
+        "category": "Aderezos",
+        "price": 1490,
+        "imageUrl": "https://example.com/ketchup-lider.jpg",
+        "productUrl": "https://example.com/product/ketchup-lider"
+    },
+    {
+        "id": 115,
+        "title": "Mostaza Maille Dijon 215 g",
+        "category": "Aderezos",
+        "price": 3990,
+        "imageUrl": "https://example.com/mostaza-maille.jpg",
+        "productUrl": "https://example.com/product/mostaza-maille"
+    },
+    {
+        "id": 116,
+        "title": "Empanadas de Pino Tradicionales 6 Unidades",
+        "category": "Comida_Preparada",
+        "price": 5990,
+        "imageUrl": "https://example.com/empanadas-pino-6u.jpg",
+        "productUrl": "https://example.com/product/empanadas-pino-6u"
+    },
+    {
+        "id": 117,
+        "title": "Empanadas de Queso Artesanales 6 Unidades",
+        "category": "Comida_Preparada",
+        "price": 5690,
+        "imageUrl": "https://example.com/empanadas-queso-6u.jpg",
+        "productUrl": "https://example.com/product/empanadas-queso-6u"
+    },
+    {
+        "id": 118,
+        "title": "Torta Selva Negra Familiar",
+        "category": "Comida_Preparada",
+        "price": 12990,
+        "imageUrl": "https://example.com/torta-selva-negra.jpg",
+        "productUrl": "https://example.com/product/torta-selva-negra"
+    },
+    {
+        "id": 119,
+        "title": "Kuchen de Frambuesa 1 Unidad",
+        "category": "Comida_Preparada",
+        "price": 7990,
+        "imageUrl": "https://example.com/kuchen-frambuesa.jpg",
+        "productUrl": "https://example.com/product/kuchen-frambuesa"
+    },
+    {
+        "id": 120,
+        "title": "Brazo de Reina Manjar 800 g",
+        "category": "Comida_Preparada",
+        "price": 6990,
+        "imageUrl": "https://example.com/brazo-reina.jpg",
+        "productUrl": "https://example.com/product/brazo-reina"
+    },
+    {
+        "id": 121,
+        "title": "Croissant Mantequilla 1 Unidad",
+        "category": "Pasteleria",
+        "price": 1100,
+        "imageUrl": "https://example.com/croissant-mantequilla.jpg",
+        "productUrl": "https://example.com/product/croissant-mantequilla"
+    },
+    {
+        "id": 122,
+        "title": "Medialunas Dulces 6 Unidades",
+        "category": "Pasteleria",
+        "price": 3500,
+        "imageUrl": "https://example.com/medialunas-6u.jpg",
+        "productUrl": "https://example.com/product/medialunas-6u"
+    },
+    {
+        "id": 123,
+        "title": "Donut Glaseada 1 Unidad",
+        "category": "Pasteleria",
+        "price": 900,
+        "imageUrl": "https://example.com/donut-glaseada.jpg",
+        "productUrl": "https://example.com/product/donut-glaseada"
+    },
+    {
+        "id": 124,
+        "title": "Brownie de Chocolate 1 Porción",
+        "category": "Pasteleria",
+        "price": 1500,
+        "imageUrl": "https://example.com/brownie.jpg",
+        "productUrl": "https://example.com/product/brownie"
+    },
+    {
+        "id": 125,
+        "title": "Helado Artesanal Vainilla 1 Litro",
+        "category": "Pasteleria",
+        "price": 4990,
+        "imageUrl": "https://example.com/helado-vainilla.jpg",
+        "productUrl": "https://example.com/product/helado-vainilla"
+    },
+    {
+        "id": 126,
+        "title": "Cereal Corn Flakes 500 g",
+        "category": "Cereales",
+        "price": 2490,
+        "imageUrl": "https://example.com/cereal-cornflakes.jpg",
+        "productUrl": "https://example.com/product/cereal-cornflakes"
+    },
+    {
+        "id": 127,
+        "title": "Cereal Choco Krispies 380 g",
+        "category": "Cereales",
+        "price": 3290,
+        "imageUrl": "https://example.com/cereal-chocokrispies.jpg",
+        "productUrl": "https://example.com/product/cereal-chocokrispies"
+    },
+    {
+        "id": 128,
+        "title": "Granola Clásica 500 g",
+        "category": "Cereales",
+        "price": 3990,
+        "imageUrl": "https://example.com/granola-clasica.jpg",
+        "productUrl": "https://example.com/product/granola-clasica"
+    },
+    {
+        "id": 129,
+        "title": "Cereal Avena Instantánea 1 kg Vivo",
+        "category": "Cereales",
+        "price": 2190,
+        "imageUrl": "https://example.com/avena-instantanea.jpg",
+        "productUrl": "https://example.com/product/avena-instantanea"
+    },
+    {
+        "id": 130,
+        "title": "Harina Tradicional 1 kg Selecta",
+        "category": "Abarrotes",
+        "price": 1290,
+        "imageUrl": "https://example.com/harina-tradicional.jpg",
+        "productUrl": "https://example.com/product/harina-tradicional"
+    },
+    {
+        "id": 131,
+        "title": "Harina Integral 1 kg Selecta",
+        "category": "Abarrotes",
+        "price": 1590,
+        "imageUrl": "https://example.com/harina-integral.jpg",
+        "productUrl": "https://example.com/product/harina-integral"
+    },
+    {
+        "id": 132,
+        "title": "Manteca 250 g Astra",
+        "category": "Abarrotes",
+        "price": 1450,
+        "imageUrl": "https://example.com/manteca.jpg",
+        "productUrl": "https://example.com/product/manteca"
+    },
+    {
+        "id": 134,
+        "title": "Margarina 250 g Soprole",
+        "category": "Abarrotes",
+        "price": 1350,
+        "imageUrl": "https://example.com/margarina.jpg",
+        "productUrl": "https://example.com/product/margarina"
+    },
+    {
+        "id": 135,
+        "title": "Chocolate en Polvo 400 g Nesquik",
+        "category": "Abarrotes",
+        "price": 2890,
+        "imageUrl": "https://example.com/chocolate-polvo.jpg",
+        "productUrl": "https://example.com/product/chocolate-polvo"
+    },
+    {
+        "id": 136,
+        "title": "Azúcar Rubia 1 kg Iansa",
+        "category": "Abarrotes",
+        "price": 1290,
+        "imageUrl": "https://example.com/azucar-rubia.jpg",
+        "productUrl": "https://example.com/product/azucar-rubia"
+    },
+    {
+        "id": 137,
+        "title": "Azúcar Blanca 1 kg Iansa",
+        "category": "Abarrotes",
+        "price": 1150,
+        "imageUrl": "https://example.com/azucar-blanca.jpg",
+        "productUrl": "https://example.com/product/azucar-blanca"
+    },
+    {
+        "id": 138,
+        "title": "Harina Montina Con Polvos 1 kg",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/harina-montina-polvos-1kg.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=harina-montina-polvos-1kg"
+    },
+    {
+        "id": 139,
+        "title": "Azúcar Flor Iansa 500 g",
+        "price": 1490,
+        "imageUrl": "public/ProductosImage/azucar-flor-iansa-500g.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=azucar-flor-iansa-500g"
+    },
+    {
+        "id": 140,
+        "title": "Polvos de Hornear Gourmet 200 g",
+        "price": 990,
+        "imageUrl": "public/ProductosImage/polvos-hornear-gourmet-200g.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=polvos-hornear-gourmet-200g"
+    },
+    {
+        "id": 141,
+        "title": "Cacao Amargo Costa 200 g",
+        "price": 2590,
+        "imageUrl": "public/ProductosImage/cacao-costa-200g.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=cacao-costa-200g"
+    },
+    {
+        "id": 142,
+        "title": "Chancaca Deliciosa 500 g",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/chancaca-deliciosa-500g.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=chancaca-deliciosa-500g"
+    },
+    {
+        "id": 143,
+        "title": "Bicarbonato de Sodio Karla 250 g",
+        "price": 890,
+        "imageUrl": "public/ProductosImage/bicarbonato-karla-250g.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=bicarbonato-karla-250g"
+    },
+    {
+        "id": 144,
+        "title": "Sal Fina Lobos 1 kg",
+        "price": 950,
+        "imageUrl": "public/ProductosImage/sal-fina-lobos-1kg.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=sal-fina-lobos-1kg"
+    },
+    {
+        "id": 145,
+        "title": "Sal Parrillera Lider 1 kg",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/sal-parrillera-lider-1kg.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=sal-parrillera-lider-1kg"
+    },
+    {
+        "id": 146,
+        "title": "Sémola Carozzi 1 kg",
+        "price": 1150,
+        "imageUrl": "public/ProductosImage/semola-carozzi-1kg.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=semola-carozzi-1kg"
+    },
+    {
+        "id": 147,
+        "title": "Levadura en Polvo Gourmet 100 g",
+        "price": 1190,
+        "imageUrl": "public/ProductosImage/levadura-gourmet-100g.png",
+        "category": "Abarrotes",
+        "productUrl": "/producto?item=levadura-gourmet-100g"
+    },
+    {
+        "id": 148,
+        "title": "Leche Entera Colún 1 L",
+        "category": "Lácteos",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/leche-entera-colun-1l.png",
+        "productUrl": "/producto?item=leche-entera-colun-1l"
+    },
+    {
+        "id": 149,
+        "title": "Leche Entera Soprole 1 L",
+        "category": "Lácteos",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/leche-entera-soprole-1l.png",
+        "productUrl": "/producto?item=leche-entera-soprole-1l"
+    },
+    {
+        "id": 150,
+        "title": "Leche Semidescremada Colún 1 L",
+        "category": "Lácteos",
+        "price": 1190,
+        "imageUrl": "public/ProductosImage/leche-semidescremada-colun-1l.png",
+        "productUrl": "/producto?item=leche-semidescremada-colun-1l"
+    },
+    {
+        "id": 151,
+        "title": "Leche Semidescremada Soprole 1 L",
+        "category": "Lácteos",
+        "price": 1290,
+        "imageUrl": "public/ProductosImage/leche-semidescremada-soprole-1l.png",
+        "productUrl": "/producto?item=leche-semidescremada-soprole-1l"
+    },
+    {
+        "id": 152,
+        "title": "Leche Sin Lactosa Loncoleche 1 L",
+        "category": "Lácteos",
+        "price": 1590,
+        "imageUrl": "public/ProductosImage/leche-sin-lactosa-loncoleche-1l.png",
+        "productUrl": "/producto?item=leche-sin-lactosa-loncoleche-1l"
+    },
+    {
+        "id": 153,
+        "title": "Leche Sin Lactosa Colún 1 L",
+        "category": "Lácteos",
+        "price": 1590,
+        "imageUrl": "public/ProductosImage/leche-sin-lactosa-colun-1l.png",
+        "productUrl": "/producto?item=leche-sin-lactosa-colun-1l"
+    },
+    {
+        "id": 154,
+        "title": "Yoghurt Batido Frutilla Colún 1 kg",
+        "category": "Lácteos",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/yoghurt-frutilla-colun-1kg.png",
+        "productUrl": "/producto?item=yoghurt-frutilla-colun-1kg"
+    },
+    {
+        "id": 155,
+        "title": "Yoghurt Batido Durazno Soprole 1 kg",
+        "category": "Lácteos",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/yoghurt-durazno-soprole-1kg.png",
+        "productUrl": "/producto?item=yoghurt-durazno-soprole-1kg"
+    },
+    {
+        "id": 156,
+        "title": "Yoghurt Griego Natural Quillayes 900 g",
+        "category": "Lácteos",
+        "price": 3290,
+        "imageUrl": "public/ProductosImage/yoghurt-griego-quillayes-900g.png",
+        "productUrl": "/producto?item=yoghurt-griego-quillayes-900g"
+    },
+    {
+        "id": 157,
+        "title": "Yoghurt Griego Natural Soprole 900 g",
+        "category": "Lácteos",
+        "price": 3290,
+        "imageUrl": "public/ProductosImage/yoghurt-griego-soprole-900g.png",
+        "productUrl": "/producto?item=yoghurt-griego-soprole-900g"
+    },
+    {
+        "id": 158,
+        "title": "Queso Gauda Laminado Colún 250 g",
+        "category": "Lácteos",
+        "price": 2690,
+        "imageUrl": "public/ProductosImage/queso-gauda-laminado-colun-250g.png",
+        "productUrl": "/producto?item=queso-gauda-laminado-colun-250g"
+    },
+    {
+        "id": 159,
+        "title": "Queso Gauda Laminado Soprole 250 g",
+        "category": "Lácteos",
+        "price": 2690,
+        "imageUrl": "public/ProductosImage/queso-gauda-laminado-soprole-250g.png",
+        "productUrl": "/producto?item=queso-gauda-laminado-soprole-250g"
+    },
+    {
+        "id": 160,
+        "title": "Queso Granulado Parmesano Quillayes 100 g",
+        "category": "Lácteos",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/queso-parmesano-quillayes-100g.png",
+        "productUrl": "/producto?item=queso-parmesano-quillayes-100g"
+    },
+    {
+        "id": 161,
+        "title": "Queso Rallado Parmesano Soprole 100 g",
+        "category": "Lácteos",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/queso-parmesano-soprole-100g.png",
+        "productUrl": "/producto?item=queso-parmesano-soprole-100g"
+    },
+    {
+        "id": 162,
+        "title": "Mantequilla Con Sal Soprole 250 g",
+        "category": "Lácteos",
+        "price": 2490,
+        "imageUrl": "public/ProductosImage/mantequilla-soprole-250g.png",
+        "productUrl": "/producto?item=mantequilla-soprole-250g"
+    },
+    {
+        "id": 163,
+        "title": "Mantequilla Con Sal Colún 250 g",
+        "category": "Lácteos",
+        "price": 2490,
+        "imageUrl": "public/ProductosImage/mantequilla-colun-250g.png",
+        "productUrl": "/producto?item=mantequilla-colun-250g"
+    },
+    {
+        "id": 164,
+        "title": "Crema Para Cocinar Soprole 200 ml",
+        "category": "Lácteos",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/crema-cocinar-soprole-200ml.png",
+        "productUrl": "/producto?item=crema-cocinar-soprole-200ml"
+    },
+    {
+        "id": 165,
+        "title": "Crema Para Cocinar Colún 200 ml",
+        "category": "Lácteos",
+        "price": 1390,
+        "imageUrl": "public/ProductosImage/crema-cocinar-colun-200ml.png",
+        "productUrl": "/producto?item=crema-cocinar-colun-200ml"
+    },
+    {
+        "id": 166,
+        "title": "Quesillo Colún 300 g",
+        "category": "Lácteos",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/quesillo-colun-300g.png",
+        "productUrl": "/producto?item=quesillo-colun-300g"
+    },
+    {
+        "id": 167,
+        "title": "Quesillo Soprole 300 g",
+        "category": "Lácteos",
+        "price": 2190,
+        "imageUrl": "public/ProductosImage/quesillo-soprole-300g.png",
+        "productUrl": "/producto?item=quesillo-soprole-300g"
+    },
+    {
+        "id": 168,
+        "title": "Leche Chocolatada Colún 1 L",
+        "category": "Lácteos",
+        "price": 1590,
+        "imageUrl": "public/ProductosImage/leche-chocolatada-colun-1l.png",
+        "productUrl": "/producto?item=leche-chocolatada-colun-1l"
+    }
+]

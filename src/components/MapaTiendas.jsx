@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-//  FIX ICONOS LEAFLET 
+// FIX ICONOS LEAFLET 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -21,14 +21,14 @@ L.Icon.Default.mergeOptions({
     "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
-//  ICONO USUARIO 
+// ICONO USUARIO 
 const userIcon = new L.Icon({
-  iconUrl:"/public/UserMap.png",
+  iconUrl: "../../public/UserMap.png",
   iconSize: [41, 41],
   iconAnchor: [20, 41],
 });
 
-//  COMPONENTE PARA MOVER EL MAPA 
+// COMPONENTE PARA MOVER EL MAPA 
 function MapMover({ userPos, zoom }) {
   const map = useMap();
   useEffect(() => {
@@ -39,7 +39,7 @@ function MapMover({ userPos, zoom }) {
   return null;
 }
 
-//  CONTROL CENTRAR (BOTTOM-RIGHT) 
+// CONTROL CENTRAR (BOTTOM-RIGHT) 
 function BotonCentrar({ userPos }) {
   const map = useMap();
 
@@ -75,7 +75,7 @@ export default function MapaTiendas() {
   const navigate = useNavigate();
   const mapRef = useRef(null);
 
-  //  ESTADOS 
+  // ESTADOS 
   const [tiendas, setTiendas] = useState([]);
   const [loadingTiendas, setLoadingTiendas] = useState(true);
 
@@ -92,7 +92,7 @@ export default function MapaTiendas() {
 
   const defaultCenter = [-33.4489, -70.6693];
 
-  //  CARGA TIENDAS 
+  // CARGA TIENDAS 
   useEffect(() => {
     fetch("/tiendas.json")
       .then((res) => res.json())
@@ -100,7 +100,7 @@ export default function MapaTiendas() {
       .finally(() => setLoadingTiendas(false));
   }, []);
 
-  //  CARGA DIRECCIONES RECIENTES 
+  // CARGA DIRECCIONES RECIENTES 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("recentAddresses") || "[]");
     setRecentAddresses(stored);
@@ -111,11 +111,17 @@ export default function MapaTiendas() {
       setManualAddress(last.display_name);
       setUserPos([parseFloat(last.lat), parseFloat(last.lon)]);
     } else {
-      setUserPos(defaultCenter);
+      // cargar la última ubicación del usuario desde el cache
+      const storedPos = JSON.parse(localStorage.getItem("userPos"));
+      if (storedPos) {
+        setUserPos([storedPos.lat, storedPos.lon]);
+      } else {
+        setUserPos(defaultCenter);
+      }
     }
   }, []);
 
-  //  GUARDAR DIRECCIÓN 
+  // GUARDAR DIRECCIÓN 
   function guardarDireccionReciente(direccion) {
     const updated = [
       direccion,
@@ -126,7 +132,7 @@ export default function MapaTiendas() {
     localStorage.setItem("recentAddresses", JSON.stringify(updated));
   }
 
-  //  GEOLOCALIZACIÓN 
+  // GEOLOCALIZACIÓN 
   const activarGeolocalizacion = () => {
     setUsarGeolocalizacion(true);
     setPermisoPregunta(false);
@@ -146,6 +152,8 @@ export default function MapaTiendas() {
           lat: coords[0],
           lon: coords[1],
         });
+        // Guardar ultima ubicación del usuario en cache
+        localStorage.setItem("userPos", JSON.stringify({ lat: coords[0], lon: coords[1] }));
       },
       () => alert("No se pudo acceder a la ubicación.")
     );
@@ -156,6 +164,7 @@ export default function MapaTiendas() {
     setPermisoPregunta(false);
   };
 
+  // SUGERENCIAS DE AUTOCOMPLETADO
   useEffect(() => {
     if (usarGeolocalizacion) return;
 
@@ -195,7 +204,7 @@ export default function MapaTiendas() {
     return () => document.removeEventListener("click", handler);
   }, []);
 
-  //  SELECCIONAR DIRECCIÓN 
+  // SELECCIONAR DIRECCIÓN 
   function seleccionarDireccion(s) {
     const lat = parseFloat(s.lat);
     const lon = parseFloat(s.lon);
@@ -212,13 +221,14 @@ export default function MapaTiendas() {
       lat,
       lon,
     });
+    // Guardamos la nueva posición en localStorage
+    localStorage.setItem("userPos", JSON.stringify({ lat, lon }));
   }
-
-  if (loadingTiendas) return <p>Cargando mapa…</p>;
 
   return (
     <div className="mapa-container">
-      {permisoPregunta && (
+      {/* Mostrar aviso de geolocalización solo si hay una puesta */}
+      {permisoPregunta && !direccionConfirmada && (
         <div className="ubicacion-modal">
           <div className="ubicacion-modal-content">
             <h2>¿Deseas activar tu ubicación?</h2>
@@ -235,28 +245,27 @@ export default function MapaTiendas() {
         </div>
       )}
 
-      {/* BARRA DIRECCIÓN */}
-      {!usarGeolocalizacion && !permisoPregunta && (
-        <div className="barra-direccion">
-          <div className="barra-direccion-inner">
-            <input
-              type="text"
-              placeholder="Ingresa tu dirección…"
-              className="input-direccion-barra"
-              value={manualAddress}
-              onChange={(e) => {
-                setManualAddress(e.target.value);
-                setDireccionConfirmada("");
-              }}
-            />
+      {/* BARRA DIRECCIÓN (siempre visible) */}
+      <div className="barra-direccion">
+        <div className="barra-direccion-inner">
+          <input
+            type="text"
+            placeholder="Ingresa tu dirección…"
+            className="input-direccion-barra"
+            value={manualAddress}
+            onChange={(e) => {
+              setManualAddress(e.target.value);
+              setDireccionConfirmada("");
+            }}
+          />
 
+          <div className="barra-botones">
             <button
               className="btn-recientes"
               onClick={() => setShowRecent((prev) => !prev)}
             >
-              ▾
+              Recientes▾
             </button>
-
             <button
               className="btn-confirmar-direccion"
               onClick={() => {
@@ -266,20 +275,19 @@ export default function MapaTiendas() {
               Confirmar
             </button>
           </div>
+        </div>
 
-          {suggestions.length > 0 && (
-            <ul className="lista-sugerencias">
-              {suggestions.map((s, idx) => (
+        {(suggestions.length > 0 || (showRecent && recentAddresses.length > 0)) && (
+          <ul className="lista-sugerencias">
+            {suggestions.length > 0 &&
+              suggestions.map((s, idx) => (
                 <li key={idx} onClick={() => seleccionarDireccion(s)}>
                   {s.display_name}
                 </li>
               ))}
-            </ul>
-          )}
-
-          {showRecent && recentAddresses.length > 0 && (
-            <ul className="lista-sugerencias">
-              {recentAddresses.map((r, i) => (
+            {showRecent &&
+              recentAddresses.length > 0 &&
+              recentAddresses.map((r, i) => (
                 <li
                   key={i}
                   onClick={() =>
@@ -291,14 +299,7 @@ export default function MapaTiendas() {
                   }
                 >
                   {r.display_name}
-
                   <span
-                    style={{
-                      float: "right",
-                      color: "red",
-                      cursor: "pointer",
-                      fontWeight: "bold",
-                    }}
                     onClick={(e) => {
                       e.stopPropagation();
                       const updated = recentAddresses.filter(
@@ -312,14 +313,13 @@ export default function MapaTiendas() {
                   </span>
                 </li>
               ))}
-            </ul>
-          )}
-        </div>
-      )}
+          </ul>
+        )}
+      </div>
 
       {/* MAPA */}
       <MapContainer
-        center={defaultCenter}
+        center={userPos || defaultCenter}
         zoom={13}
         whenCreated={(map) => (mapRef.current = map)}
         className="leaflet-map"

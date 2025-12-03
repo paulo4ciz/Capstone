@@ -1,8 +1,8 @@
 // src/components/LoginForm.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles.css";
-import loginImg from "../../public/hand.png"; // puedes seguir usando esta imagen
+import loginImg from "../../public/hand.png";
 
 export default function LoginForm() {
   const navigate = useNavigate();
@@ -10,6 +10,16 @@ export default function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    // Solo activar  solo en teleffono
+    if (window.innerWidth <= 768) {
+      const timer = setTimeout(() => setFadeOut(true), 7500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -34,10 +44,9 @@ export default function LoginForm() {
         return;
       }
 
-      // Sesión mínima
       localStorage.setItem("auth:user", JSON.stringify(payload.user));
       window.dispatchEvent(new Event("auth:user-changed"));
-      navigate("/"); // al Home, el Header ya mostrará "Terminar sesión"
+      navigate("/");
     } catch {
       setError("No se pudo iniciar sesión. Inténtalo nuevamente.");
     } finally {
@@ -45,16 +54,15 @@ export default function LoginForm() {
     }
   };
 
-  
-
-
   return (
     <div className="login-container">
       <div className="login-box">
-        {/* Panel Izquierdo (formulario) */}
+        {/* Panel izquierdo (formulario) */}
         <div className="login-left">
           <h2 className="login-title">Iniciar sesión</h2>
-          <p className="login-subtitle">Bienvenido a la ruta del ahorro, por favor inicia sesión</p>
+          <p className="login-subtitle">
+            Bienvenido a la ruta del ahorro, por favor inicia sesión
+          </p>
 
           {error && <p className="form-error">{error}</p>}
 
@@ -82,7 +90,9 @@ export default function LoginForm() {
               <span className="show-pass" aria-hidden="true"></span>
             </div>
 
-            <a href="#" className="forgot-link">¿Olvidaste tu contraseña?</a>
+            <a href="#" className="forgot-link">
+              ¿Olvidaste tu contraseña?
+            </a>
 
             <button type="submit" className="btn-login" disabled={loading}>
               {loading ? "Ingresando..." : "Iniciar sesión"}
@@ -93,8 +103,12 @@ export default function LoginForm() {
             </div>
 
             <div className="social-login">
-              <button type="button" className="google-btn">Google</button>
-              <button type="button" className="facebook-btn">Facebook</button>
+              <button type="button" className="google-btn">
+                Google
+              </button>
+              <button type="button" className="facebook-btn">
+                Facebook
+              </button>
             </div>
 
             <p className="signup-text">
@@ -103,8 +117,8 @@ export default function LoginForm() {
           </form>
         </div>
 
-        {/* Panel Derecho (imagen + SVGs que ya tenías) */}
-        <div className="login-right">
+        {/* Panel derecho (animación) */}
+        <div className={`login-right ${fadeOut ? "fade-out" : ""}`}>
           <div className="login-content">
             <div className="inicial">
               <svg className="textoini" viewBox="0 0 215 100">

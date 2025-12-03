@@ -1,19 +1,22 @@
 [
   {
+    "id": 1,
     "title": "Pan Marraqueta 4 Un",
     "price": 850,
-    "imageUrl": "/public/ProductosImage/Marraqueta.png",
+    "imageUrl": "public/ProductosImage/Marraqueta.png",
     "category": "Pan",
     "productUrl": "/producto?item=pan-marraqueta-4-un"
   },
   {
+    "id": 2,
     "title": "Pan Hallulla 1 Un",
     "price": 450,
-    "imageUrl": "/public/ProductosImage/Hallulla.png",
+    "imageUrl": "public/ProductosImage/Hallulla.png",
     "category": "Pan",
     "productUrl": "/producto?item=pan-hallulla-1-un"
   },
   {
+    "id": 3,
     "title": "Kuchen de Manzana 1 Porción",
     "price": 1800,
     "imageUrl": "/public/ProductosImage/",
@@ -21,6 +24,7 @@
     "productUrl": "/producto?item=kuchen-de-manzana-1-porcion"
   },
   {
+    "id": 4,
     "title": "Berlines Rellenos 1 Un",
     "price": 900,
     "imageUrl": "/public/ProductosImage/",
@@ -28,6 +32,7 @@
     "productUrl": "/producto?item=berlines-rellenos-1-un"
   },
   {
+    "id": 5,
     "title": "Empanada de Pino 1 Un",
     "price": 1800,
     "imageUrl": "/public/ProductosImage/",
@@ -35,6 +40,7 @@
     "productUrl": "/producto?item=empanada-de-pino-1-un"
   },
   {
+    "id": 6,
     "title": "Empanada de Queso 1 Un",
     "price": 1300,
     "imageUrl": "/public/ProductosImage/",
@@ -42,6 +48,7 @@
     "productUrl": "/producto?item=empanada-de-queso-1-un"
   },
   {
+    "id": 7,
     "title": "Queque Marmoleado 1 Porción",
     "price": 1200,
     "imageUrl": "/public/ProductosImage/",
@@ -49,6 +56,7 @@
     "productUrl": "/producto?item=queque-marmoleado-1-porcion"
   },
   {
+    "id": 8,
     "title": "Donas Glaseadas 1 Un",
     "price": 700,
     "imageUrl": "/public/ProductosImage/",
@@ -56,6 +64,7 @@
     "productUrl": "/producto?item=donas-glaseadas-1-un"
   },
   {
+    "id": 9,
     "title": "Galletas Caseras 100g",
     "price": 900,
     "imageUrl": "/public/ProductosImage/",
@@ -63,6 +72,7 @@
     "productUrl": "/producto?item=galletas-caseras-100g"
   },
   {
+    "id": 10,
     "title": "Torta Tres Leches Porción",
     "price": 2200,
     "imageUrl": "/public/ProductosImage/",
@@ -70,6 +80,7 @@
     "productUrl": "/producto?item=torta-tres-leches-porcion"
   },
   {
+    "id": 11,
     "title": "Pan Integral Molde 500g",
     "price": 1600,
     "imageUrl": "/public/ProductosImage/",
@@ -77,6 +88,7 @@
     "productUrl": "/producto?item=pan-integral-molde-500g"
   },
   {
+    "id": 12,
     "title": "Pan Amasado 1 Un",
     "price": 600,
     "imageUrl": "/public/ProductosImage/",
@@ -84,6 +96,7 @@
     "productUrl": "/producto?item=pan-amasado-1-un"
   },
   {
+    "id": 13,
     "title": "Croissant Mantequilla 1 Un",
     "price": 1100,
     "imageUrl": "/public/ProductosImage/",
@@ -91,6 +104,7 @@
     "productUrl": "/producto?item=croissant-mantequilla-1-un"
   },
   {
+    "id": 14,
     "title": "Sopaipillas 4 Un",
     "price": 700,
     "imageUrl": "/public/ProductosImage/",
@@ -98,6 +112,7 @@
     "productUrl": "/producto?item=sopaipillas-4-un"
   },
   {
+    "id": 15,
     "title": "Leche Entera 1L",
     "price": 1400,
     "imageUrl": "/public/ProductosImage/",
@@ -105,6 +120,7 @@
     "productUrl": "/producto?item=leche-entera-1l"
   },
   {
+    "id": 16,
     "title": "Huevos 12 Un",
     "price": 2900,
     "imageUrl": "/public/ProductosImage/",
@@ -112,6 +128,7 @@
     "productUrl": "/producto?item=huevos-12-un"
   },
   {
+    "id": 17,
     "title": "Mantequilla Soprole 250g",
     "price": 2100,
     "imageUrl": "/public/ProductosImage/",
@@ -119,6 +136,7 @@
     "productUrl": "/producto?item=mantequilla-soprole-250g"
   },
   {
+    "id": 18,
     "title": "Queso Laminado 200g",
     "price": 2400,
     "imageUrl": "/public/ProductosImage/",
@@ -126,10 +144,171 @@
     "productUrl": "/producto?item=queso-laminado-200g"
   },
   {
+    "id": 19,
     "title": "Café Instantáneo 170g",
     "price": 3900,
     "imageUrl": "/public/ProductosImage/",
     "category": "Abarrotes",
     "productUrl": "/producto?item=cafe-instantaneo-170g"
+  },
+  {
+    "id": 20,
+    "title": "Pan Ciabatta 1 Un",
+    "price": 900,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=pan-ciabatta-1-un"
+  },
+  {
+    "id": 21,
+    "title": "Pan Baguette 1 Un",
+    "price": 1200,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=pan-baguette-1-un"
+  },
+  {
+    "id": 22,
+    "title": "Pan Pita 4 Un",
+    "price": 1000,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=pan-pita-4-un"
+  },
+  {
+    "id": 23,
+    "title": "Pan de Masa Madre 1 Un",
+    "price": 2500,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=pan-masa-madre-1-un"
+  },
+  {
+    "id": 24,
+    "title": "Molde Blanco 500g",
+    "price": 1500,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=molde-blanco-500g"
+  },
+  {
+    "id": 25,
+    "title": "Empanada Napolitana 1 Un",
+    "price": 2000,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Comida Preparada",
+    "productUrl": "/producto?item=empanada-napolitana-1-un"
+  },
+  {
+    "id": 26,
+    "title": "Pizza Individual Jamón Queso",
+    "price": 2800,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Comida Preparada",
+    "productUrl": "/producto?item=pizza-individual-jamon-queso"
+  },
+  {
+    "id": 27,
+    "title": "Empanada de Pollo 1 Un",
+    "price": 1600,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Comida Preparada",
+    "productUrl": "/producto?item=empanada-de-pollo-1-un"
+  },
+  {
+    "id": 28,
+    "title": "Pan de Pascua 500g",
+    "price": 3500,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=pan-de-pascua-500g"
+  },
+  {
+    "id": 29,
+    "title": "Torta Selva Negra Porción",
+    "price": 2300,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=torta-selva-negra-porcion"
+  },
+  {
+    "id": 30,
+    "title": "Cheesecake Frutilla Porción",
+    "price": 2400,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=cheesecake-frutilla-porcion"
+  },
+  {
+    "id": 31,
+    "title": "Brownie 1 Un",
+    "price": 1000,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=brownie-1-un"
+  },
+  {
+    "id": 32,
+    "title": "Muffin de Arándanos 1 Un",
+    "price": 900,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=muffin-arandanos-1-un"
+  },
+  {
+    "id": 33,
+    "title": "Tartaleta de Limón 1 Un",
+    "price": 1800,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=tartaleta-limon-1-un"
+  },
+  {
+    "id": 34,
+    "title": "Rollito de Canela 1 Un",
+    "price": 1300,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=rollito-canela-1-un"
+  },
+  {
+    "id": 35,
+    "title": "Kuchen de Queso Porción",
+    "price": 1900,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=kuchen-de-queso-porcion"
+  },
+  {
+    "id": 36,
+    "title": "Pan Mini Dulce 6 Un",
+    "price": 1200,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=pan-mini-dulce-6-un"
+  },
+  {
+    "id": 37,
+    "title": "Calzones Rotos 6 Un",
+    "price": 1500,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=calzones-rotos-6-un"
+  },
+  {
+    "id": 38,
+    "title": "Empolvados 2 Un",
+    "price": 1200,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pastelería",
+    "productUrl": "/producto?item=empolvados-2-un"
+  },
+  {
+    "id": 39,
+    "title": "Pan Frica 6 Un",
+    "price": 1800,
+    "imageUrl": "/public/ProductosImage/",
+    "category": "Pan",
+    "productUrl": "/producto?item=pan-frica-6-un"
   }
 ]

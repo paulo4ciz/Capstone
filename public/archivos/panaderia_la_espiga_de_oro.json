@@ -1,0 +1,198 @@
+[
+    {
+        "title": "Pan Marraqueta 4 Un",
+        "price": 790,
+        "imageUrl": "public/ProductosImage/Marraqueta.png",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-marraqueta-4-un"
+    },
+    {
+        "title": "Pan Hallulla 1 Un",
+        "price": 420,
+        "imageUrl": "public/ProductosImage/Hallulla.png",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-hallulla-1-un"
+    },
+    {
+        "title": "Kuchen de Manzana 1 Porción",
+        "price": 2000,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=kuchen-manzana-porcion"
+    },
+    {
+        "title": "Berlines Rellenos 1 Un",
+        "price": 850,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=berlines-rellenos-1-un"
+    },
+    {
+        "title": "Empanada de Pino 1 Un",
+        "price": 1900,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Comida Preparada",
+        "productUrl": "/producto?item=empanada-de-pino-1-un"
+    },
+    {
+        "title": "Empanada de Queso 1 Un",
+        "price": 1200,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Comida Preparada",
+        "productUrl": "/producto?item=empanada-queso-1-un"
+    },
+    {
+        "title": "Queque Marmoleado 1 Porción",
+        "price": 1100,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=queque-marmoleado-porcion"
+    },
+    {
+        "title": "Donas Glaseadas 1 Un",
+        "price": 750,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=donas-glaseadas-1-un"
+    },
+    {
+        "title": "Galletas Caseras 100g",
+        "price": 950,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=galletas-caseras-100g"
+    },
+    {
+        "title": "Torta Tres Leches Porción",
+        "price": 2100,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=torta-tres-leches"
+    },
+    {
+        "title": "Pan Integral Molde 500g",
+        "price": 1700,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-integral-molde"
+    },
+    {
+        "title": "Pan Amasado 1 Un",
+        "price": 650,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-amasado"
+    },
+    {
+        "title": "Croissant Mantequilla 1 Un",
+        "price": 1200,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=croissant-mantequilla"
+    },
+    {
+        "title": "Sopaipillas 4 Un",
+        "price": 600,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Panadería",
+        "productUrl": "/producto?item=sopaipillas-4-un"
+    },
+    {
+        "title": "Pan Ciabatta 1 Un",
+        "price": 950,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-ciabatta"
+    },
+    {
+        "title": "Pan Baguette 1 Un",
+        "price": 1100,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-baguette"
+    },
+    {
+        "title": "Pan Pita 4 Un",
+        "price": 1050,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-pita"
+    },
+    {
+        "title": "Pan de Masa Madre 1 Un",
+        "price": 2600,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-masa-madre"
+    },
+    {
+        "title": "Pizza Individual Jamón Queso",
+        "price": 2700,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Comida Preparada",
+        "productUrl": "/producto?item=pizza-jamon-queso"
+    },
+    {
+        "title": "Empanada de Pollo 1 Un",
+        "price": 1500,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Comida Preparada",
+        "productUrl": "/producto?item=empanada-pollo"
+    },
+    {
+        "title": "Pan Brioche 1 Un",
+        "price": 1800,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-brioche"
+    },
+    {
+        "title": "Donut Rellena Manjar 1 Un",
+        "price": 950,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=donut-manjar"
+    },
+    {
+        "title": "Pan Mini Dulce 6 Un",
+        "price": 1100,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pan",
+        "productUrl": "/producto?item=pan-mini-dulce"
+    },
+    {
+        "title": "Calzones Rotos 6 Un",
+        "price": 1400,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=calzones-rotos"
+    },
+    {
+        "title": "Empolvados 2 Un",
+        "price": 1300,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=empolvados"
+    },
+    {
+        "title": "Brownie 1 Un",
+        "price": 1100,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=brownie"
+    },
+    {
+        "title": "Muffin de Arándanos 1 Un",
+        "price": 850,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=muffin-arandanos"
+    },
+    {
+        "title": "Rollito de Canela 1 Un",
+        "price": 1350,
+        "imageUrl": "/public/ProductosImage/",
+        "category": "Pastelería",
+        "productUrl": "/producto?item=rollito-canela"
+    }
+]
