@@ -1231,11 +1231,12 @@ ol.principios li:hover {
 .product-card {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   background: #fff;
   border-radius: 12px;
   border: 1px solid #ddd;
   padding: 12px;
-  height: 500px;
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -1658,15 +1659,18 @@ ol.principios li:hover {
     right: 20px;
   }
 }
+
 /* --- WIDGET TAMAÑO DE LETRA --- */
 .fontsize-widget {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* Si lo quieres a la izquierda cambia a: left: 20px; */
+  right: 20px;
+  /* Si lo quieres a la izquierda cambia a: left: 20px; */
   z-index: 1050;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Si lo pones a la izquierda usa: flex-start */
+  align-items: flex-end;
+  /* Si lo pones a la izquierda usa: flex-start */
   gap: 10px;
 }
 
@@ -1678,14 +1682,14 @@ ol.principios li:hover {
   color: #181818;
   border: 2px solid #181818;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn-fontsize-float:hover, 
+.btn-fontsize-float:hover,
 .btn-fontsize-float.active {
   background-color: #181818;
   color: #ffffff;
@@ -1703,6 +1707,13 @@ ol.principios li:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
